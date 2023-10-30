@@ -1,5 +1,39 @@
 .set LOCALID_DAYCARE_LADY, 1
 
+Route117_PokemonDayCare_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart Route117_PokemonDayCare_Pokemart
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+Route117_PokemonDayCare_Pokemart:
+	.2byte ITEM_EVERSTONE
+	.2byte ITEM_DESTINY_KNOT
+	.2byte ITEM_POWER_WEIGHT
+	.2byte ITEM_POWER_BRACER
+	.2byte ITEM_POWER_BELT
+	.2byte ITEM_POWER_LENS
+	.2byte ITEM_POWER_BAND
+	.2byte ITEM_POWER_ANKLET
+	.2byte ITEM_OVAL_STONE
+	.2byte ITEM_FULL_INCENSE
+	.2byte ITEM_LAX_INCENSE
+	.2byte ITEM_LUCK_INCENSE
+	.2byte ITEM_ODD_INCENSE
+	.2byte ITEM_PURE_INCENSE
+	.2byte ITEM_ROCK_INCENSE
+	.2byte ITEM_ROSE_INCENSE
+	.2byte ITEM_SEA_INCENSE
+	.2byte ITEM_WAVE_INCENSE
+	.2byte ITEM_NONE
+	release
+	end
+
 Route117_EventScript_DaycareMan::
 	lock
 	faceplayer

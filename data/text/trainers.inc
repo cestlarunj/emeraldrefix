@@ -4779,3 +4779,15 @@ Route134_Text_HudsonPostBattle:
 	.string "Our boat drifted out to sea.\p"
 	.string "My buddy's a timid fellow, so I'm\n"
 	.string "worried about him.$"
+
+GraniteCave_1F_Text_HowardIntro:
+	.string "This cave is lit !\p"
+	.string "Get it ?\n"
+	.string "Because I'm making fire !$"
+
+GraniteCave_1F_Text_HowardDefeat:
+	.string "Wow, you're really lit!$"
+
+GraniteCave_1F_Text_HowardPostBattle:
+	.string "I got extinguished!$"
+

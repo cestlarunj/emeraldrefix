@@ -40,10 +40,10 @@ struct TrainerMonCustomized
     const u8 *nickname;
     const u8 *ev;
     u32 iv;
-    u16 moves[4];
+    u16 moves[MAX_MON_MOVES];
     u16 species;
     u16 heldItem;
-    u16 ability;
+    u16 abilityNums;
     u8 lvl;
     u8 ball;
     u8 friendship;
@@ -57,6 +57,7 @@ struct TrainerMonNoItemDefaultMoves
     u16 iv;
     u8 lvl;
     u16 species;
+    u8 abilityNums;
 };
 
 struct TrainerMonItemDefaultMoves
@@ -64,6 +65,7 @@ struct TrainerMonItemDefaultMoves
     u16 iv;
     u8 lvl;
     u16 species;
+    u8 abilityNums;
     u16 heldItem;
 };
 
@@ -72,6 +74,7 @@ struct TrainerMonNoItemCustomMoves
     u16 iv;
     u8 lvl;
     u16 species;
+    u8 abilityNums;
     u16 moves[MAX_MON_MOVES];
 };
 
@@ -80,6 +83,7 @@ struct TrainerMonItemCustomMoves
     u16 iv;
     u8 lvl;
     u16 species;
+    u8 abilityNums;
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
 };

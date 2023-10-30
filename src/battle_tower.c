@@ -3136,13 +3136,13 @@ static void FillPartnerParty(u16 trainerId)
                     SetMonData(&gPlayerParty[i+3], MON_DATA_SPDEF_EV, &(partyData[i].ev[4]));
                     SetMonData(&gPlayerParty[i+3], MON_DATA_SPEED_EV, &(partyData[i].ev[5]));
                 }
-                if (partyData[i].ability != ABILITY_NONE)
+                if (partyData[i].abilityNums != ABILITY_NONE)
                 {
                     const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[partyData[i].species];
                     u32 maxAbilities = ARRAY_COUNT(speciesInfo->abilities);
                     for (j = 0; j < maxAbilities; ++j)
                     {
-                        if (speciesInfo->abilities[j] == partyData[i].ability)
+                        if (speciesInfo->abilities[j] == partyData[i].abilityNums)
                             break;
                     }
                     if (j < maxAbilities)

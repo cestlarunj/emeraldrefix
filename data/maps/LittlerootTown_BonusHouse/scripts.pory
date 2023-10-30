@@ -1,0 +1,7 @@
+mapscripts LittlerootTown_BonusHouse_MapScripts {}
+
+script LittlerootTown_BonusHouse_EventScript_Oldman {
+    lockall
+    msgbox("Hello World !", MSGBOX_NPC)
+    releaseall
+}

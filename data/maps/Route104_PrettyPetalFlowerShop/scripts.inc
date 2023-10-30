@@ -82,19 +82,68 @@ Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
 Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
 	lock
 	faceplayer
-	dotimebasedevents
-	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
-	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
-	random 8
-	addvar VAR_RESULT, FIRST_BERRY_INDEX
-	giveitem VAR_RESULT
-	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
-	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	message gText_PlayerWhatCanIDoForYou
+	waitmessage
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Berries
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
-Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry::
-	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	.align 2
+Route104_PrettyPetalFlowerShop_Pokemart_Berries:
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_ORAN_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_ENIGMA_BERRY
+	.2byte ITEM_FIGY_BERRY
+	.2byte ITEM_WIKI_BERRY
+	.2byte ITEM_MAGO_BERRY
+	.2byte ITEM_AGUAV_BERRY
+	.2byte ITEM_IAPAPA_BERRY
+	.2byte ITEM_POMEG_BERRY
+	.2byte ITEM_KELPSY_BERRY
+	.2byte ITEM_QUALOT_BERRY
+	.2byte ITEM_HONDEW_BERRY
+	.2byte ITEM_GREPA_BERRY
+	.2byte ITEM_TAMATO_BERRY
+	.2byte ITEM_OCCA_BERRY
+	.2byte ITEM_PASSHO_BERRY
+	.2byte ITEM_WACAN_BERRY
+	.2byte ITEM_RINDO_BERRY
+	.2byte ITEM_YACHE_BERRY
+	.2byte ITEM_CHOPLE_BERRY
+	.2byte ITEM_KEBIA_BERRY
+	.2byte ITEM_SHUCA_BERRY
+	.2byte ITEM_COBA_BERRY
+	.2byte ITEM_PAYAPA_BERRY
+	.2byte ITEM_TANGA_BERRY
+	.2byte ITEM_CHARTI_BERRY
+	.2byte ITEM_KASIB_BERRY
+	.2byte ITEM_HABAN_BERRY
+	.2byte ITEM_COLBUR_BERRY
+	.2byte ITEM_BABIRI_BERRY
+	.2byte ITEM_ROSELI_BERRY
+	.2byte ITEM_CHILAN_BERRY
+	.2byte ITEM_LIECHI_BERRY
+	.2byte ITEM_GANLON_BERRY
+	.2byte ITEM_SALAC_BERRY
+	.2byte ITEM_PETAYA_BERRY
+	.2byte ITEM_APICOT_BERRY
+	.2byte ITEM_LANSAT_BERRY
+	.2byte ITEM_STARF_BERRY
+	.2byte ITEM_KEE_BERRY
+	.2byte ITEM_MARANGA_BERRY
+	.2byte ITEM_JABOCA_BERRY
+	.2byte ITEM_ROWAP_BERRY
+	.2byte ITEM_MICLE_BERRY
+	.2byte ITEM_CUSTAP_BERRY
+	.2byte ITEM_NONE
 	release
 	end

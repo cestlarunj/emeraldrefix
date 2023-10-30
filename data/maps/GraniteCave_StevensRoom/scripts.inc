@@ -13,6 +13,8 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_TM47
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis2, MSGBOX_DEFAULT
+	giveitem ITEM_ESCAPE_ROPE
 	msgbox GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -96,6 +98,12 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "I'll give you this TM.\p"
 	.string "It contains my favorite move,\n"
 	.string "STEEL WING.$"
+
+GraniteCave_StevensRoom_Text_ThankYouTakeThis2:
+	.string "STEVEN: Have this also.\p"
+	.string "It's an ESCAPE ROPE. It'll\n"
+	.string "allows you to get out of\p"
+	.string "any cave or dungeon you're in.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "STEVEN: Your POKéMON appear quite\n"

@@ -674,6 +674,7 @@ Common_ShowEasyChatScreen::
 Common_EventScript_ReadyPetalburgGymForBattle::
 	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
 	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
+	clearflag FLAG_PETALBURG_MART_SECOND_CLERK
 	return
 
 Common_EventScript_BufferTrendyPhrase::
@@ -1059,3 +1060,10 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/LittlerootTown_BonusHouse/scripts.inc"
+
+	.include "data/maps/Route101Grove/scripts.inc"
+	
+	
+	.include "data/maps/DewfordTown_Mart/scripts.inc"

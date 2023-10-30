@@ -612,7 +612,7 @@
       "x": 16,
       "y": 72,
       "elevation": 3,
-      "item": "ITEM_ANTIDOTE",
+      "item": "ITEM_KEBIA_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE"
     },
     {

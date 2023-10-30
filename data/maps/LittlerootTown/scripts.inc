@@ -254,6 +254,10 @@ LittlerootTown_EventScript_Boy::
 	msgbox LittlerootTown_Text_BirchSpendsDaysInLab, MSGBOX_NPC
 	end
 
+LittlerootTown_EventScript_Girl::
+	msgbox LittlerootTown_Text_EmeraldRefix, MSGBOX_NPC
+	end
+
 LittlerootTown_EventScript_Twin::
 	lock
 	faceplayer
@@ -968,6 +972,10 @@ LittlerootTown_Text_BirchSpendsDaysInLab:
 	.string "the wild to do more research…\p"
 	.string "When does PROF. BIRCH spend time\n"
 	.string "at home?$"
+
+LittlerootTown_Text_EmeraldRefix:
+	.string "Do you think a bunch of 14 years-old\n"
+	.string "could start a terrorist organization ?$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut:
 	.string "Um, um, um!\p"

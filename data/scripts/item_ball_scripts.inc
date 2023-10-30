@@ -3,7 +3,7 @@ Route102_EventScript_ItemPotion::
 	end
 
 Route103_EventScript_ItemGuardSpec::
-	finditem ITEM_GUARD_SPEC
+	finditem ITEM_PP_UP
 	end
 
 Route103_EventScript_ItemPPUp::
@@ -19,7 +19,7 @@ Route104_EventScript_ItemPokeBall::
 	end
 
 Route104_EventScript_ItemXAccuracy::
-	finditem ITEM_X_ACCURACY
+	finditem ITEM_HP_UP
 	end
 
 Route104_EventScript_ItemPotion::
@@ -51,11 +51,11 @@ Route110_EventScript_ItemRareCandy::
 	end
 
 Route110_EventScript_ItemDireHit::
-	finditem ITEM_DIRE_HIT
+	finditem ITEM_PP_UP
 	end
 
 Route110_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+	finditem ITEM_WACAN_BERRY
 	end
 
 Route111_EventScript_ItemTM37::
@@ -71,7 +71,7 @@ Route111_EventScript_ItemHPUp::
 	end
 
 Route111_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+	finditem ITEM_SHUCA_BERRY
 	end
 
 Route112_EventScript_ItemNugget::
@@ -79,7 +79,7 @@ Route112_EventScript_ItemNugget::
 	end
 
 Route113_EventScript_ItemMaxEther::
-	finditem ITEM_MAX_ETHER
+	finditem ITEM_CHOPLE_BERRY
 	end
 
 Route113_EventScript_ItemSuperRepel::
@@ -127,11 +127,11 @@ Route115_EventScript_ItemPPUp::
 	end
 
 Route116_EventScript_ItemXSpecial::
-	finditem ITEM_X_SP_ATK
+	finditem ITEM_CALCIUM
 	end
 
 Route116_EventScript_ItemEther::
-	finditem ITEM_ETHER
+	finditem ITEM_CHARTI_BERRY
 	end
 
 Route116_EventScript_ItemRepel::
@@ -167,7 +167,7 @@ Route119_EventScript_ItemZinc::
 	end
 
 Route119_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+	finditem ITEM_RINDO_BERRY
 	end
 
 Route119_EventScript_ItemLeafStone::
@@ -187,7 +187,7 @@ Route119_EventScript_ItemHyperPotion2::
 	end
 
 Route119_EventScript_ItemElixir2::
-	finditem ITEM_ELIXIR
+	finditem ITEM_COBA_BERRY
 	end
 
 Route120_EventScript_ItemNugget::
@@ -231,7 +231,7 @@ Route123_EventScript_ItemUltraBall::
 	end
 
 Route123_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+	finditem ITEM_KASIB_BERRY
 	end
 
 Route123_EventScript_ItemPPUp::
@@ -307,15 +307,15 @@ PetalburgCity_EventScript_ItemMaxRevive::
 	end
 
 PetalburgCity_EventScript_ItemEther::
-	finditem ITEM_ETHER
+	finditem ITEM_LEPPA_BERRY
 	end
 
 MauvilleCity_EventScript_ItemXSpeed::
-	finditem ITEM_X_SPEED
+	finditem ITEM_CARBOS
 	end
 
 RustboroCity_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFENSE
+	finditem ITEM_IRON
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel::
@@ -327,7 +327,7 @@ MossdeepCity_EventScript_ItemNetBall::
 	end
 
 PetalburgWoods_EventScript_ItemXAttack::
-	finditem ITEM_X_ATTACK
+	finditem ITEM_PROTEIN
 	end
 
 PetalburgWoods_EventScript_ItemGreatBall::
@@ -335,11 +335,11 @@ PetalburgWoods_EventScript_ItemGreatBall::
 	end
 
 PetalburgWoods_EventScript_ItemEther::
-	finditem ITEM_ETHER
+	finditem ITEM_LEPPA_BERRY
 	end
 
 PetalburgWoods_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+	finditem ITEM_TANGA_BERRY
 	end
 
 RusturfTunnel_EventScript_ItemPokeBall::
@@ -347,11 +347,11 @@ RusturfTunnel_EventScript_ItemPokeBall::
 	end
 
 RusturfTunnel_EventScript_ItemMaxEther::
-	finditem ITEM_MAX_ETHER
+	finditem ITEM_COLBUR_BERRY
 	end
 
 GraniteCave_1F_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+	finditem ITEM_REPEL
 	end
 
 GraniteCave_B1F_EventScript_ItemPokeBall::
@@ -367,7 +367,7 @@ GraniteCave_B2F_EventScript_ItemRareCandy::
 	end
 
 JaggedPass_EventScript_ItemBurnHeal::
-	finditem ITEM_BURN_HEAL
+	finditem ITEM_OCCA_BERRY
 	end
 
 FieryPath_EventScript_ItemFireStone::
@@ -403,7 +403,7 @@ NewMauville_Inside_EventScript_ItemUltraBall::
 	end
 
 NewMauville_Inside_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+	finditem ITEM_REPEL
 	end
 
 NewMauville_Inside_EventScript_ItemThunderStone::
@@ -415,7 +415,7 @@ NewMauville_Inside_EventScript_ItemFullHeal::
 	end
 
 NewMauville_Inside_EventScript_ItemParalyzeHeal::
-	finditem ITEM_PARALYZE_HEAL
+	finditem ITEM_BABIRI_BERRY
 	end
 
 AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
@@ -423,7 +423,7 @@ AbandonedShip_Rooms_1F_EventScript_ItemHarborMail::
 	end
 
 AbandonedShip_Rooms_B1F_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+	finditem ITEM_REPEL
 	end
 
 AbandonedShip_Rooms2_B1F_EventScript_ItemDiveBall::
@@ -519,7 +519,7 @@ AquaHideout_B1F_EventScript_ItemNugget::
 	end
 
 AquaHideout_B1F_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_HEART_SCALE
 	end
 
 AquaHideout_B2F_EventScript_ItemNestBall::
@@ -535,7 +535,7 @@ Route119_EventScript_ItemNugget::
 	end
 
 Route119_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_PAYAPA_BERRY
 	end
 
 Route119_EventScript_ItemNestBall::
@@ -551,7 +551,7 @@ ShoalCave_LowTideInnerRoom_EventScript_ItemRareCandy::
 	end
 
 ShoalCave_LowTideStairsRoom_EventScript_ItemIceHeal::
-	finditem ITEM_ICE_HEAL
+	finditem ITEM_YACHE_BERRY
 	end
 
 ShoalCave_LowTideIceRoom_EventScript_ItemTM07::
@@ -603,7 +603,7 @@ Route110_TrickHousePuzzle8_EventScript_ItemBeadMail::
 	end
 
 VictoryRoad_1F_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_ROSELI_BERRY
 	end
 
 VictoryRoad_1F_EventScript_ItemPPUp::
@@ -635,7 +635,7 @@ MagmaHideout_1F_EventScript_ItemRareCandy::
 	end
 
 MagmaHideout_2F_2R_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_HEART_SCALE
 	end
 
 MagmaHideout_2F_2R_EventScript_ItemFullRestore::
@@ -655,5 +655,5 @@ MagmaHideout_4F_EventScript_ItemMaxRevive::
 	end
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+	finditem ITEM_REPEL
 	end

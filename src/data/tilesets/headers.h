@@ -825,3 +825,14 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_gTileset_PetalburgPlusForestEntry =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_gTileset_PetalburgPlusForestEntry,
+    .palettes = gTilesetPalettes_gTileset_PetalburgPlusForestEntry,
+    .metatiles = gMetatiles_gTileset_PetalburgPlusForestEntry,
+    .metatileAttributes = gMetatileAttributes_gTileset_PetalburgPlusForestEntry,
+    .callback = NULL,
+};

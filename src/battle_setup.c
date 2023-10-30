@@ -942,7 +942,7 @@ static void CB2_GiveStarter(void)
 {
     u16 starterMon;
 
-    *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result;
+    *GetVarPointer(VAR_STARTER_MON) = gSpecialVar_Result % 3;
     starterMon = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterMon, 5, ITEM_NONE, 0, 0, 0);
     ResetTasks();
@@ -1911,4 +1911,49 @@ u16 CountBattledRematchTeams(u16 trainerId)
     }
 
     return i;
+}
+
+bool8 levelCappedNuzlocke(u8 level){ //returns TRUE if "level" is equals or above cap
+    u8 levelCap = 0;
+    u16 nextLeader, i;
+    const struct TrainerMonCustomized *partyData;
+    //TODO : const struct TrainerMon *partyData;
+
+    DebugPrintfLevel(MGBA_LOG_DEBUG,"The function is called");
+
+    if (!FlagGet(FLAG_BADGE01_GET))
+        nextLeader = TRAINER_ROXANNE_1;
+    else if (!FlagGet(FLAG_BADGE02_GET))
+        nextLeader = TRAINER_BRAWLY_1;
+    else if (!FlagGet(FLAG_BADGE03_GET))
+        nextLeader = TRAINER_WATTSON_1;
+    else if (!FlagGet(FLAG_BADGE04_GET))
+        nextLeader = TRAINER_FLANNERY_1;
+    else if (!FlagGet(FLAG_BADGE05_GET))
+        nextLeader = TRAINER_NORMAN_1;
+    else if (!FlagGet(FLAG_BADGE06_GET))
+        nextLeader = TRAINER_WINONA_1;
+    else if (!FlagGet(FLAG_BADGE07_GET))
+        nextLeader = TRAINER_TATE_AND_LIZA_1;
+    else if (!FlagGet(FLAG_BADGE08_GET))
+        nextLeader = TRAINER_JUAN_1;
+    else if (!FlagGet(FLAG_IS_CHAMPION))
+        nextLeader = TRAINER_WALLACE;
+    else if (FlagGet(FLAG_IS_CHAMPION))
+        return FALSE;
+
+
+    //TODO : partyData = gTrainers[nextLeader].party;
+    partyData = gTrainers[nextLeader].party.EverythingCustomized;
+    for (i = 0; i < gTrainers[nextLeader].partySize; i++){
+        if (partyData[i].lvl > levelCap)
+            levelCap = partyData[i].lvl;
+        // DebugPrintfLevel(MGBA_LOG_DEBUG,"Leader pokemon number: %d", i);
+        // DebugPrintfLevel(MGBA_LOG_DEBUG,"That pokemon is level: %d", partyData[i].lvl);
+        // DebugPrintfLevel(MGBA_LOG_DEBUG,"levelCap is now : %d", levelCap);
+    }
+
+    if (level >= levelCap)
+        return TRUE;
+    return FALSE;
 }

@@ -1291,17 +1291,17 @@ static const u16 sNaturePowerMoves[BATTLE_TERRAIN_COUNT] =
 static const u16 sPickupItems[] =
 {
     ITEM_POTION,
-    ITEM_ANTIDOTE,
+    ITEM_POKE_BALL,
     ITEM_SUPER_POTION,
     ITEM_GREAT_BALL,
     ITEM_REPEL,
-    ITEM_ESCAPE_ROPE,
-    ITEM_X_ATTACK,
+    ITEM_SUPER_REPEL,
     ITEM_FULL_HEAL,
     ITEM_ULTRA_BALL,
     ITEM_HYPER_POTION,
+    ITEM_HEART_SCALE,
     ITEM_RARE_CANDY,
-    ITEM_PROTEIN,
+    ITEM_HEART_SCALE,
     ITEM_REVIVE,
     ITEM_HP_UP,
     ITEM_FULL_RESTORE,
@@ -1316,13 +1316,13 @@ static const u16 sRarePickupItems[] =
     ITEM_NUGGET,
     ITEM_KINGS_ROCK,
     ITEM_FULL_RESTORE,
-    ITEM_ETHER,
+    ITEM_ELIXIR,
     ITEM_WHITE_HERB,
     ITEM_TM44_REST,
-    ITEM_ELIXIR,
-    ITEM_TM01_FOCUS_PUNCH,
+    ITEM_MAX_ELIXIR,
+    ITEM_HEART_SCALE,
     ITEM_LEFTOVERS,
-    ITEM_TM26_EARTHQUAKE,
+    ITEM_HEART_SCALE,
 };
 
 static const u8 sPickupProbabilities[] =
@@ -4268,7 +4268,9 @@ static void Cmd_getexp(void)
 
             for (viaSentIn = 0, i = 0; i < PARTY_SIZE; i++)
             {
-                if (!IsValidForBattle(&gPlayerParty[i]))
+                if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(&gPlayerParty[i], MON_DATA_HP) == 0)
+                    continue;
+                if (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
                     continue;
                 if (gBitTable[i] & sentIn)
                     viaSentIn++;
@@ -4284,9 +4286,10 @@ static void Cmd_getexp(void)
                     viaExpShare++;
             }
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
-                calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5;
+                //EXP MULTIPLIER
+                calculatedExp = 1.7*(gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5);
             #else
-                calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
+                calculatedExp = (gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7);
             #endif
 
             #if B_SPLIT_EXP < GEN_6
@@ -4336,7 +4339,8 @@ static void Cmd_getexp(void)
                 gBattleMoveDamage = 0; // used for exp
             }
             else if ((gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && gBattleStruct->expGetterMonId >= 3)
-                  || GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL)
+                  || (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) == MAX_LEVEL
+                  || levelCappedNuzlocke(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL))))
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;
@@ -4359,7 +4363,8 @@ static void Cmd_getexp(void)
                     gBattleStruct->wildVictorySong++;
                 }
 
-                if (IsValidForBattle(&gPlayerParty[gBattleStruct->expGetterMonId]))
+                if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP)
+                    && !GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_IS_EGG))
                 {
                     if (gBattleStruct->sentInPokes & 1)
                         gBattleMoveDamage = *exp;
@@ -4448,7 +4453,7 @@ static void Cmd_getexp(void)
         if (gBattleControllerExecFlags == 0)
         {
             gBattleResources->bufferB[gBattleStruct->expGetterBattlerId][0] = 0;
-            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != MAX_LEVEL)
+            if (GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_HP) && GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL) != MAX_LEVEL && !levelCappedNuzlocke(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)))
             {
                 gBattleResources->beforeLvlUp->stats[STAT_HP]    = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_MAX_HP);
                 gBattleResources->beforeLvlUp->stats[STAT_ATK]   = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_ATK);

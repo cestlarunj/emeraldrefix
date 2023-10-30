@@ -30,10 +30,15 @@ GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "Here you go, I'll pass this on to you.$"
 
 GraniteCave_1F_Text_ExplainFlash:
-	.string "Teach that hidden move FLASH to\n"
-	.string "a POKéMON and use it.\p"
+	.string "IF you own the HM for FLASH,\n"
+	.string "a POKéMON in your party can use it.\p"
 	.string "It lights up even the inky darkness\n"
 	.string "of caves.\p"
 	.string "But, to use it, you need the GYM BADGE\n"
 	.string "from DEWFORD's POKéMON GYM.$"
+
+GraniteCave_1F_EventScript_Howard::
+	trainerbattle_single TRAINER_HOWARD, GraniteCave_1F_Text_HowardIntro, GraniteCave_1F_Text_HowardDefeat
+	msgbox GraniteCave_1F_Text_HowardPostBattle, MSGBOX_AUTOCLOSE
+	end
 

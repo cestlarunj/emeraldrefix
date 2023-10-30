@@ -139,9 +139,11 @@ SlateportCity_Movement_ScottExit:
 SlateportCity_EventScript_EnergyGuru::
 	lock
 	faceplayer
-	message SlateportCity_Text_EnergyGuruSellWhatYouNeed
-	waitmessage
+	msgbox SlateportCity_Text_EnergyGuruSellWhatYouNeed, MSGBOX_DEFAULT
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale
 	pokemart SlateportCity_Pokemart_EnergyGuru
+	removeitem ITEM_HEART_SCALE
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -157,6 +159,15 @@ SlateportCity_Pokemart_EnergyGuru:
 	.2byte ITEM_NONE
 	release
 	end
+
+SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale::
+	msgbox SlateportCity_Pokemart_EnergyGuru_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Text_ComeBackWithHeartScale:
+	.string "Come back with a HEART SCALE if you\n"
+	.string "want your POKéMON to get stronger!$"
 
 SlateportCity_EventScript_EffortRibbonWoman::
 	lock
@@ -514,6 +525,16 @@ SlateportCity_PokemartDecor_Dolls:
 	.2byte DECOR_AZURILL_DOLL
 	.2byte DECOR_MARILL_DOLL
 	.2byte DECOR_SKITTY_DOLL
+	.2byte DECOR_SEEDOT_DOLL
+	.2byte DECOR_LOTAD_DOLL
+	.2byte DECOR_CHIKORITA_DOLL
+	.2byte DECOR_CYNDAQUIL_DOLL
+	.2byte DECOR_TOTODILE_DOLL
+	.2byte DECOR_CLEFAIRY_DOLL
+	.2byte DECOR_MEOWTH_DOLL
+	.2byte DECOR_TOGEPI_DOLL
+	.2byte DECOR_SMOOCHUM_DOLL
+	.2byte DECOR_DITTO_DOLL
 	.2byte DECOR_NONE
 	release
 	end
@@ -951,8 +972,8 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	end
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
-	.string "sell you what you need!$"
+	.string "I'm the ENERGY GURU! I'll make your\n"
+	.string "POKéMON stronger for a HEART SCALE!$"
 
 SlateportCity_Text_OhYourPokemon:
 	.string "Oh?\n"

@@ -253,12 +253,42 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
 {
     u8 wildMonIndex = 0;
     bool8 swap = FALSE;
+    u8 rand = Random() % ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_TOTAL;
+    
+    /* MODIFIED */
+    /*
     u8 rand = Random() % max(max(ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_TOTAL, ENCOUNTER_CHANCE_FISHING_MONS_GOOD_ROD_TOTAL),
-                             ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_TOTAL);
+    ENCOUNTER_CHANCE_FISHING_MONS_SUPER_ROD_TOTAL);
+    */
 
     if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
         swap = TRUE;
 
+    if (rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_0)
+        wildMonIndex = 0;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_0 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_1)
+        wildMonIndex = 1;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_1 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_2)
+        wildMonIndex = 2;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_2 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_3)
+        wildMonIndex = 3;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_3 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_4)
+        wildMonIndex = 4;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_4 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_5)
+        wildMonIndex = 5;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_5 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_6)
+        wildMonIndex = 6;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_6 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_7)
+        wildMonIndex = 7;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_7 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_8)
+        wildMonIndex = 8;
+    if (rand >= ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_8 && rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_9)
+        wildMonIndex = 9;
+
+    return wildMonIndex;
+
+    /* MODIFIED */
+    /*
     switch (rod)
     {
     case OLD_ROD:
@@ -298,6 +328,7 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
         break;
     }
     return wildMonIndex;
+    */
 }
 
 static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, u8 area)
@@ -886,7 +917,7 @@ void FishingWildEncounter(u8 rod)
     {
         species = GenerateFishingWildMon(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
     }
-    IncrementGameStat(GAME_STAT_FISHING_ENCOUNTERS);
+    IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
     SetPokemonAnglerSpecies(species);
     gIsFishingEncounter = TRUE;
     BattleSetup_StartWildBattle();

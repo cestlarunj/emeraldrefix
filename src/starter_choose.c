@@ -24,7 +24,7 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
-#define STARTER_MON_COUNT   3
+#define STARTER_MON_COUNT   9
 
 // Position of the sprite of the selected starter Pokemon
 #define STARTER_PKMN_POS_X (DISPLAY_WIDTH / 2)
@@ -98,20 +98,38 @@ static const struct WindowTemplate sWindowTemplate_StarterLabel =
 
 static const u8 sPokeballCoords[STARTER_MON_COUNT][2] =
 {
-    {60, 64},
-    {120, 88},
-    {180, 64},
+    {35, 52},
+    {45, 71},
+    {65, 82},
+    {95, 91},
+    {120, 95},
+    {145, 91},
+    {175, 82},
+    {195, 71},
+    {205, 52},
 };
 
 static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
 {
-    {0, 9},
-    {16, 10},
+    {0, 0},
+    {2, 1},
+    {4, 2},
+    {6, 3},
     {8, 4},
+    {10, 3},
+    {12, 2},
+    {14, 1},
+    {16, 0},
 };
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
+    SPECIES_BULBASAUR,
+    SPECIES_CHARMANDER,
+    SPECIES_SQUIRTLE,
+    SPECIES_CHIKORITA,
+    SPECIES_CYNDAQUIL,
+    SPECIES_TOTODILE,
     SPECIES_TREECKO,
     SPECIES_TORCHIC,
     SPECIES_MUDKIP,
@@ -203,9 +221,15 @@ static const struct OamData sOam_StarterCircle =
 
 static const u8 sCursorCoords[][2] =
 {
-    {60, 32},
-    {120, 56},
-    {180, 32},
+    {35, 17},
+    {45, 36},
+    {65, 47},
+    {95, 56},
+    {120, 60},
+    {145, 56},
+    {175, 47},
+    {195, 36},
+    {205, 17},
 };
 
 static const union AnimCmd sAnim_Hand[] =
@@ -287,8 +311,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_PokeballSelect[] =
         .data = gPokeballSelection_Gfx,
         .size = 0x0800,
         .tag = TAG_POKEBALL_SELECT
-    },
-    {}
+    }
 };
 
 static const struct CompressedSpriteSheet sSpriteSheet_StarterCircle[] =
@@ -297,8 +320,7 @@ static const struct CompressedSpriteSheet sSpriteSheet_StarterCircle[] =
         .data = sStarterCircle_Gfx,
         .size = 0x0800,
         .tag = TAG_STARTER_CIRCLE
-    },
-    {}
+    }
 };
 
 static const struct SpritePalette sSpritePalettes_StarterChoose[] =
@@ -310,8 +332,7 @@ static const struct SpritePalette sSpritePalettes_StarterChoose[] =
     {
         .data = sStarterCircle_Pal,
         .tag = TAG_STARTER_CIRCLE
-    },
-    {},
+    }
 };
 
 static const struct SpriteTemplate sSpriteTemplate_Hand =
@@ -440,7 +461,7 @@ void CB2_ChooseStarter(void)
     ShowBg(3);
 
     taskId = CreateTask(Task_StarterChoose, 0);
-    gTasks[taskId].tStarterSelection = 1;
+    gTasks[taskId].tStarterSelection = 4;
 
     // Create hand sprite
     spriteId = CreateSprite(&sSpriteTemplate_Hand, 120, 56, 2);
@@ -458,6 +479,30 @@ void CB2_ChooseStarter(void)
     spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[2][0], sPokeballCoords[2][1], 2);
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sBallId = 2;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[3][0], sPokeballCoords[3][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 3;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[4][0], sPokeballCoords[4][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 4;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[5][0], sPokeballCoords[5][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 5;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[6][0], sPokeballCoords[6][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 6;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[7][0], sPokeballCoords[7][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 7;
+
+    spriteId = CreateSprite(&sSpriteTemplate_Pokeball, sPokeballCoords[8][0], sPokeballCoords[8][1], 2);
+    gSprites[spriteId].sTaskId = taskId;
+    gSprites[spriteId].sBallId = 8;
 
     sStarterLabelWindowId = WINDOW_NONE;
 }
@@ -657,11 +702,11 @@ static void SpriteCB_StarterPokemon(struct Sprite *sprite)
 {
     // Move sprite to upper center of screen
     if (sprite->x > STARTER_PKMN_POS_X)
-        sprite->x -= 4;
+        sprite->x -= 1;
     if (sprite->x < STARTER_PKMN_POS_X)
-        sprite->x += 4;
+        sprite->x += 1;
     if (sprite->y > STARTER_PKMN_POS_Y)
-        sprite->y -= 2;
+        sprite->y -= 1;
     if (sprite->y < STARTER_PKMN_POS_Y)
-        sprite->y += 2;
+        sprite->y += 1;
 }

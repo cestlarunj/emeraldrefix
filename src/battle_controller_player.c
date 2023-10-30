@@ -1377,7 +1377,7 @@ static void Task_GiveExpToMon(u8 taskId)
     u8 battlerId = gTasks[taskId].tExpTask_battler;
     s32 gainedExp = GetTaskExpValue(taskId);
 
-    if (WhichBattleCoords(battlerId) == 1 || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
+    if (IsDoubleBattle() == TRUE || monId != gBattlerPartyIndexes[battlerId]) // Give exp without moving the expbar.
     {
         struct Pokemon *mon = &gPlayerParty[monId];
         u16 species = GetMonData(mon, MON_DATA_SPECIES);
@@ -2965,7 +2965,7 @@ static void PlayerHandleExpUpdate(void)
     u8 monId = gBattleResources->bufferA[gActiveBattler][1];
     s32 taskId, expPointsToGive;
 
-    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= MAX_LEVEL)
+    if (GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL) >= MAX_LEVEL || levelCappedNuzlocke(GetMonData(&gPlayerParty[monId], MON_DATA_LEVEL)))
     {
         PlayerBufferExecCompleted();
     }

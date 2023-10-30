@@ -376,6 +376,10 @@ Route111_EventScript_WinstrateHouseSign::
 	msgbox Route111_Text_WinstrateHouseSign, MSGBOX_SIGN
 	end
 
+Route111_EventScript_ComingSoonSign::
+	msgbox Route111_Text_ComingSoonSign, MSGBOX_SIGN
+	end
+
 Route111_EventScript_RouteSign112::
 	msgbox Route111_Text_RouteSign112, MSGBOX_SIGN
 	end
@@ -654,6 +658,9 @@ Route111_Text_RouteSignMauville:
 Route111_Text_WinstrateHouseSign:
 	.string "“Our family's hearts beat as one!”\n"
 	.string "THE WINSTRATE'S HOUSE$"
+
+Route111_Text_ComingSoonSign:
+	.string "COMING SOON.$"
 
 Route111_Text_RouteSign112:
 	.string "ROUTE 111\n"

@@ -2003,6 +2003,9 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 const struct TrainerMonNoItemDefaultMoves *partyData = trainer->party.NoItemDefaultMoves;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                // set ability
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
+                
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
@@ -2016,6 +2019,9 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
                     SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                 }
+                // set ability
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
+                
                 break;
             }
             case F_TRAINER_PARTY_HELD_ITEM:
@@ -2025,6 +2031,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
@@ -2040,6 +2047,17 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     SetMonData(&party[i], MON_DATA_MOVE1 + j, &partyData[i].moves[j]);
                     SetMonData(&party[i], MON_DATA_PP1 + j, &gBattleMoves[partyData[i].moves[j]].pp);
                 }
+                // set ability
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
+                
+                // set EVs
+                /*
+                for (j = 0; j < NUM_STATS; j++)
+                {
+                    SetMonData(&party[i], MON_DATA_HP_EV + j, &partyData[i].evs[j]);
+                }                             
+                CalculateMonStats(&party[i]);
+                */
                 break;
             }
             case F_TRAINER_PARTY_EVERYTHING_CUSTOMIZED:
@@ -2072,6 +2090,11 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     SetMonData(&party[i], MON_DATA_SPDEF_EV, &(partyData[i].ev[4]));
                     SetMonData(&party[i], MON_DATA_SPEED_EV, &(partyData[i].ev[5]));
                 }
+                
+                // set ability
+                SetMonData(&party[i], MON_DATA_ABILITY_NUM, &partyData[i].abilityNums);
+                
+                /*
                 if (partyData[i].ability != ABILITY_NONE)
                 {
                     const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[partyData[i].species];
@@ -2084,6 +2107,8 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     if (j < maxAbilities)
                         SetMonData(&party[i], MON_DATA_ABILITY_NUM, &j);
                 }
+                */
+
                 SetMonData(&party[i], MON_DATA_FRIENDSHIP, &(partyData[i].friendship));
                 if (partyData[i].ball != ITEM_NONE)
                 {
@@ -4683,14 +4708,6 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
     speed *= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][0];
     speed /= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][1];
 
-    // player's badge boost
-    if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK | BATTLE_TYPE_FRONTIER))
-        && ShouldGetStatBadgeBoost(FLAG_BADGE03_GET, battlerId)
-        && GetBattlerSide(battlerId) == B_SIDE_PLAYER)
-    {
-        speed = (speed * 110) / 100;
-    }
-
     // item effects
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE || holdEffect == HOLD_EFFECT_POWER_ITEM)
         speed /= 2;
@@ -5582,7 +5599,8 @@ static void ReturnFromBattleToOverworld(void)
 #else
         if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT) // Bug: When Roar is used by roamer, gBattleOutcome is B_OUTCOME_PLAYER_TELEPORTED (5).
 #endif                                                                               // & with B_OUTCOME_WON (1) will return TRUE and deactivates the roamer.
-            SetRoamerInactive();
+            //SetRoamerInactive();
+            NextRoamer();
     }
 
     m4aSongNumStop(SE_LOW_HEALTH);

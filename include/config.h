@@ -6,7 +6,7 @@
 // still has them in the ROM. This is because the developers forgot
 // to define NDEBUG before release, however this has been changed as
 // Ruby's actual debug build does not use the AGBPrint features.
-#define NDEBUG
+//#define NDEBUG
 
 // To enable printf debugging, comment out "#define NDEBUG". This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
@@ -37,10 +37,10 @@
 #define ENGLISH
 
 #ifdef ENGLISH
-#define UNITS_IMPERIAL
+#define UNITS_METRIC
 #define CHAR_DEC_SEPARATOR CHAR_PERIOD // Period is used as a decimal separator only in the UK and the US.
 #else
-#define UNITS_METRIC
+#define UNITS_IMPERIAL
 #define CHAR_DEC_SEPARATOR CHAR_COMMA
 #endif
 
@@ -74,6 +74,6 @@
 #define GEN_LATEST GEN_8
 
 // General settings
-#define EXPANSION_INTRO   TRUE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
+#define EXPANSION_INTRO   FALSE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
 
 #endif // GUARD_CONFIG_H

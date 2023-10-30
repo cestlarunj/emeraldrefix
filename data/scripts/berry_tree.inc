@@ -166,8 +166,8 @@ BerryTree_EventScript_WaterBerry::
 	special ObjectEventInteractionWaterBerryTree
 	special DoWateringBerryTreeAnim
 	waitstate
-	message BerryTree_Text_PlantIsDelighted
-	waitmessage
+@	message BerryTree_Text_PlantIsDelighted
+@	waitmessage
 	waitbuttonpress
 	releaseall
 	end
