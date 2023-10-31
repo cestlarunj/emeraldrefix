@@ -37,19 +37,19 @@ struct MonCoords
 
 struct TrainerMon
 {
-    const u8 *nickname;
-    const u8 *ev;
-    u32 iv;
-    u16 moves[MAX_MON_MOVES];
     u16 species;
-    u16 heldItem;
-    u16 abilityNums;
+    const u8 *nickname;
     u8 lvl;
-    u8 ball;
-    u8 friendship;
+    u16 ability;
+    u16 heldItem;
+    u16 moves[MAX_MON_MOVES];
+    u32 iv;
+    const u8 *ev;
     u8 nature : 5;
     bool8 gender : 2;
     bool8 isShiny : 1;
+    u8 friendship;
+    u8 ball;
 };
 
 #define TRAINER_PARTY(partyArray) partyArray, .partySize = ARRAY_COUNT(partyArray)

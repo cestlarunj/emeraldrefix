@@ -1943,43 +1943,27 @@ u16 CountBattledRematchTeams(u16 trainerId)
 
 bool8 levelCappedNuzlocke(u8 level){ //returns TRUE if "level" is equals or above cap
     u8 levelCap = 0;
-    u16 nextLeader, i;
-    const struct TrainerMonCustomized *partyData;
-    //TODO : const struct TrainerMon *partyData;
-
-    DebugPrintfLevel(MGBA_LOG_DEBUG,"The function is called");
 
     if (!FlagGet(FLAG_BADGE01_GET))
-        nextLeader = TRAINER_ROXANNE_1;
+        levelCap = 15;
     else if (!FlagGet(FLAG_BADGE02_GET))
-        nextLeader = TRAINER_BRAWLY_1;
+        levelCap = 26;
     else if (!FlagGet(FLAG_BADGE03_GET))
-        nextLeader = TRAINER_WATTSON_1;
+        levelCap = 36;
     else if (!FlagGet(FLAG_BADGE04_GET))
-        nextLeader = TRAINER_FLANNERY_1;
+        levelCap = 47;
     else if (!FlagGet(FLAG_BADGE05_GET))
-        nextLeader = TRAINER_NORMAN_1;
+        levelCap = 58;
     else if (!FlagGet(FLAG_BADGE06_GET))
-        nextLeader = TRAINER_WINONA_1;
+        levelCap = 68;
     else if (!FlagGet(FLAG_BADGE07_GET))
-        nextLeader = TRAINER_TATE_AND_LIZA_1;
+        levelCap = 79;
     else if (!FlagGet(FLAG_BADGE08_GET))
-        nextLeader = TRAINER_JUAN_1;
+        levelCap = 89;
     else if (!FlagGet(FLAG_IS_CHAMPION))
-        nextLeader = TRAINER_WALLACE;
+        levelCap = 100;
     else if (FlagGet(FLAG_IS_CHAMPION))
         return FALSE;
-
-
-    //TODO : partyData = gTrainers[nextLeader].party;
-    partyData = gTrainers[nextLeader].party.EverythingCustomized;
-    for (i = 0; i < gTrainers[nextLeader].partySize; i++){
-        if (partyData[i].lvl > levelCap)
-            levelCap = partyData[i].lvl;
-        // DebugPrintfLevel(MGBA_LOG_DEBUG,"Leader pokemon number: %d", i);
-        // DebugPrintfLevel(MGBA_LOG_DEBUG,"That pokemon is level: %d", partyData[i].lvl);
-        // DebugPrintfLevel(MGBA_LOG_DEBUG,"levelCap is now : %d", levelCap);
-    }
 
     if (level >= levelCap)
         return TRUE;
