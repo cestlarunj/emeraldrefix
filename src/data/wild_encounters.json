@@ -565,8 +565,8 @@
                 "species": "SPECIES_QWILFISH"
               },
               {
-                "min_level": 20,
-                "max_level": 25,
+                "min_level": 17,
+                "max_level": 19,
                 "species": "SPECIES_MAGIKARP"
               },
               {
@@ -575,8 +575,8 @@
                 "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 20,
-                "max_level": 25,
+                "min_level": 12,
+                "max_level": 14,
                 "species": "SPECIES_LOTAD"
               }
             ]
@@ -2773,12 +2773,12 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_CHINCHOU"
               },
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_CHINCHOU"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 20,
@@ -2862,12 +2862,12 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_CHINCHOU"
               },
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_CHINCHOU"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 20,
@@ -8330,12 +8330,12 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_GYARADOS"
+                "species": "SPECIES_CHINCHOU"
               },
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_CHINCHOU"
+                "species": "SPECIES_GYARADOS"
               },
               {
                 "min_level": 20,

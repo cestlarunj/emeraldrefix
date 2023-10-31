@@ -8465,8 +8465,8 @@ void SetWildMonHeldItem(void)
     {
         u16 rnd;
         u16 species;
-        u16 chanceNoItem = 45;
-        u16 chanceNotRare = 95;
+        u16 chanceNoItem = 35; //used to be 45
+        u16 chanceNotRare = 90; //used to be 95
         u16 count = (WILD_DOUBLE_BATTLE) ? 2 : 1;
         u16 i;
 
@@ -8474,8 +8474,8 @@ void SetWildMonHeldItem(void)
             && (GetMonAbility(&gPlayerParty[0]) == ABILITY_COMPOUND_EYES
                 || GetMonAbility(&gPlayerParty[0]) == ABILITY_SUPER_LUCK))
         {
-            chanceNoItem = 20;
-            chanceNotRare = 80;
+            chanceNoItem = 0; //used to be 20
+            chanceNotRare = 65; //used to be 80
         }
 
         for (i = 0; i < count; i++)

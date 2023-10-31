@@ -18,6 +18,7 @@ PetalburgCity_Mart_Pokemart_Basic:
 	.2byte ITEM_POTION
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 	release
@@ -38,6 +39,8 @@ PetalburgCity_Mart_Pokemart_Expanded:
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_REPEL
 	.2byte ITEM_SUPER_REPEL
 	.2byte ITEM_NONE

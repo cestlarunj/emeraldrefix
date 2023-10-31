@@ -4945,6 +4945,7 @@ static const struct TrainerMon sParty_Elliot1[] = {
     {
     .species = SPECIES_GYARADOS,
     .lvl = 20,
+    .moves = {MOVE_TWISTER, MOVE_WHIRLPOOL, MOVE_BITE, MOVE_FLAIL},
     .iv = 25,
     }
 };

@@ -1036,7 +1036,7 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A TM, TECHNICAL MACHINE, is reusable\p"
+	.string "A TM, TECHNICAL MACHINE, is reusable\n"
 	.string "as much as you want.$"
 
 Route104_Text_DontNeedThisTakeIt:

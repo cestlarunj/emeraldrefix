@@ -31,6 +31,7 @@ OldaleTown_Mart_Pokemart_Expanded:
 	.2byte ITEM_POKE_BALL
 	.2byte ITEM_POTION
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
 	.2byte ITEM_NONE
 	release
 	end

@@ -307,7 +307,7 @@ PetalburgCity_EventScript_ItemMaxRevive::
 	end
 
 PetalburgCity_EventScript_ItemEther::
-	finditem ITEM_LEPPA_BERRY
+	finditem ITEM_HEART_SCALE
 	end
 
 MauvilleCity_EventScript_ItemXSpeed::
@@ -335,7 +335,7 @@ PetalburgWoods_EventScript_ItemGreatBall::
 	end
 
 PetalburgWoods_EventScript_ItemEther::
-	finditem ITEM_LEPPA_BERRY
+	finditem ITEM_HEART_SCALE
 	end
 
 PetalburgWoods_EventScript_ItemParalyzeHeal::
