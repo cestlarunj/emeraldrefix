@@ -10380,29 +10380,29 @@ static const struct TrainerMon sParty_Mike1[] = {
 
 static const struct TrainerMon sParty_Mike2[] = {
     {
-    .species = SPECIES_GEODUDE,
-    .lvl = 16,
-    .iv = 0,
+    .species = SPECIES_GRAVELER,
+    .lvl = 35,
+    .iv = 50,
     },
     {
-    .species = SPECIES_ELECTRIKE,
-    .lvl = 16,
-    .iv = 0,
+    .species = SPECIES_MANECTRIC,
+    .lvl = 35,
+    .iv = 50,
     },
     {
-    .species = SPECIES_DIGLETT,
-    .lvl = 16,
-    .iv = 0,
+    .species = SPECIES_DUGTRIO,
+    .lvl = 35,
+    .iv = 50,
     },
     {
-    .species = SPECIES_PARAS,
-    .lvl = 16,
-    .iv = 0,
+    .species = SPECIES_PARASECT,
+    .lvl = 35,
+    .iv = 50,
     },
     {
-    .species = SPECIES_MACHOP,
-    .lvl = 16,
-    .iv = 0,
+    .species = SPECIES_MACHOKE,
+    .lvl = 35,
+    .iv = 50,
     }
 };
 
