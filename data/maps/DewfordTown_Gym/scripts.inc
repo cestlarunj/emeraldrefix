@@ -400,8 +400,8 @@ DewfordTown_Gym_Text_ReceivedKnuckleBadge:
 	.string "from BRAWLY.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE increases the LEVEL\n"
-	.string "CAP up to Level 36.\p"
+	.string "The KNUCKLE BADGE increases the\n"
+	.string "LEVEL CAP up to Level 36.\p"
 	.string "And, you'll be able to use the HM move\n"
 	.string "FLASH outside of battle.\p"
 	.string "If you'd like, use this TECHNICAL\n"

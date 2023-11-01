@@ -101,9 +101,8 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 
 GraniteCave_StevensRoom_Text_ThankYouTakeThis2:
 	.string "STEVEN: Have this also.\p"
-	.string "It's an ESCAPE ROPE. It'll\n"
-	.string "allows you to get out of\p"
-	.string "any cave or dungeon you're in.$"
+	.string "It's an ESCAPE ROPE. It allows you\n"
+	.string "to get out of any cave or dungeon.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "STEVEN: Your POKéMON appear quite\n"
