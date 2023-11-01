@@ -3404,6 +3404,30 @@ void FaintClearSetData(u32 battler)
     gBattleStruct->zmove.effect = EFFECT_HIT;
 }
 
+/*
+static void SetVarTerrain(void) // TERRAIN SETTER
+{
+    switch (GetCurrentRegionMapSectionId())
+    {
+    case MAPSEC_ROUTE_119:
+        VarSet(VAR_SET_TERRAIN, STATUS_FIELD_GRASSY_TERRAIN);
+        break;
+    case MAPSEC_FORTREE_CITY:
+        VarSet(VAR_SET_TERRAIN, STATUS_FIELD_GRASSY_TERRAIN);
+        break;
+    case MAPSEC_ROUTE_120:
+        VarSet(VAR_SET_TERRAIN, STATUS_FIELD_GRASSY_TERRAIN);
+        break;
+    case MAPSEC_NEW_MAUVILLE:
+        VarSet(VAR_SET_TERRAIN, STATUS_FIELD_ELECTRIC_TERRAIN);
+        break;
+    default:
+        VarSet(VAR_SET_TERRAIN, 0);
+        break;
+    }
+}
+*/
+
 static void DoBattleIntro(void)
 {
     s32 i;
@@ -3723,6 +3747,7 @@ static void DoBattleIntro(void)
             gBattleStruct->switchInAbilitiesCounter = 0;
             gBattleStruct->switchInItemsCounter = 0;
             gBattleStruct->overworldWeatherDone = FALSE;
+            //gBattleStruct->SetVarTerrain = 0;
             SetAiLogicDataForTurn(AI_DATA); // get assumed abilities, hold effects, etc of all battlers
             Ai_InitPartyStruct(); // Save mons party counts, and first 2/4 mons on the battlefield.
             gBattleMainFunc = TryDoEventsBeforeFirstTurn;
