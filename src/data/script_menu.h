@@ -6,6 +6,17 @@ static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_SlatePortVitaminsSeller[] =
+{
+    {gText_HPUp},
+    {gText_Protein},
+    {gText_Iron},
+    {gText_Calcium},
+    {gText_Zinc},
+    {gText_Carbos},
+    {gText_Exit},
+};
+
 static const struct MenuAction MultichoiceList_EnterInfo[] =
 {
     {gText_Enter2},
@@ -793,7 +804,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_SLATEPORT_VITAMIN_SELLER]   = MULTICHOICE(MultichoiceList_SlatePortVitaminsSeller),
     [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),

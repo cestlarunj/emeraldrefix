@@ -142,23 +142,70 @@ SlateportCity_EventScript_EnergyGuru::
 	msgbox SlateportCity_Text_EnergyGuruSellWhatYouNeed, MSGBOX_DEFAULT
 	checkitem ITEM_HEART_SCALE
 	goto_if_eq VAR_RESULT, FALSE, SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale
-	pokemart SlateportCity_Pokemart_EnergyGuru
-	removeitem ITEM_HEART_SCALE
+	waitmessage
+	multichoicedefault 21, 0, MULTI_SLATEPORT_VITAMIN_SELLER, 7, FALSE
+	switch VAR_RESULT
+	case 0, SlateportCity_Pokemart_EnergyGuru_HPUp
+	case 1, SlateportCity_Pokemart_EnergyGuru_Protein
+	case 2, SlateportCity_Pokemart_EnergyGuru_Iron
+	case 3, SlateportCity_Pokemart_EnergyGuru_Calcium
+	case 4, SlateportCity_Pokemart_EnergyGuru_Zinc
+	case 5, SlateportCity_Pokemart_EnergyGuru_Carbos
+	case 6, SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale
+	case MULTI_B_PRESSED, SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
-	.align 2
-SlateportCity_Pokemart_EnergyGuru:
-	.2byte ITEM_PROTEIN
-	.2byte ITEM_IRON
-	.2byte ITEM_CARBOS
-	.2byte ITEM_ZINC
-	.2byte ITEM_CALCIUM
-	.2byte ITEM_HP_UP
-	.2byte ITEM_NONE
+SlateportCity_Pokemart_EnergyGuru_HPUp::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_HP_UP
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Protein::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_PROTEIN
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Iron::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_IRON
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Calcium::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_CALCIUM
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Zinc::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_ZINC
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_Carbos::
+	msgbox SlateportCity_Text_EnergyGuruThankYou, MSGBOX_DEFAULT
+	giveitem ITEM_CARBOS
+	goto SlateportCity_Pokemart_EnergyGuru_GiveHeartScale
+	end
+
+SlateportCity_Pokemart_EnergyGuru_GiveHeartScale::
+	removeitem ITEM_HEART_SCALE
+	msgbox DewfordTown_Text_CandySeller_HandedOverHeartScale, MSGBOX_DEFAULT
 	release
 	end
+
+SlateportCity_Text_EnergyGuruThankYou::
+	.string "Thank you lots!\n"
+	.string "Here's your VITAMIN.$"
+
+SlateportCity_Text_EnergyGuruSellWhatYouNeed:
+	.string "I'm the ENERGY GURU! I'll give you\n"
+	.string "a VITAMIN for a HEART SCALE!$"
 
 SlateportCity_Pokemart_EnergyGuru_ComeBackWithHeartScale::
 	msgbox SlateportCity_Pokemart_EnergyGuru_Text_ComeBackWithHeartScale, MSGBOX_DEFAULT
@@ -970,10 +1017,6 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	waitstate
 	releaseall
 	end
-
-SlateportCity_Text_EnergyGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll make your\n"
-	.string "POKéMON stronger for a HEART SCALE!$"
 
 SlateportCity_Text_OhYourPokemon:
 	.string "Oh?\n"
