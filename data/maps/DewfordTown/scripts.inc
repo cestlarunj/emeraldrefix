@@ -646,6 +646,62 @@ DewfordTown_EventScript_PhraseNotTrendyEnough::
 	release
 	end
 
+DewfordTown_EventScript_CandySeller::
+	lockall
+	faceplayer
+	msgbox DewfordTown_Text_CandySeller_Intro, MSGBOX_DEFAULT
+	checkitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_EventScript_CandySeller_NoHeartScale
+	msgbox DewfordTown_Text_CandySeller_Choice, MSGBOX_YESNO
+	switch VAR_RESULT
+	case NO, DewfordTown_EventScript_CandySeller_No
+	goto DewfordTown_EventScript_CandySeller_Yes
+	end
+
+DewfordTown_EventScript_CandySeller_NoHeartScale::
+	msgbox DewfordTown_Text_CandySeller_NoHeartScale, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_CandySeller_Yes::
+	msgbox DewfordTown_Text_CandySeller_Yes, MSGBOX_DEFAULT
+	giveitem ITEM_RARE_CANDY
+	removeitem ITEM_HEART_SCALE
+	msgbox DewfordTown_Text_CandySeller_HandedOverHeartScale, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_CandySeller_No::
+	msgbox DewfordTown_Text_CandySeller_No, MSGBOX_DEFAULT
+	release
+	end
+
+
+DewfordTown_Text_CandySeller_Intro:
+	.string "I have tons of RARE CANDIES !\n"
+	.string "I'm willing to trade one candy\l"
+	.string "for one HEART SCALE.$"
+
+DewfordTown_Text_CandySeller_Choice:
+	.string "What do you say?\n"
+	.string "Do you want to trade?$"
+
+DewfordTown_Text_CandySeller_Yes:
+	.string "Thank you so much !\n"
+	.string "Here's your RARE CANDY.$"
+
+DewfordTown_Text_CandySeller_No:
+	.string "That's alright. Come back whenever\n"
+	.string "you want with a HEART SCALE!$"
+
+DewfordTown_Text_CandySeller_NoHeartScale:
+	.string "Oh, but you don't have any.\n"
+	.string "Come back with a HEART SCALE.$"
+
+DewfordTown_Text_CandySeller_HandedOverHeartScale:
+	.string "{PLAYER} handed over one HEART SCALE\n"
+	.string "in exchange.$"
+
 DewfordTown_Text_TinyIslandCommunity:
 	.string "DEWFORD is a tiny island community.\n"
 	.string "If something gets trendy here,\l"
