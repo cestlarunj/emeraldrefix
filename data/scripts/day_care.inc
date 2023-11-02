@@ -14,12 +14,6 @@ Route117_PokemonDayCare_EventScript_Clerk::
 Route117_PokemonDayCare_Pokemart:
 	.2byte ITEM_EVERSTONE
 	.2byte ITEM_DESTINY_KNOT
-	.2byte ITEM_POWER_WEIGHT
-	.2byte ITEM_POWER_BRACER
-	.2byte ITEM_POWER_BELT
-	.2byte ITEM_POWER_LENS
-	.2byte ITEM_POWER_BAND
-	.2byte ITEM_POWER_ANKLET
 	.2byte ITEM_OVAL_STONE
 	.2byte ITEM_FULL_INCENSE
 	.2byte ITEM_LAX_INCENSE
