@@ -1079,7 +1079,7 @@ static const u16 sPickupItems[] =
     ITEM_FULL_RESTORE,
     ITEM_MAX_REVIVE,
     ITEM_PP_UP,
-    ITEM_MAX_ELIXIR,
+    ITEM_RARE_CANDY,
 };
 
 static const u16 sRarePickupItems[] =
@@ -1087,11 +1087,11 @@ static const u16 sRarePickupItems[] =
     ITEM_HYPER_POTION,
     ITEM_NUGGET,
     ITEM_KINGS_ROCK,
-    ITEM_FULL_RESTORE,
-    ITEM_ELIXIR,
+    ITEM_PP_UP,
+    ITEM_RARE_CANDY,
     ITEM_WHITE_HERB,
-    ITEM_TM_REST,
-    ITEM_ELIXIR,
+    ITEM_HEART_SCALE,
+    ITEM_RARE_CANDY,
     ITEM_HEART_SCALE,
     ITEM_LEFTOVERS,
     ITEM_HEART_SCALE,
