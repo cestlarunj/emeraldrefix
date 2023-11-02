@@ -256,6 +256,7 @@ TrainerHill_Entrance_EventScript_Clerk::
 TrainerHill_Entrance_Pokemart_Basic:
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
 	.2byte ITEM_NONE
 	release
 	end
@@ -273,6 +274,7 @@ TrainerHill_Entrance_Pokemart_Expanded:
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_NONE
 	release
 	end
