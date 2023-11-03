@@ -33,8 +33,10 @@ Route118_EventScript_GoodRodFisherman::
 
 Route118_EventScript_ReceiveGoodRod::
 	msgbox Route118_Text_IdenticalMindsTakeThis, MSGBOX_DEFAULT
-	giveitem ITEM_GOOD_ROD
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_RECEIVED_OLD_ROD
 	setflag FLAG_RECEIVED_GOOD_ROD
+	setflag FLAG_RECEIVED_SUPER_ROD
 	msgbox Route118_Text_TryYourLuckFishing, MSGBOX_DEFAULT
 	release
 	end
@@ -264,14 +266,14 @@ Route118_Text_StevenQuestions:
 
 Route118_Text_YouAgreeGoodRodIsGood:
 	.string "Hmm!\n"
-	.string "A GOOD ROD is really good!\p"
+	.string "A OLD ROD is really good!\p"
 	.string "Wouldn't you agree?$"
 
 Route118_Text_IdenticalMindsTakeThis:
 	.string "Hmm!\n"
 	.string "We're of identical minds!\p"
 	.string "Hmm!\n"
-	.string "Take this GOOD ROD!$"
+	.string "Take this OLD ROD!$"
 
 Route118_Text_TryYourLuckFishing:
 	.string "Wherever there's water, try your luck\n"
@@ -282,7 +284,7 @@ Route118_Text_DontYouLikeToFish:
 
 Route118_Text_TryCatchingMonWithGoodRod:
 	.string "Try catching all sorts of POKéMON\n"
-	.string "with your GOOD ROD.$"
+	.string "with your OLD ROD.$"
 
 Route118_Text_CanCrossRiversWithSurf:
 	.string "Even if there isn't a boat, you can\n"

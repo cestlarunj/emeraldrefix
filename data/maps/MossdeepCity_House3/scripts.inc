@@ -8,7 +8,9 @@ MossdeepCity_House3_EventScript_SuperRodFisherman::
 	msgbox MossdeepCity_House3_Text_YouWantSuperRod, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, MossdeepCity_House3_EventScript_DeclineSuperRod
 	msgbox MossdeepCity_House3_Text_SuperRodIsSuper, MSGBOX_DEFAULT
-	giveitem ITEM_SUPER_ROD
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_RECEIVED_OLD_ROD
+	setflag FLAG_RECEIVED_GOOD_ROD
 	setflag FLAG_RECEIVED_SUPER_ROD
 	msgbox MossdeepCity_House3_Text_TryDroppingRodInWater, MSGBOX_DEFAULT
 	release
@@ -26,7 +28,7 @@ MossdeepCity_House3_EventScript_DeclineSuperRod::
 
 MossdeepCity_House3_Text_YouWantSuperRod:
 	.string "Hey there, TRAINER!\n"
-	.string "A SUPER ROD really is super!\p"
+	.string "A OLD ROD really is super!\p"
 	.string "Say all you want, but this baby can\n"
 	.string "catch POKéMON off the seafloor!\p"
 	.string "What do you think?\n"
@@ -34,7 +36,7 @@ MossdeepCity_House3_Text_YouWantSuperRod:
 
 MossdeepCity_House3_Text_SuperRodIsSuper:
 	.string "You bet, you bet!\n"
-	.string "After all, a SUPER ROD is really super!$"
+	.string "After all, a OLD ROD is really super!$"
 
 MossdeepCity_House3_Text_TryDroppingRodInWater:
 	.string "If there's any water, try dropping in\n"
@@ -46,5 +48,5 @@ MossdeepCity_House3_Text_DontYouLikeToFish:
 
 MossdeepCity_House3_Text_GoAfterSeafloorPokemon:
 	.string "Go after the seafloor POKéMON with\n"
-	.string "your SUPER ROD.$"
+	.string "your OLD ROD.$"
 
