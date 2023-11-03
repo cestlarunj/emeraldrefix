@@ -807,7 +807,7 @@ Route110_Text_BrendanTakeThis:
 	.string "Here, take this.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's an ITEMFINDER.\p"
+	.string "BRENDAN: That's a DOWSING MACHINE.\p"
 	.string "Use it to root around for items that\n"
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"
