@@ -4,17 +4,19 @@ PacifidlogTown_House2_MapScripts::
 PacifidlogTown_House2_EventScript_FanClubYoungerBrother::
 	lock
 	faceplayer
-	dotimebasedevents
-	call PacifidlogTown_House2_EventScript_UpdateFanClubTMFlag
-	goto_if_set FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK, PacifidlogTown_House2_EventScript_ComeBackInXDays
-	call_if_set FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_MonAssessment
+@	dotimebasedevents
+@	call PacifidlogTown_House2_EventScript_UpdateFanClubTMFlag
+@	goto_if_set FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK, PacifidlogTown_House2_EventScript_ComeBackInXDays
+@	call_if_set FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_MonAssessment
+@	call_if_unset FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_FirstMonAssessment
+@	setflag FLAG_MET_FANCLUB_YOUNGER_BROTHER
+@	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+@	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, PacifidlogTown_House2_EventScript_GiveReturn
+@	specialvar VAR_RESULT, GetLeadMonFriendshipScore
+@	goto_if_ge VAR_RESULT, FRIENDSHIP_50_TO_99, PacifidlogTown_House2_EventScript_PutInEffort
 	call_if_unset FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_FirstMonAssessment
-	setflag FLAG_MET_FANCLUB_YOUNGER_BROTHER
-	specialvar VAR_RESULT, GetLeadMonFriendshipScore
-	goto_if_ge VAR_RESULT, FRIENDSHIP_150_TO_199, PacifidlogTown_House2_EventScript_GiveReturn
-	specialvar VAR_RESULT, GetLeadMonFriendshipScore
-	goto_if_ge VAR_RESULT, FRIENDSHIP_50_TO_99, PacifidlogTown_House2_EventScript_PutInEffort
-	goto PacifidlogTown_House2_EventScript_GiveFrustration
+	call_if_unset FLAG_MET_FANCLUB_YOUNGER_BROTHER, PacifidlogTown_House2_EventScript_GiveFrustration
+	goto PacifidlogTown_House2_EventScript_Explain
 	end
 
 PacifidlogTown_House2_EventScript_UpdateFanClubTMFlag::
@@ -55,8 +57,11 @@ PacifidlogTown_House2_EventScript_GiveFrustration::
 	msgbox PacifidlogTown_House2_Text_ViciousPokemonTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_TM_FRUSTRATION
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK
+	setflag FLAG_MET_FANCLUB_YOUNGER_BROTHER
 	special SetPacifidlogTMReceivedDay
+	return
+
+PacifidlogTown_House2_EventScript_Explain::
 	msgbox PacifidlogTown_House2_Text_ExplainReturnFrustration, MSGBOX_DEFAULT
 	release
 	end
