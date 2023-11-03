@@ -232,6 +232,52 @@ LavaridgeTown_EventScript_ExpertF::
 	msgbox LavaridgeTown_Text_OhYouLikeHotSprings, MSGBOX_NPC
 	end
 
+LavaridgeTown_EventScript_FlamethrowerGuy::
+	lock
+	faceplayer
+	msgbox LavaridgeTown_Text_ILoveBerries, MSGBOX_DEFAULT
+	goto_if_unset FLAG_TM35_IN_LAVARIDGE, LavaridgeTown_EventScript_FlamethrowerGuy_ProposeTrade
+	release
+	end
+
+LavaridgeTown_EventScript_FlamethrowerGuy_ProposeTrade::
+	checkitem ITEM_LUM_BERRY 100
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_FlamethrowerGuy_AskTrade
+	msgbox LavaridgeTown_Text_BringMe100Berries, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_EventScript_FlamethrowerGuy_AskTrade::
+	msgbox LavaridgeTown_Text_WillYouTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_FlamethrowerGuy_DeclineTrade
+	msgbox LavaridgeTown_Text_ThankYou, MSGBOX_DEFAULT
+	removeitem ITEM_LUM_BERRY 100
+	giveitem ITEM_TM35
+	setflag FLAG_TM35_IN_LAVARIDGE
+	msgbox LavaridgeTown_Text_ILoveBerries, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_EventScript_FlamethrowerGuy_DeclineTrade::
+	msgbox LavaridgeTown_Text_BringMe100Berries, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_Text_ILoveBerries:
+	.string "Oh, how I love LUM BERRIES!$"
+
+LavaridgeTown_Text_WillYouTrade:
+	.string "I see you have 100 of them!\n"
+	.string "Will you trade them with me?$"
+
+LavaridgeTown_Text_ThankYou:
+	.string "Thank you so much!\n"
+	.string "Have this TM.$"
+
+LavaridgeTown_Text_BringMe100Berries:
+	.string "If you bring me 100 LUM BERRIES,\n"
+	.string "I'll give you something cool.$"
+
 LavaridgeTown_EventScript_EggWoman::
 	lock
 	faceplayer
