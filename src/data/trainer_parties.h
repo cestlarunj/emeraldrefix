@@ -4914,7 +4914,7 @@ static const struct TrainerMon sParty_Ned[] = {
     .iv = 25,
     },
     {
-    .species = SPECIES_MAKUHITA,
+    .species = SPECIES_CLEFAIRY,
     .lvl = 16,
     .iv = 25,
     }
@@ -6207,40 +6207,6 @@ static const struct TrainerMon sParty_Jocelyn[] = {
     .moves = {MOVE_FAKE_OUT, MOVE_HEADBUTT, MOVE_BITE, MOVE_BULLDOZE},
     .iv = 135,
     }
-};
-
-static const struct TrainerMon sParty_Laura[] = {
-    {
-    .species = SPECIES_MEDITITE,
-    .lvl = 23,
-    .heldItem = ITEM_SITRUS_BERRY,
-    .moves = {MOVE_CALM_MIND, MOVE_PSYBEAM, MOVE_FORCE_PALM, MOVE_DETECT},
-    .iv = 135,
-    },
-    {
-    .species = SPECIES_MANKEY,
-    .lvl = 22,
-    .ability = ABILITY_DEFIANT,
-    .heldItem = ITEM_COBA_BERRY,
-    .moves = {MOVE_CROSS_CHOP, MOVE_SWAGGER, MOVE_SEISMIC_TOSS, MOVE_NONE},
-    .iv = 135,
-    },
-    {
-    .species = SPECIES_HITMONTOP,
-    .lvl = 22,
-    .ability = ABILITY_TECHNICIAN,
-    .heldItem = ITEM_WIDE_LENS,
-    .moves = {MOVE_TRIPLE_KICK, MOVE_FAKE_OUT, MOVE_RAPID_SPIN, MOVE_DETECT},
-    .iv = 135,
-    },
-    {
-    .species = SPECIES_MACHOP,
-    .lvl = 23,
-    .ability = ABILITY_NO_GUARD,
-    .heldItem = ITEM_FOCUS_SASH,
-    .moves = {MOVE_REVENGE, MOVE_KNOCK_OFF, MOVE_NONE, MOVE_NONE},
-    .iv = 135,
-    },
 };
 
 static const struct TrainerMon sParty_Cyndy1[] = {
@@ -9417,6 +9383,40 @@ static const struct TrainerMon sParty_Marc[] = {
     }
 };
 
+static const struct TrainerMon sParty_Laura[] = {
+    {
+    .species = SPECIES_MEDITITE,
+    .lvl = 20,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .moves = {MOVE_CALM_MIND, MOVE_PSYBEAM, MOVE_FORCE_PALM, MOVE_DETECT},
+    .iv = 135,
+    },
+    {
+    .species = SPECIES_MANKEY,
+    .lvl = 22,
+    .ability = ABILITY_DEFIANT,
+    .heldItem = ITEM_COBA_BERRY,
+    .moves = {MOVE_CROSS_CHOP, MOVE_SWAGGER, MOVE_SEISMIC_TOSS, MOVE_NONE},
+    .iv = 135,
+    },
+    {
+    .species = SPECIES_HITMONTOP,
+    .lvl = 20,
+    .ability = ABILITY_TECHNICIAN,
+    .heldItem = ITEM_WIDE_LENS,
+    .moves = {MOVE_TRIPLE_KICK, MOVE_FAKE_OUT, MOVE_RAPID_SPIN, MOVE_DETECT},
+    .iv = 135,
+    },
+    {
+    .species = SPECIES_MACHOP,
+    .lvl = 21,
+    .ability = ABILITY_NO_GUARD,
+    .heldItem = ITEM_FOCUS_SASH,
+    .moves = {MOVE_REVENGE, MOVE_KNOCK_OFF, MOVE_NONE, MOVE_NONE},
+    .iv = 135,
+    },
+};
+
 static const struct TrainerMon sParty_Brenden[] = {
     {
     .species = SPECIES_MACHOP,
@@ -9435,10 +9435,10 @@ static const struct TrainerMon sParty_Brenden[] = {
     .iv = 135,
     },
     {
-    .species = SPECIES_POLIWHIRL,
-    .lvl = 25,
+    .species = SPECIES_POLIWAG,
+    .lvl = 23,
     .heldItem = ITEM_ASSAULT_VEST,
-    .moves = {MOVE_BUBBLE_BEAM, MOVE_HYPNOSIS, MOVE_MUD_SHOT, MOVE_ICE_PUNCH},
+    .moves = {MOVE_BUBBLE_BEAM, MOVE_HYPNOSIS, MOVE_MUD_SHOT, MOVE_ICY_WIND},
     .iv = 135,
     },
 };
