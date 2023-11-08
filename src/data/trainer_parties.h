@@ -445,6 +445,195 @@ static const struct TrainerMon sParty_Daisy[] = {
     }
 };
 
+
+static const struct TrainerMon sParty_Miguel1[] = {
+    {
+    .species = SPECIES_DELCATTY,
+    .lvl = 31,
+    .heldItem = ITEM_ORAN_BERRY,
+    .iv = 50,
+    },
+    {
+    .species = SPECIES_SLOWKING,
+    .lvl = 31,
+    .ability = ABILITY_OBLIVIOUS,
+    .heldItem = ITEM_ORAN_BERRY,
+    .iv = 50,
+    },
+    {
+    .species = SPECIES_CHARMELEON,
+    .lvl = 31,
+    .heldItem = ITEM_ORAN_BERRY,
+    .iv = 50,
+    },
+    {
+    .species = SPECIES_DONPHAN,
+    .lvl = 31,
+    .heldItem = ITEM_ORAN_BERRY,
+    .iv = 50,
+    },
+};
+
+
+
+static const struct TrainerMon sParty_Miguel2[] = {
+    {
+    .species = SPECIES_DELCATTY,
+    .lvl = 43,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 83,
+    },
+    {
+    .species = SPECIES_SLOWKING,
+    .lvl = 43,
+    .ability = ABILITY_OBLIVIOUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 83,
+    },
+    {
+    .species = SPECIES_CHARMELEON,
+    .lvl = 43,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 83,
+    },
+    {
+    .species = SPECIES_DONPHAN,
+    .lvl = 43,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 83,
+    },
+    {
+    .species = SPECIES_AMBIPOM,
+    .lvl = 43,
+    .ability = ABILITY_TECHNICIAN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 83,
+    },
+};
+
+static const struct TrainerMon sParty_Miguel3[] = {
+    {
+    .species = SPECIES_DELCATTY,
+    .lvl = 56,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+    {
+    .species = SPECIES_SLOWKING,
+    .lvl = 56,
+    .ability = ABILITY_OBLIVIOUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+    {
+    .species = SPECIES_CHARMELEON,
+    .lvl = 56,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+    {
+    .species = SPECIES_DONPHAN,
+    .lvl = 56,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+    {
+    .species = SPECIES_AMBIPOM,
+    .lvl = 56,
+    .ability = ABILITY_TECHNICIAN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+    {
+    .species = SPECIES_LEAFEON,
+    .lvl = 56,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 115,
+    },
+};
+
+static const struct TrainerMon sParty_Miguel4[] = {
+    {
+    .species = SPECIES_DELCATTY,
+    .lvl = 68,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+    {
+    .species = SPECIES_SLOWKING,
+    .lvl = 68,
+    .ability = ABILITY_OBLIVIOUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+    {
+    .species = SPECIES_CHARMELEON,
+    .lvl = 68,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+    {
+    .species = SPECIES_DONPHAN,
+    .lvl = 68,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+    {
+    .species = SPECIES_AMBIPOM,
+    .lvl = 68,
+    .ability = ABILITY_TECHNICIAN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+    {
+    .species = SPECIES_LEAFEON,
+    .lvl = 68,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 148,
+    },
+};
+
+static const struct TrainerMon sParty_Miguel5[] = {
+    {
+    .species = SPECIES_DELCATTY,
+    .lvl = 80,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+    {
+    .species = SPECIES_SLOWKING,
+    .lvl = 80,
+    .ability = ABILITY_OBLIVIOUS,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+    {
+    .species = SPECIES_CHARMELEON,
+    .lvl = 80,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+    {
+    .species = SPECIES_DONPHAN,
+    .lvl = 80,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+    {
+    .species = SPECIES_AMBIPOM,
+    .lvl = 80,
+    .ability = ABILITY_TECHNICIAN,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+    {
+    .species = SPECIES_LEAFEON,
+    .lvl = 80,
+    .heldItem = ITEM_SITRUS_BERRY,
+    .iv = 180,
+    },
+};
+
 static const struct TrainerMon sParty_Wade[] = {
     {
     .species = SPECIES_PELIPPER,
@@ -4017,15 +4206,6 @@ static const struct TrainerMon sParty_KateAndJoy[] = {
     }
 };
 
-static const struct TrainerMon sParty_Miguel1[] = {
-    {
-    .species = SPECIES_SKITTY,
-    .lvl = 15,
-    .heldItem = ITEM_ORAN_BERRY,
-    .iv = 0,
-    }
-};
-
 static const struct TrainerMon sParty_Colton[] = {
     {
     .species = SPECIES_SKITTY,
@@ -4067,42 +4247,6 @@ static const struct TrainerMon sParty_Colton[] = {
     .lvl = 42,
     .heldItem = ITEM_ORAN_BERRY,
     .moves = {MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK, MOVE_HEAL_BELL},
-    .iv = 0,
-    }
-};
-
-static const struct TrainerMon sParty_Miguel2[] = {
-    {
-    .species = SPECIES_SKITTY,
-    .lvl = 29,
-    .heldItem = ITEM_ORAN_BERRY,
-    .iv = 0,
-    }
-};
-
-static const struct TrainerMon sParty_Miguel3[] = {
-    {
-    .species = SPECIES_SKITTY,
-    .lvl = 32,
-    .heldItem = ITEM_ORAN_BERRY,
-    .iv = 0,
-    }
-};
-
-static const struct TrainerMon sParty_Miguel4[] = {
-    {
-    .species = SPECIES_DELCATTY,
-    .lvl = 35,
-    .heldItem = ITEM_ORAN_BERRY,
-    .iv = 0,
-    }
-};
-
-static const struct TrainerMon sParty_Miguel5[] = {
-    {
-    .species = SPECIES_DELCATTY,
-    .lvl = 38,
-    .heldItem = ITEM_SITRUS_BERRY,
     .iv = 0,
     }
 };
