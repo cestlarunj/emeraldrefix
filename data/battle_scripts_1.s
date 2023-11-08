@@ -6638,8 +6638,13 @@ BattleScript_LevelUp::
 	printstring STRINGID_PKMNGREWTOLV
 	setbyte sLVLBOX_STATE, 0
 	drawlvlupbox
+	levelcap BattleScript_LevelCapReached, BattleScript_LevelUp2
+BattleScript_LevelUp2::
 	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMoveReturn, TRUE
 	goto BattleScript_AskToLearnMove
+BattleScript_LevelCapReached::
+	printstring STRINGID_LEVELCAP
+	goto BattleScript_LevelUp2
 BattleScript_TryLearnMoveLoop::
 	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMoveReturn, FALSE
 BattleScript_AskToLearnMove::

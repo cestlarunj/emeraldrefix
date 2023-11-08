@@ -5384,14 +5384,29 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
             if (holdEffectParam == 0) // Rare Candy
             {
                 ConvertIntToDecimalStringN(gStringVar2, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
-                StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+
+                if (levelCappedNuzlocke(sFinalLevel))
+                {
+                    StringExpandPlaceholders(gStringVar4, gText_LevelCapRareCandy);
+                }
+                else
+                {
+                    StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);
+                }
                 // StringExpandPlaceholders(gStringVar4, gText_PkmnReachedLvlCap);
             }
             else // Exp Candies
             {
                 ConvertIntToDecimalStringN(gStringVar2, sExpCandyExperienceTable[holdEffectParam - 1], STR_CONV_MODE_LEFT_ALIGN, 6);
                 ConvertIntToDecimalStringN(gStringVar3, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
-                StringExpandPlaceholders(gStringVar4, gText_PkmnGainedExpAndElevatedToLvVar3);
+                if (levelCappedNuzlocke(sFinalLevel))
+                {
+                    StringExpandPlaceholders(gStringVar4, gText_LevelCapExpCandy);
+                }
+                else
+                {
+                    StringExpandPlaceholders(gStringVar4, gText_PkmnGainedExpAndElevatedToLvVar3);
+                } 
             }
 
             DisplayPartyMenuMessage(gStringVar4, TRUE);
