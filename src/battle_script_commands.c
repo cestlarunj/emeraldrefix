@@ -15619,6 +15619,21 @@ void BS_CalcMetalBurstDmg(void)
     }
 }
 
+void BS_LevelCap(void)
+{
+    NATIVE_ARGS(const u8 *LevelCapReachedPtr, const u8 *LevelCapNotReachedPtr);
+
+    if (levelCappedNuzlocke(GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL)))
+    {
+        gBattlescriptCurrInstr = cmd->LevelCapReachedPtr;
+    }
+    else {
+        gBattlescriptCurrInstr = cmd->LevelCapNotReachedPtr;
+    }
+
+}
+
+
 void BS_JumpIfCantFling(void)
 {
     NATIVE_ARGS(u8 battler, const u8 *jumpInstr);

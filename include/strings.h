@@ -495,6 +495,8 @@ extern const u8 gText_PkmnFriendlyBaseVar2CantFall[];
 extern const u8 gText_PkmnAdoresBaseVar2Fell[];
 extern const u8 gText_PkmnAlreadyKnows[];
 extern const u8 gText_PkmnCantLearnMove[];
+extern const u8 gText_LevelCapRareCandy[];
+extern const u8 gText_LevelCapExpCandy[];
 extern const u8 gText_PkmnNeedsToReplaceMove[];
 extern const u8 gText_PkmnLearnedMove3[];
 extern const u8 gText_WhichMoveToForget[];

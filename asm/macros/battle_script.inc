@@ -1312,6 +1312,12 @@
 	.4byte \failInstr
 	.endm
 
+	.macro levelcap levelCapReachedPtr:req, levelCapNotReachedPtr:req
+	callnative BS_LevelCap
+	.4byte \levelCapReachedPtr
+	.4byte \levelCapNotReachedPtr
+	.endm
+
 	.macro jumpifcantfling battler:req, jumpInstr:req
 	callnative BS_JumpIfCantFling
 	.byte \battler
