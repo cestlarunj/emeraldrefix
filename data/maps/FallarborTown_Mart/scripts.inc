@@ -21,6 +21,40 @@ FallarborTown_Mart_Pokemart:
 	release
 	end
 
+FallarborTown_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart FallarborTown_Mart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+FallarborTown_Mart_Pokemart2:
+	.2byte ITEM_FIRE_GEM
+	.2byte ITEM_WATER_GEM
+	.2byte ITEM_ELECTRIC_GEM
+	.2byte ITEM_GRASS_GEM
+	.2byte ITEM_ICE_GEM
+	.2byte ITEM_FIGHTING_GEM
+	.2byte ITEM_POISON_GEM
+	.2byte ITEM_GROUND_GEM
+	.2byte ITEM_FLYING_GEM
+	.2byte ITEM_PSYCHIC_GEM
+	.2byte ITEM_BUG_GEM
+	.2byte ITEM_ROCK_GEM
+	.2byte ITEM_GHOST_GEM
+	.2byte ITEM_DRAGON_GEM
+	.2byte ITEM_DARK_GEM
+	.2byte ITEM_STEEL_GEM
+	.2byte ITEM_NORMAL_GEM
+	.2byte ITEM_FAIRY_GEM
+	.2byte ITEM_NONE
+	release
+	end
+
 FallarborTown_Mart_EventScript_Woman::
 	msgbox FallarborTown_Mart_Text_DecidingSkittyEvolve, MSGBOX_NPC
 	end

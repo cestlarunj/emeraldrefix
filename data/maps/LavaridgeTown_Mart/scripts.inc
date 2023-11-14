@@ -22,6 +22,33 @@ LavaridgeTown_Mart_Pokemart:
 	release
 	end
 
+LavaridgeTown_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart LavaridgeTown_Mart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LavaridgeTown_Mart_Pokemart2:
+	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_PROTECTOR
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_DUBIOUS_DISC
+	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_PEAT_BLOCK
+	.2byte ITEM_BLACK_AUGURITE
+	.2byte ITEM_NONE
+	release
+	end
+
 LavaridgeTown_Mart_EventScript_ExpertM::
 	msgbox LavaridgeTown_Mart_Text_XSpeedFirstStrike, MSGBOX_NPC
 	end

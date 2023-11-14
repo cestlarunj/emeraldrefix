@@ -2679,7 +2679,7 @@ const struct Item gItems[] =
     [ITEM_DRAGON_SCALE] =
     {
         .name = _("Dragon Scale"),
-        .price = 2000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_DRAGON_SCALE,
         .holdEffectParam = 10,
         .description = sDragonScaleDesc,
@@ -2692,7 +2692,7 @@ const struct Item gItems[] =
     [ITEM_UPGRADE] =
     {
         .name = _("Upgrade"),
-        .price = 2000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_UPGRADE,
         .description = sUpgradeDesc,
         .pocket = POCKET_ITEMS,
@@ -2704,7 +2704,7 @@ const struct Item gItems[] =
     [ITEM_PROTECTOR] =
     {
         .name = _("Protector"),
-        .price = 2000,
+        .price = 30000,
         .description = sProtectorDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -2715,7 +2715,7 @@ const struct Item gItems[] =
     [ITEM_ELECTIRIZER] =
     {
         .name = _("Electirizer"),
-        .price = 2000,
+        .price = 30000,
         .description = sElectirizerDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -2726,7 +2726,7 @@ const struct Item gItems[] =
     [ITEM_MAGMARIZER] =
     {
         .name = _("Magmarizer"),
-        .price = 2000,
+        .price = 30000,
         .description = sMagmarizerDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -2737,7 +2737,7 @@ const struct Item gItems[] =
     [ITEM_DUBIOUS_DISC] =
     {
         .name = _("Dubious Disc"),
-        .price = 2000,
+        .price = 30000,
         .description = sDubiousDiscDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -2748,7 +2748,7 @@ const struct Item gItems[] =
     [ITEM_REAPER_CLOTH] =
     {
         .name = _("Reaper Cloth"),
-        .price = 2000,
+        .price = 30000,
         .description = sReaperClothDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -2759,7 +2759,7 @@ const struct Item gItems[] =
     [ITEM_PRISM_SCALE] =
     {
         .name = _("Prism Scale"),
-        .price = 2000,
+        .price = 30000,
         .description = sPrismScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = EVO_HELD_ITEM_TYPE,
@@ -5692,7 +5692,7 @@ const struct Item gItems[] =
     [ITEM_KINGS_ROCK] =
     {
         .name = _("King's Rock"),
-        .price = 5000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_FLINCH,
         .holdEffectParam = 10,
         .description = sKingsRockDesc,
@@ -6028,7 +6028,7 @@ const struct Item gItems[] =
     [ITEM_RAZOR_CLAW] =
     {
         .name = _("Razor Claw"),
-        .price = 5000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_SCOPE_LENS,
         .description = sRazorClawDesc,
         .pocket = POCKET_ITEMS,
@@ -6040,7 +6040,7 @@ const struct Item gItems[] =
     [ITEM_RAZOR_FANG] =
     {
         .name = _("Razor Fang"),
-        .price = 5000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_FLINCH,
         .holdEffectParam = 10,
         .description = sRazorFangDesc,
@@ -9608,7 +9608,7 @@ const struct Item gItems[] =
     [ITEM_BLACK_AUGURITE] =
     {
         .name = _("BlackAugurite"),
-        .price = 8000,
+        .price = 30000,
         .description = sBlackAuguriteDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9619,7 +9619,7 @@ const struct Item gItems[] =
     [ITEM_LINKING_CORD] =
     {
         .name = _("Linking Cord"),
-        .price = 8000,
+        .price = 30000,
         .description = sLinkingCordDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -9630,7 +9630,7 @@ const struct Item gItems[] =
     [ITEM_PEAT_BLOCK] =
     {
         .name = _("Peat Block"),
-        .price = 10000,
+        .price = 30000,
         .description = sPeatBlockDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
