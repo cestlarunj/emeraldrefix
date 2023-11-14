@@ -7892,7 +7892,7 @@ static const struct TrainerMon sParty_BrendanRoute110Mudkip[] = {
     },
     {
     .species = SPECIES_GROVYLE,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_OCCA_BERRY,
     .moves = {MOVE_GIGA_DRAIN, MOVE_FURY_CUTTER, MOVE_QUICK_ATTACK, MOVE_SLAM},
     .iv = 130,
@@ -7924,7 +7924,7 @@ static const struct TrainerMon sParty_BrendanRoute110Treecko[] = {
     },
     {
     .species = SPECIES_COMBUSKEN,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_PASSHO_BERRY,
     .moves = {MOVE_FLAME_CHARGE, MOVE_AERIAL_ACE, MOVE_DOUBLE_KICK, MOVE_QUICK_ATTACK},
     .iv = 130,
@@ -7957,7 +7957,7 @@ static const struct TrainerMon sParty_BrendanRoute110Torchic[] = {
     },
     {
     .species = SPECIES_MARSHTOMP,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_RINDO_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_ROCK_SLIDE, MOVE_PROTECT},
     .iv = 130,
@@ -7990,7 +7990,7 @@ static const struct TrainerMon sParty_MayRoute110Mudkip[] = {
     },
     {
     .species = SPECIES_GROVYLE,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_OCCA_BERRY,
     .moves = {MOVE_GIGA_DRAIN, MOVE_FURY_CUTTER, MOVE_QUICK_ATTACK, MOVE_SLAM},
     .iv = 130,
@@ -8022,7 +8022,7 @@ static const struct TrainerMon sParty_MayRoute110Treecko[] = {
     },
     {
     .species = SPECIES_COMBUSKEN,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_PASSHO_BERRY,
     .moves = {MOVE_FLAME_CHARGE, MOVE_AERIAL_ACE, MOVE_DOUBLE_KICK, MOVE_QUICK_ATTACK},
     .iv = 130,
@@ -8055,7 +8055,7 @@ static const struct TrainerMon sParty_MayRoute110Torchic[] = {
     },
     {
     .species = SPECIES_MARSHTOMP,
-    .lvl = 34,
+    .lvl = 35,
     .heldItem = ITEM_RINDO_BERRY,
     .moves = {MOVE_WATER_PULSE, MOVE_MUD_SHOT, MOVE_ROCK_SLIDE, MOVE_PROTECT},
     .iv = 130,
