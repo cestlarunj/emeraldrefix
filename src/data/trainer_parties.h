@@ -4704,12 +4704,6 @@ static const struct TrainerMon sParty_Josh[] = {
 
 static const struct TrainerMon sParty_Tommy[] = {
     {
-    .species = SPECIES_SOLROCK,
-    .lvl = 12,
-    .moves = {MOVE_MORNING_SUN, MOVE_CONFUSION, MOVE_ROCK_THROW, MOVE_ROCK_POLISH},
-    .iv = 100,
-    },
-    {
     .species = SPECIES_SUDOWOODO,
     .lvl = 12,
     .ability = ABILITY_RATTLED,
@@ -4718,10 +4712,25 @@ static const struct TrainerMon sParty_Tommy[] = {
     .iv = 100,
     },
     {
-    .species = SPECIES_LARVITAR,
+    .species = SPECIES_SOLROCK,
     .lvl = 12,
-    .heldItem = ITEM_CHOPLE_BERRY,
-    .moves = {MOVE_ROCK_THROW, MOVE_BITE, MOVE_SCARY_FACE, MOVE_NONE},
+    .moves = {MOVE_MORNING_SUN, MOVE_CONFUSION, MOVE_ROCK_THROW, MOVE_ROCK_POLISH},
+    .iv = 100,
+    },
+};
+
+static const struct TrainerMon sParty_Marc[] = {
+    {
+    .species = SPECIES_RELICANTH,
+    .lvl = 12,
+    .heldItem = ITEM_RINDO_BERRY,
+    .moves = {MOVE_WATER_GUN, MOVE_ANCIENT_POWER, MOVE_NONE, MOVE_NONE},
+    .iv = 100,
+    },
+    {
+    .species = SPECIES_LUNATONE,
+    .lvl = 12,
+    .moves = {MOVE_MOONLIGHT, MOVE_CONFUSION, MOVE_ROCK_THROW, MOVE_ROCK_POLISH},
     .iv = 100,
     }
 };
@@ -9419,30 +9428,6 @@ static const struct TrainerMon sParty_GruntJaggedPass[] = {
     .species = SPECIES_NUMEL,
     .lvl = 22,
     .iv = 50,
-    }
-};
-
-static const struct TrainerMon sParty_Marc[] = {
-    {
-    .species = SPECIES_LUNATONE,
-    .lvl = 12,
-    .moves = {MOVE_MOONLIGHT, MOVE_CONFUSION, MOVE_ROCK_THROW, MOVE_ROCK_POLISH},
-    .iv = 100,
-    },
-    {
-    .species = SPECIES_ONIX,
-    .lvl = 12,
-    .ability = ABILITY_STURDY,
-    .heldItem = ITEM_BERRY_JUICE,
-    .moves = {MOVE_SMACK_DOWN, MOVE_DRAGON_BREATH, MOVE_ROCK_POLISH, MOVE_NONE},
-    .iv = 100,
-    },
-    {
-    .species = SPECIES_RELICANTH,
-    .lvl = 12,
-    .heldItem = ITEM_RINDO_BERRY,
-    .moves = {MOVE_WATER_GUN, MOVE_ANCIENT_POWER, MOVE_NONE, MOVE_NONE},
-    .iv = 100,
     }
 };
 
