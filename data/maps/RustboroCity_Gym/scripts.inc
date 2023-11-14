@@ -202,7 +202,7 @@ RustboroCity_Gym_Text_ReceivedStoneBadge:
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "The STONE BADGE increases the\n"
-	.string "LEVEL CAP up to Level 26.\p"
+	.string "LEVEL CAP up to Level 25.\p"
 	.string "It also enables your POKéMONs\n"
 	.string "to use the HM CUT outside of battle.\p"
 	.string "Please take this with you, too.$"

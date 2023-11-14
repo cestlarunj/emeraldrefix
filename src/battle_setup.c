@@ -1947,7 +1947,7 @@ bool8 levelCappedNuzlocke(u8 level){ //returns TRUE if "level" is equals or abov
     if (!FlagGet(FLAG_BADGE01_GET))
         levelCap = 15;
     else if (!FlagGet(FLAG_BADGE02_GET))
-        levelCap = 26;
+        levelCap = 25;
     else if (!FlagGet(FLAG_BADGE03_GET))
         levelCap = 36;
     else if (!FlagGet(FLAG_BADGE04_GET))
