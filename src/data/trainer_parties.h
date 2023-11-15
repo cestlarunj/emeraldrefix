@@ -10854,7 +10854,7 @@ static const struct TrainerMon sParty_Ben[] = {
     .lvl = 33,
     .ability = ABILITY_NATURAL_CURE,
     .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_ELECTRIC_TERRAIN, MOVE_SOFT_BOILED, MOVE_TOXIC, MOVE_VOLT_SWITCH},
+    .moves = {MOVE_ELECTRIC_TERRAIN, MOVE_SOFT_BOILED, MOVE_TOXIC, MOVE_TELEPORT},
     .iv = 175,
     .ev = (const u8[]){4, 0, 252, 0, 252, 0},
     },
