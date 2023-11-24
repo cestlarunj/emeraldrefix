@@ -6316,7 +6316,7 @@ const struct Item gItems[] =
     [ITEM_CHESTO_BERRY] =
     {
         .name = _("Chesto Berry"),
-        .price = 20,
+        .price = 500,
         .holdEffect = HOLD_EFFECT_CURE_SLP,
         .description = sChestoBerryDesc,
         .pocket = POCKET_BERRIES,
