@@ -10981,10 +10981,10 @@ static const struct TrainerMon sParty_Ashley[] = {
 
 static const struct TrainerMon sParty_WallyMauville[] = {
     {
-    .species = SPECIES_GARDEVOIR,
+    .species = SPECIES_GALLADE,
     .lvl = 30,
-    .iv = 0,
-    .gender = TRAINER_MON_FEMALE,
+    .iv = 100,
+    .gender = TRAINER_MON_MALE,
     }
 };
 
