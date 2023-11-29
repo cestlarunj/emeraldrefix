@@ -879,6 +879,12 @@ u16 ItemId_GetPrice(u16 itemId)
     return gItems[SanitizeItemId(itemId)].price;
 }
 
+u16 ItemId_GetSellPrice(u16 itemId)
+{
+    u16 sanitizedItemId = SanitizeItemId(itemId);
+    return gItems[sanitizedItemId].sellPrice != 0 ? gItems[sanitizedItemId].sellPrice : gItems[sanitizedItemId].price / 2;
+}
+
 u32 ItemId_GetHoldEffect(u32 itemId)
 {
     return gItems[SanitizeItemId(itemId)].holdEffect;
