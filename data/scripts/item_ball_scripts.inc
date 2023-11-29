@@ -143,7 +143,7 @@ Route116_EventScript_ItemHPUp::
 	end
 
 Route116_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_HEART_SCALE
 	end
 
 Route117_EventScript_ItemGreatBall::
