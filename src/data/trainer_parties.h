@@ -7833,39 +7833,6 @@ static const struct TrainerMon sParty_TabithaMossdeep[] = {
     }
 };
 
-static const struct TrainerMon sParty_WallyVR1[] = {
-    {
-    .species = SPECIES_ALTARIA,
-    .lvl = 44,
-    .moves = {MOVE_AERIAL_ACE, MOVE_SAFEGUARD, MOVE_DRAGON_BREATH, MOVE_DRAGON_DANCE},
-    .iv = 150,
-    },
-    {
-    .species = SPECIES_DELCATTY,
-    .lvl = 43,
-    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK},
-    .iv = 150,
-    },
-    {
-    .species = SPECIES_ROSELIA,
-    .lvl = 44,
-    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC},
-    .iv = 150,
-    },
-    {
-    .species = SPECIES_MAGNETON,
-    .lvl = 41,
-    .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH},
-    .iv = 150,
-    },
-    {
-    .species = SPECIES_GARDEVOIR,
-    .lvl = 45,
-    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT},
-    .iv = 250,
-    }
-};
-
 static const struct TrainerMon sParty_BrendanRoute103Mudkip[] = {
     {
     .species = SPECIES_TREECKO,
@@ -10854,9 +10821,9 @@ static const struct TrainerMon sParty_Ben[] = {
     .lvl = 33,
     .ability = ABILITY_NATURAL_CURE,
     .heldItem = ITEM_EVIOLITE,
-    .moves = {MOVE_ELECTRIC_TERRAIN, MOVE_SOFT_BOILED, MOVE_TOXIC, MOVE_TELEPORT},
+    .moves = {MOVE_ELECTRIC_TERRAIN, MOVE_SOFT_BOILED, MOVE_TOXIC, MOVE_SEISMIC_TOSS},
     .iv = 175,
-    .ev = (const u8[]){4, 0, 252, 0, 252, 0},
+    .ev = (const u8[]){4, 0, 168, 0, 168, 0},
     },
     {
     .species = SPECIES_PIKACHU,
@@ -10864,15 +10831,16 @@ static const struct TrainerMon sParty_Ben[] = {
     .heldItem = ITEM_LIGHT_BALL,
     .moves = {MOVE_VOLT_TACKLE, MOVE_PLAY_ROUGH, MOVE_BRICK_BREAK, MOVE_KNOCK_OFF},
     .iv = 175,
-    .ev = (const u8[]){4, 252, 0, 0, 0, 252},
+    .ev = (const u8[]){4, 168, 0, 0, 0, 168},
     },
     {
     .species = SPECIES_DITTO,
     .lvl = 33,
     .ability = ABILITY_IMPOSTER,
-    .heldItem = ITEM_CHOICE_SCARF,
+    .heldItem = ITEM_LIFE_ORB,
     .moves = {MOVE_TRANSFORM, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     .iv = 175,
+    .ev = (const u8[]){0, 0, 0, 0, 0, 168},
     },
     {
     .species = SPECIES_LINOONE,
@@ -10881,7 +10849,7 @@ static const struct TrainerMon sParty_Ben[] = {
     .heldItem = ITEM_FIGY_BERRY,
     .moves = {MOVE_BELLY_DRUM, MOVE_EXTREME_SPEED, MOVE_SEED_BOMB, MOVE_THUNDERBOLT},
     .iv = 175,
-    .ev = (const u8[]){252, 0, 0, 0, 0, 4},
+    .ev = (const u8[]){168, 0, 0, 0, 0, 4},
     .nature = 3,
     },
     {
@@ -10985,6 +10953,45 @@ static const struct TrainerMon sParty_WallyMauville[] = {
     .lvl = 30,
     .iv = 100,
     .gender = TRAINER_MON_MALE,
+    }
+};
+
+static const struct TrainerMon sParty_WallyVR1[] = {
+    {
+    .species = SPECIES_ALTARIA,
+    .lvl = 100,
+    .moves = {MOVE_AERIAL_ACE, MOVE_SAFEGUARD, MOVE_DRAGON_BREATH, MOVE_DRAGON_DANCE},
+    .iv = 255,
+    },
+    {
+    .species = SPECIES_MILOTIC,
+    .lvl = 100,
+    .moves = {MOVE_SING, MOVE_ASSIST, MOVE_CHARM, MOVE_FEINT_ATTACK},
+    .iv = 255,
+    },
+    {
+    .species = SPECIES_ROSERADE,
+    .lvl = 100,
+    .moves = {MOVE_MAGICAL_LEAF, MOVE_LEECH_SEED, MOVE_GIGA_DRAIN, MOVE_TOXIC},
+    .iv = 255,
+    },
+    {
+    .species = SPECIES_MAGNEZONE,
+    .lvl = 100,
+    .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH},
+    .iv = 255,
+    },
+    {
+    .species = SPECIES_URSALUNA,
+    .lvl = 100,
+    .moves = {MOVE_SUPERSONIC, MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SCREECH},
+    .iv = 255,
+    },
+    {
+    .species = SPECIES_GALLADE,
+    .lvl = 100,
+    .moves = {MOVE_DOUBLE_TEAM, MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_FUTURE_SIGHT},
+    .iv = 255,
     }
 };
 
@@ -13355,7 +13362,7 @@ static const struct TrainerMon sParty_Wattson1[] = {
     .lvl = 36,
     .ability = ABILITY_AFTERMATH,
     .heldItem = ITEM_LIGHT_CLAY,
-    .moves = {MOVE_TAUNT, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_EXPLOSION},
+    .moves = {MOVE_VOLT_SWITCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_EXPLOSION},
     .iv = 210,
     .ev = (const u8[]){168, 0, 168, 0, 0, 168},
     },
