@@ -51,7 +51,57 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(U_TURN) \
+    F(X_SCISSOR) \
+    F(BUG_BUZZ) \
+    F(POLLEN_PUFF) \
+    F(DARK_PULSE) \
+    F(NASTY_PLOT) \
+    F(DRAGON_PULSE) \
+    F(DRAGON_DANCE) \
+    F(THUNDER_PUNCH) \
+    F(WILD_CHARGE) \
+    F(ELECTRIC_TERRAIN) \
+    F(THUNDER_WAVE) \
+    F(PLAY_ROUGH) \
+    F(DAZZLING_GLEAM) \
+    F(DRAINING_KISS) \
+    F(MISTY_TERRAIN) \
+    F(CLOSE_COMBAT) \
+    F(AURA_SPHERE) \
+    F(FOCUS_BLAST) \
+    F(FIRE_PUNCH) \
+    F(FLARE_BLITZ) \
+    F(WILL_O_WISP) \
+    F(BRAVE_BIRD) \
+    F(AIR_SLASH) \
+    F(HURRICANE) \
+    F(TAILWIND) \
+    F(SHADOW_CLAW) \
+    F(HEX) \
+    F(GRASSY_GLIDE) \
+    F(SOLAR_BLADE) \
+    F(TRAILBLAZE) \
+    F(GRASSY_TERRAIN) \
+    F(EARTH_POWER) \
+    F(SPIKES) \
+    F(ICE_PUNCH) \
+    F(ICE_SPINNER) \
+    F(POISON_JAB) \
+    F(GUNK_SHOT) \
+    F(TOXIC_SPIKES) \
+    F(ZEN_HEADBUTT) \
+    F(TRICK_ROOM) \
+    F(PSYCHIC_TERRAIN) \
+    F(TRICK) \
+    F(STONE_EDGE) \
+    F(POWER_GEM) \
+    F(STEALTH_ROCK) \
+    F(IRON_HEAD) \
+    F(FLASH_CANNON) \
+    F(FLIP_TURN) \
+    F(SCALD) 
 
 #define FOREACH_HM(F) \
     F(CUT) \

@@ -6304,6 +6304,7 @@ const struct Item gItems[] =
     {
         .name = _("Cheri Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_PAR,
         .description = sCheriBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6317,6 +6318,7 @@ const struct Item gItems[] =
     {
         .name = _("Chesto Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_SLP,
         .description = sChestoBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6330,6 +6332,7 @@ const struct Item gItems[] =
     {
         .name = _("Pecha Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_PSN,
         .description = sPechaBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6343,6 +6346,7 @@ const struct Item gItems[] =
     {
         .name = _("Rawst Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_BRN,
         .description = sRawstBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6356,6 +6360,7 @@ const struct Item gItems[] =
     {
         .name = _("Aspear Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_FRZ,
         .description = sAspearBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6369,6 +6374,7 @@ const struct Item gItems[] =
     {
         .name = _("Leppa Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESTORE_PP,
         .holdEffectParam = 10,
         .description = sLeppaBerryDesc,
@@ -6383,6 +6389,7 @@ const struct Item gItems[] =
     {
         .name = _("Oran Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 10,
         .description = sOranBerryDesc,
@@ -6397,6 +6404,7 @@ const struct Item gItems[] =
     {
         .name = _("Persim Berry"),
         .price = 500,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_CONFUSION,
         .description = sPersimBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6410,6 +6418,7 @@ const struct Item gItems[] =
     {
         .name = _("Lum Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CURE_STATUS,
         .description = sLumBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -6423,6 +6432,7 @@ const struct Item gItems[] =
     {
         .name = _("Sitrus Berry"),
         .price = 1000,
+        .sellPrice = 10,
         #if I_SITRUS_BERRY_HEAL >= GEN_4
             .holdEffect = HOLD_EFFECT_RESTORE_PCT_HP,
             .holdEffectParam = 25,
@@ -6450,6 +6460,7 @@ const struct Item gItems[] =
     {
         .name = _("Figy Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CONFUSE_SPICY,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
         .description = sFigyBerryDesc,
@@ -6463,6 +6474,7 @@ const struct Item gItems[] =
     {
         .name = _("Wiki Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CONFUSE_DRY,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
         .description = sWikiBerryDesc,
@@ -6476,6 +6488,7 @@ const struct Item gItems[] =
     {
         .name = _("Mago Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CONFUSE_SWEET,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
         .description = sMagoBerryDesc,
@@ -6489,6 +6502,7 @@ const struct Item gItems[] =
     {
         .name = _("Aguav Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CONFUSE_BITTER,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
         .description = sAguavBerryDesc,
@@ -6502,6 +6516,7 @@ const struct Item gItems[] =
     {
         .name = _("Iapapa Berry"),
         .price = 1000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CONFUSE_SOUR,
         .holdEffectParam = CONFUSE_BERRY_HEAL_FRACTION,
         .description = sIapapaBerryDesc,
@@ -6517,6 +6532,7 @@ const struct Item gItems[] =
     {
         .name = _("Razz Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sRazzBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6528,6 +6544,7 @@ const struct Item gItems[] =
     {
         .name = _("Bluk Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sBlukBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6539,6 +6556,7 @@ const struct Item gItems[] =
     {
         .name = _("Nanab Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sNanabBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6550,6 +6568,7 @@ const struct Item gItems[] =
     {
         .name = _("Wepear Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sWepearBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6561,6 +6580,7 @@ const struct Item gItems[] =
     {
         .name = _("Pinap Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sPinapBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6572,6 +6592,7 @@ const struct Item gItems[] =
     {
         .name = _("Pomeg Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sPomegBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6583,6 +6604,7 @@ const struct Item gItems[] =
     {
         .name = _("Kelpsy Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sKelpsyBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6594,6 +6616,7 @@ const struct Item gItems[] =
     {
         .name = _("Qualot Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sQualotBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6605,6 +6628,7 @@ const struct Item gItems[] =
     {
         .name = _("Hondew Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sHondewBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6616,6 +6640,7 @@ const struct Item gItems[] =
     {
         .name = _("Grepa Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sGrepaBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6627,6 +6652,7 @@ const struct Item gItems[] =
     {
         .name = _("Tamato Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sTamatoBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6638,6 +6664,7 @@ const struct Item gItems[] =
     {
         .name = _("Cornn Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sCornnBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6649,6 +6676,7 @@ const struct Item gItems[] =
     {
         .name = _("Magost Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sMagostBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6660,6 +6688,7 @@ const struct Item gItems[] =
     {
         .name = _("Rabuta Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sRabutaBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6671,6 +6700,7 @@ const struct Item gItems[] =
     {
         .name = _("Nomel Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sNomelBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6682,6 +6712,7 @@ const struct Item gItems[] =
     {
         .name = _("Spelon Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sSpelonBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6693,6 +6724,7 @@ const struct Item gItems[] =
     {
         .name = _("Pamtre Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sPamtreBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6704,6 +6736,7 @@ const struct Item gItems[] =
     {
         .name = _("Watmel Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sWatmelBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6715,6 +6748,7 @@ const struct Item gItems[] =
     {
         .name = _("Durin Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sDurinBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6726,6 +6760,7 @@ const struct Item gItems[] =
     {
         .name = _("Belue Berry"),
         .price = 20,
+        .sellPrice = 10,
         .description = sBelueBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6737,6 +6772,7 @@ const struct Item gItems[] =
     {
         .name = _("Chilan Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_NORMAL,
         .description = sChilanBerryDesc,
@@ -6750,6 +6786,7 @@ const struct Item gItems[] =
     {
         .name = _("Occa Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_FIRE,
         .description = sOccaBerryDesc,
@@ -6763,6 +6800,7 @@ const struct Item gItems[] =
     {
         .name = _("Passho Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_WATER,
         .description = sPasshoBerryDesc,
@@ -6776,6 +6814,7 @@ const struct Item gItems[] =
     {
         .name = _("Wacan Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_ELECTRIC,
         .description = sWacanBerryDesc,
@@ -6789,6 +6828,7 @@ const struct Item gItems[] =
     {
         .name = _("Rindo Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_GRASS,
         .description = sRindoBerryDesc,
@@ -6802,6 +6842,7 @@ const struct Item gItems[] =
     {
         .name = _("Yache Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_ICE,
         .description = sYacheBerryDesc,
@@ -6815,6 +6856,7 @@ const struct Item gItems[] =
     {
         .name = _("Chople Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_FIGHTING,
         .description = sChopleBerryDesc,
@@ -6828,6 +6870,7 @@ const struct Item gItems[] =
     {
         .name = _("Kebia Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_POISON,
         .description = sKebiaBerryDesc,
@@ -6841,6 +6884,7 @@ const struct Item gItems[] =
     {
         .name = _("Shuca Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_GROUND,
         .description = sShucaBerryDesc,
@@ -6854,6 +6898,7 @@ const struct Item gItems[] =
     {
         .name = _("Coba Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_FLYING,
         .description = sCobaBerryDesc,
@@ -6867,6 +6912,7 @@ const struct Item gItems[] =
     {
         .name = _("Payapa Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_PSYCHIC,
         .description = sPayapaBerryDesc,
@@ -6880,6 +6926,7 @@ const struct Item gItems[] =
     {
         .name = _("Tanga Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_BUG,
         .description = sTangaBerryDesc,
@@ -6893,6 +6940,7 @@ const struct Item gItems[] =
     {
         .name = _("Charti Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_ROCK,
         .description = sChartiBerryDesc,
@@ -6906,6 +6954,7 @@ const struct Item gItems[] =
     {
         .name = _("Kasib Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_GHOST,
         .description = sKasibBerryDesc,
@@ -6919,6 +6968,7 @@ const struct Item gItems[] =
     {
         .name = _("Haban Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_DRAGON,
         .description = sHabanBerryDesc,
@@ -6932,6 +6982,7 @@ const struct Item gItems[] =
     {
         .name = _("Colbur Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_DARK,
         .description = sColburBerryDesc,
@@ -6945,6 +6996,7 @@ const struct Item gItems[] =
     {
         .name = _("Babiri Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_STEEL,
         .description = sBabiriBerryDesc,
@@ -6958,6 +7010,7 @@ const struct Item gItems[] =
     {
         .name = _("Roseli Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RESIST_BERRY,
         .holdEffectParam = TYPE_FAIRY,
         .description = sRoseliBerryDesc,
@@ -6971,6 +7024,7 @@ const struct Item gItems[] =
     {
         .name = _("Liechi Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_ATTACK_UP,
         .holdEffectParam = 4,
         .description = sLiechiBerryDesc,
@@ -6984,6 +7038,7 @@ const struct Item gItems[] =
     {
         .name = _("Ganlon Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_DEFENSE_UP,
         .holdEffectParam = 4,
         .description = sGanlonBerryDesc,
@@ -6997,6 +7052,7 @@ const struct Item gItems[] =
     {
         .name = _("Salac Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_SPEED_UP,
         .holdEffectParam = 4,
         .description = sSalacBerryDesc,
@@ -7010,6 +7066,7 @@ const struct Item gItems[] =
     {
         .name = _("Petaya Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_SP_ATTACK_UP,
         .holdEffectParam = 4,
         .description = sPetayaBerryDesc,
@@ -7023,6 +7080,7 @@ const struct Item gItems[] =
     {
         .name = _("Apicot Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_SP_DEFENSE_UP,
         .holdEffectParam = 4,
         .description = sApicotBerryDesc,
@@ -7036,6 +7094,7 @@ const struct Item gItems[] =
     {
         .name = _("Lansat Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CRITICAL_UP,
         .holdEffectParam = 4,
         .description = sLansatBerryDesc,
@@ -7049,6 +7108,7 @@ const struct Item gItems[] =
     {
         .name = _("Starf Berry"),
         .price = 10000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_RANDOM_STAT_UP,
         .holdEffectParam = 4,
         .description = sStarfBerryDesc,
@@ -7062,6 +7122,7 @@ const struct Item gItems[] =
     {
         .name = _("Enigma Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_ENIGMA_BERRY,
         .description = sEnigmaBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -7074,6 +7135,7 @@ const struct Item gItems[] =
     {
         .name = _("Micle Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_MICLE_BERRY,
         .holdEffectParam = 4,
         .description = sMicleBerryDesc,
@@ -7087,6 +7149,7 @@ const struct Item gItems[] =
     {
         .name = _("Custap Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_CUSTAP_BERRY,
         .holdEffectParam = 4,
         .description = sCustapBerryDesc,
@@ -7100,6 +7163,7 @@ const struct Item gItems[] =
     {
         .name = _("Jaboca Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_JABOCA_BERRY,
         .description = sJabocaBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -7112,6 +7176,7 @@ const struct Item gItems[] =
     {
         .name = _("Rowap Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_ROWAP_BERRY,
         .description = sRowapBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -7124,6 +7189,7 @@ const struct Item gItems[] =
     {
         .name = _("Kee Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_KEE_BERRY,
         .description = sKeeBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -7136,6 +7202,7 @@ const struct Item gItems[] =
     {
         .name = _("Maranga Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .holdEffect = HOLD_EFFECT_MARANGA_BERRY,
         .description = sMarangaBerryDesc,
         .pocket = POCKET_BERRIES,
@@ -7148,6 +7215,7 @@ const struct Item gItems[] =
     {
         .name = _("Enigma Berry"),
         .price = 5000,
+        .sellPrice = 10,
         .description = sEnigmaBerryEReaderDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU, // Type handled by ItemUseOutOfBattle_EnigmaBerry
@@ -7758,604 +7826,604 @@ const struct Item gItems[] =
         .secondaryId = MOVE_OVERHEAT,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM_U_TURN] =
     {
         .name = _("TM51"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM51Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_U_TURN,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_X_SCISSOR] =
     {
         .name = _("TM52"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM52Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_X_SCISSOR,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_BUG_BUZZ] =
     {
         .name = _("TM53"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM53Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_BUG_BUZZ,
     },
 
-    [ITEM_TM54] =
+    [ITEM_TM_POLLEN_PUFF] =
     {
         .name = _("TM54"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM54Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_POLLEN_PUFF,
     },
 
-    [ITEM_TM55] =
+    [ITEM_TM_DARK_PULSE] =
     {
         .name = _("TM55"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM55Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DARK_PULSE,
     },
 
-    [ITEM_TM56] =
+    [ITEM_TM_NASTY_PLOT] =
     {
         .name = _("TM56"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM56Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_NASTY_PLOT,
     },
 
-    [ITEM_TM57] =
+    [ITEM_TM_DRAGON_PULSE] =
     {
         .name = _("TM57"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM57Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DRAGON_PULSE,
     },
 
-    [ITEM_TM58] =
+    [ITEM_TM_DRAGON_DANCE] =
     {
         .name = _("TM58"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM58Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DRAGON_DANCE,
     },
 
-    [ITEM_TM59] =
+    [ITEM_TM_THUNDER_PUNCH] =
     {
         .name = _("TM59"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM59Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_THUNDER_PUNCH,
     },
 
-    [ITEM_TM60] =
+    [ITEM_TM_WILD_CHARGE] =
     {
         .name = _("TM60"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM60Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_WILD_CHARGE,
     },
 
-    [ITEM_TM61] =
+    [ITEM_TM_ELECTRIC_TERRAIN] =
     {
         .name = _("TM61"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM61Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_ELECTRIC_TERRAIN,
     },
 
-    [ITEM_TM62] =
+    [ITEM_TM_THUNDER_WAVE] =
     {
         .name = _("TM62"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM62Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_THUNDER_WAVE,
     },
 
-    [ITEM_TM63] =
+    [ITEM_TM_PLAY_ROUGH] =
     {
         .name = _("TM63"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM63Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_PLAY_ROUGH,
     },
 
-    [ITEM_TM64] =
+    [ITEM_TM_DAZZLING_GLEAM] =
     {
         .name = _("TM64"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM64Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DAZZLING_GLEAM,
     },
 
-    [ITEM_TM65] =
+    [ITEM_TM_DRAINING_KISS] =
     {
         .name = _("TM65"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM65Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_DRAINING_KISS,
     },
 
-    [ITEM_TM66] =
+    [ITEM_TM_MISTY_TERRAIN] =
     {
         .name = _("TM66"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM66Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_MISTY_TERRAIN,
     },
 
-    [ITEM_TM67] =
+    [ITEM_TM_CLOSE_COMBAT] =
     {
         .name = _("TM67"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM67Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_CLOSE_COMBAT,
     },
 
-    [ITEM_TM68] =
+    [ITEM_TM_AURA_SPHERE] =
     {
         .name = _("TM68"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM68Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_AURA_SPHERE,
     },
 
-    [ITEM_TM69] =
+    [ITEM_TM_FOCUS_BLAST] =
     {
         .name = _("TM69"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM69Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FOCUS_BLAST,
     },
 
-    [ITEM_TM70] =
+    [ITEM_TM_FIRE_PUNCH] =
     {
         .name = _("TM70"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM70Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FIRE_PUNCH,
     },
 
-    [ITEM_TM71] =
+    [ITEM_TM_FLARE_BLITZ] =
     {
         .name = _("TM71"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM71Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FLARE_BLITZ,
     },
 
-    [ITEM_TM72] =
+    [ITEM_TM_WILL_O_WISP] =
     {
         .name = _("TM72"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM72Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_WILL_O_WISP,
     },
 
-    [ITEM_TM73] =
+    [ITEM_TM_BRAVE_BIRD] =
     {
         .name = _("TM73"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM73Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_BRAVE_BIRD,
     },
 
-    [ITEM_TM74] =
+    [ITEM_TM_AIR_SLASH] =
     {
         .name = _("TM74"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM74Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_AIR_SLASH,
     },
 
-    [ITEM_TM75] =
+    [ITEM_TM_HURRICANE] =
     {
         .name = _("TM75"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM75Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_HURRICANE,
     },
 
-    [ITEM_TM76] =
+    [ITEM_TM_TAILWIND] =
     {
         .name = _("TM76"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM76Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_TAILWIND,
     },
 
-    [ITEM_TM77] =
+    [ITEM_TM_SHADOW_CLAW] =
     {
         .name = _("TM77"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM77Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SHADOW_CLAW,
     },
 
-    [ITEM_TM78] =
+    [ITEM_TM_HEX] =
     {
         .name = _("TM78"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM78Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_HEX,
     },
 
-    [ITEM_TM79] =
+    [ITEM_TM_GRASSY_GLIDE] =
     {
         .name = _("TM79"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM79Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_GRASSY_GLIDE,
     },
 
-    [ITEM_TM80] =
+    [ITEM_TM_SOLAR_BLADE] =
     {
         .name = _("TM80"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM80Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SOLAR_BLADE,
     },
 
-    [ITEM_TM81] =
+    [ITEM_TM_TRAILBLAZE] =
     {
         .name = _("TM81"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM81Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_TRAILBLAZE,
     },
 
-    [ITEM_TM82] =
+    [ITEM_TM_GRASSY_TERRAIN] =
     {
         .name = _("TM82"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM82Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_GRASSY_TERRAIN,
     },
 
-    [ITEM_TM83] =
+    [ITEM_TM_EARTH_POWER] =
     {
         .name = _("TM83"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM83Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_EARTH_POWER,
     },
 
-    [ITEM_TM84] =
+    [ITEM_TM_SPIKES] =
     {
         .name = _("TM84"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM84Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SPIKES,
     },
 
-    [ITEM_TM85] =
+    [ITEM_TM_ICE_PUNCH] =
     {
         .name = _("TM85"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM85Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_ICE_PUNCH,
     },
 
-    [ITEM_TM86] =
+    [ITEM_TM_ICE_SPINNER] =
     {
         .name = _("TM86"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM86Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_ICE_SPINNER,
     },
 
-    [ITEM_TM87] =
+    [ITEM_TM_POISON_JAB] =
     {
         .name = _("TM87"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM87Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_POISON_JAB,
     },
 
-    [ITEM_TM88] =
+    [ITEM_TM_GUNK_SHOT] =
     {
         .name = _("TM88"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM88Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_GUNK_SHOT,
     },
 
-    [ITEM_TM89] =
+    [ITEM_TM_TOXIC_SPIKES] =
     {
         .name = _("TM89"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM89Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_TOXIC_SPIKES,
     },
 
-    [ITEM_TM90] =
+    [ITEM_TM_ZEN_HEADBUTT] =
     {
         .name = _("TM90"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM90Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_ZEN_HEADBUTT,
     },
 
-    [ITEM_TM91] =
+    [ITEM_TM_TRICK_ROOM] =
     {
         .name = _("TM91"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM91Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_TRICK_ROOM,
     },
 
-    [ITEM_TM92] =
+    [ITEM_TM_PSYCHIC_TERRAIN] =
     {
         .name = _("TM92"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM92Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_PSYCHIC_TERRAIN,
     },
 
-    [ITEM_TM93] =
+    [ITEM_TM_TRICK] =
     {
         .name = _("TM93"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM93Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_TRICK,
     },
 
-    [ITEM_TM94] =
+    [ITEM_TM_STONE_EDGE] =
     {
         .name = _("TM94"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM94Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_STONE_EDGE,
     },
 
-    [ITEM_TM95] =
+    [ITEM_TM_POWER_GEM] =
     {
         .name = _("TM95"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM95Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_POWER_GEM,
     },
 
-    [ITEM_TM96] =
+    [ITEM_TM_STEALTH_ROCK] =
     {
         .name = _("TM96"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM96Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_STEALTH_ROCK,
     },
 
-    [ITEM_TM97] =
+    [ITEM_TM_IRON_HEAD] =
     {
         .name = _("TM97"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM97Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_IRON_HEAD,
     },
 
-    [ITEM_TM98] =
+    [ITEM_TM_FLASH_CANNON] =
     {
         .name = _("TM98"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM98Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FLASH_CANNON,
     },
 
-    [ITEM_TM99] =
+    [ITEM_TM_FLIP_TURN] =
     {
         .name = _("TM99"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM99Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FLIP_TURN,
     },
 
-    [ITEM_TM100] =
+    [ITEM_TM_SCALD] =
     {
         .name = _("TM100"),
-        .price = 3000,
+        .price = 8000,
         .description = sTM100Desc,
         .importance = 1,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SCALD,
     },
 
     [ITEM_HM_CUT] =
