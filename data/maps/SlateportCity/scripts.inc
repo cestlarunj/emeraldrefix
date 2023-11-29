@@ -634,8 +634,12 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_POTION
-@TODO ADD TMs HERE
+	.2byte ITEM_TM_ELECTRIC_TERRAIN
+	.2byte ITEM_TM_MISTY_TERRAIN
+	.2byte ITEM_TM_TAILWIND
+	.2byte ITEM_TM_GRASSY_TERRAIN
+	.2byte ITEM_TM_TRICK_ROOM
+	.2byte ITEM_TM_PSYCHIC_TERRAIN
 	.2byte ITEM_NONE
 	release
 	end
