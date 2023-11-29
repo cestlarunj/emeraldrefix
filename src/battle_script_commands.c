@@ -94,6 +94,8 @@
 #define MEMBERS_7(a, b, c, d, e, f, g) a; b; c; d; e; f; g;
 #define MEMBERS_8(a, b, c, d, e, f, g, h) a; b; c; d; e; f; g; h;
 
+#define EXP_MULTIPLIER 1.7 //EXP MULTIPLIER
+
 extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
@@ -4111,14 +4113,13 @@ static void Cmd_getexp(void)
                 gBattleStruct->expGettersOrder[orderId] = PARTY_SIZE;
 
             #if (B_SCALED_EXP >= GEN_5) && (B_SCALED_EXP != GEN_6)
-                //EXP MULTIPLIER
-                calculatedExp = 1.7*(gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5);
+                calculatedExp = (gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 5);
             #else
                 calculatedExp = (gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7);
             #endif
 
             if (B_TRAINER_EXP_MULTIPLIER <= GEN_7 && gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                calculatedExp = (calculatedExp * 150) / 100;
+                calculatedExp = ((calculatedExp * 150) / 100);
 
             #if B_SPLIT_EXP < GEN_6
                 if (viaExpShare) // at least one mon is getting exp via exp share
@@ -4139,8 +4140,8 @@ static void Cmd_getexp(void)
                     gBattleStruct->expShareExpValue = 0;
                 }
             #else
-                *exp = calculatedExp;
-                gBattleStruct->expShareExpValue = calculatedExp / 2;
+                *exp = EXP_MULTIPLIER * calculatedExp;
+                gBattleStruct->expShareExpValue = calculatedExp;
                 if (gBattleStruct->expShareExpValue == 0)
                     gBattleStruct->expShareExpValue = 1;
             #endif
