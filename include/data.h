@@ -39,7 +39,10 @@ struct TrainerMon
 {
     u16 species;
     const u8 *nickname;
-    u8 lvl;
+    u8 lvl; //set to zero to make it scale on the player's party
+    u8 minLvl; //make it other than zero to make it a minimum scale
+    u8 maxLvl; //make it other than zero to make it a maximum scale
+    int8_t modLvl; //make it other than zero to make it a bonus or malus in level
     u16 ability;
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];

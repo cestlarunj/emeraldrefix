@@ -1990,11 +1990,23 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            if (partyData[i].lvl == 0) {
-                CreateMon(&party[i], partyData[i].species, GetHighestLevelInPlayerParty(), 0, TRUE, personalityValue, otIdType, fixedOtId);
-            } else {
+    
+            if (partyData[i].lvl == 0) { // LEVEL SCALING
+                u8 monLvl = GetHighestLevelInPlayerParty() + partyData[i].modLvl;
+                u8 maxLvl = (partyData[i].maxLvl != 0) ? partyData[i].maxLvl : 100;
+                u8 minLvl = (partyData[i].minLvl != 0) ? partyData[i].minLvl : 1;
+
+                if (monLvl < partyData[i].minLvl) {
+                    monLvl = partyData[i].minLvl;
+                } else if (monLvl > maxLvl && maxLvl != 0) {
+                    monLvl = maxLvl;
+                }
+
+                CreateMon(&party[i], partyData[i].species, monLvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            } else { // NORMAL LEVEL SET
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             }
+
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[i]);
