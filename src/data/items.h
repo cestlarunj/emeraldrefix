@@ -336,7 +336,7 @@ const struct Item gItems[] =
     [ITEM_POTION] =
     {
         .name = _("Potion"),
-        .price = 200,
+        .price = 100,
         .holdEffectParam = 20,
         .description = sPotionDesc,
         .pocket = POCKET_ITEMS,
@@ -349,7 +349,7 @@ const struct Item gItems[] =
     [ITEM_SUPER_POTION] =
     {
         .name = _("Super Potion"),
-        .price = 700,
+        .price = 250,
         .holdEffectParam = 60,
         .description = sSuperPotionDesc,
         .pocket = POCKET_ITEMS,
@@ -362,7 +362,7 @@ const struct Item gItems[] =
     [ITEM_HYPER_POTION] =
     {
         .name = _("Hyper Potion"),
-        .price = 1500,
+        .price = 600,
         .holdEffectParam = 120,
         .description = sHyperPotionDesc,
         .pocket = POCKET_ITEMS,
@@ -375,7 +375,7 @@ const struct Item gItems[] =
     [ITEM_MAX_POTION] =
     {
         .name = _("Max Potion"),
-        .price = 2500,
+        .price = 1200,
         .holdEffectParam = 255,
         .description = sMaxPotionDesc,
         .pocket = POCKET_ITEMS,
@@ -388,7 +388,7 @@ const struct Item gItems[] =
     [ITEM_FULL_RESTORE] =
     {
         .name = _("Full Restore"),
-        .price = 3000,
+        .price = 2200,
         .holdEffectParam = 255,
         .description = sFullRestoreDesc,
         .pocket = POCKET_ITEMS,
@@ -425,7 +425,7 @@ const struct Item gItems[] =
     [ITEM_FRESH_WATER] =
     {
         .name = _("Fresh Water"),
-        .price = 200,
+        .price = 120,
         .holdEffectParam = 30,
         .description = sFreshWaterDesc,
         .pocket = POCKET_ITEMS,
@@ -438,7 +438,7 @@ const struct Item gItems[] =
     [ITEM_SODA_POP] =
     {
         .name = _("Soda Pop"),
-        .price = 300,
+        .price = 200,
         .holdEffectParam = 50,
         .description = sSodaPopDesc,
         .pocket = POCKET_ITEMS,
@@ -451,7 +451,7 @@ const struct Item gItems[] =
     [ITEM_LEMONADE] =
     {
         .name = _("Lemonade"),
-        .price = 400,
+        .price = 280,
         .holdEffectParam = 70,
         .description = sLemonadeDesc,
         .pocket = POCKET_ITEMS,
@@ -464,7 +464,7 @@ const struct Item gItems[] =
     [ITEM_MOOMOO_MILK] =
     {
         .name = _("Moomoo Milk"),
-        .price = 600,
+        .price = 400,
         .holdEffectParam = 100,
         .description = sMoomooMilkDesc,
         .pocket = POCKET_ITEMS,
@@ -725,7 +725,7 @@ const struct Item gItems[] =
     [ITEM_LAVA_COOKIE] =
     {
         .name = _("Lava Cookie"),
-        .price = 350,
+        .price = 800,
         .description = sLavaCookieDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
