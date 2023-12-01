@@ -237,6 +237,56 @@ MeteorFalls_1F_1R_EventScript_MetCozmo::
 	release
 	end
 
+MeteorFalls_Pojemo_Valou::
+	lock
+	faceplayer
+	msgbox MeteorFalls_Pojemo_Valou_Text_Intro, MSGBOX_DEFAULT
+	waitmessage
+	multichoicedefault 19, 8, MULTI_FIGHT_DONTFIGHT, 1, FALSE
+	switch VAR_RESULT
+	case 0, MeteorFalls_Pojemo_Valou_Yes
+	case 1, MeteorFalls_Pojemo_Valou_No
+	case MULTI_B_PRESSED, MeteorFalls_Pojemo_Valou_No
+	release
+	end
+
+MeteorFalls_Pojemo_Valou_Yes::
+	trainerbattle_no_intro TRAINER_POJEMO_VALOU, MeteorFalls_Pojemo_Valou_Text_Defeat
+	switch VAR_POJEMO_VALOU
+	case 0, MeteorFalls_Pojemo_Valou_FirstWin
+	case 1, MeteorFalls_Pojemo_Valou_Win
+	releaseall
+	end
+
+MeteorFalls_Pojemo_Valou_FirstWin::
+	giveitem ITEM_HEART_SCALE, 10
+	setvar VAR_POJEMO_VALOU 1
+	releaseall
+	end
+
+MeteorFalls_Pojemo_Valou_Win::
+	giveitem ITEM_HEART_SCALE, 3
+	releaseall
+	end
+
+MeteorFalls_Pojemo_Valou_No::
+	msgbox MeteorFalls_Pojemo_Valou_Text_No, MSGBOX_DEFAULT
+	releaseall
+	end
+
+MeteorFalls_Pojemo_Valou_Text_Intro:
+	.string "Who said that pink was a gendered color?\n"
+	.string "I'll have to prove you wrong !\p"
+	.string "On guard!$"
+
+MeteorFalls_Pojemo_Valou_Text_No:
+	.string "Oh, you already know that I'm right,\n"
+	.string "that's even better.$"
+
+MeteorFalls_Pojemo_Valou_Text_Defeat:
+	.string "I don't care, you still got an eyeful,\n"
+	.string "blessed by my adorable POKéMONs!$"
+
 MeteorFalls_1F_1R_Text_WithThisMeteorite:
 	.string "Hehehe!\p"
 	.string "With this METEORITE, that thing in\n"

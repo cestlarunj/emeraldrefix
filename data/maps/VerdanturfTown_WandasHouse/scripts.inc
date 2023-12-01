@@ -82,6 +82,55 @@ VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande::
 	release
 	end
 
+VerdanturfTown_WandasHouse_Pojemo_Romain::
+	lock
+	faceplayer
+	msgbox VerdanturfTown_WandasHouse_Pojemo_Romain_Text_Intro, MSGBOX_DEFAULT
+	waitmessage
+	multichoicedefault 19, 8, MULTI_FIGHT_DONTFIGHT, 1, FALSE
+	switch VAR_RESULT
+	case 0, VerdanturfTown_WandasHouse_Pojemo_Romain_Yes
+	case 1, VerdanturfTown_WandasHouse_Pojemo_Romain_No
+	case MULTI_B_PRESSED, VerdanturfTown_WandasHouse_Pojemo_Romain_No
+	release
+	end
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_Yes::
+	trainerbattle_no_intro TRAINER_POJEMO_ROMAIN, VerdanturfTown_WandasHouse_Pojemo_Romain_Text_Defeat
+	switch VAR_POJEMO_ROMAIN
+	case 0, VerdanturfTown_WandasHouse_Pojemo_Romain_FirstWin
+	case 1, VerdanturfTown_WandasHouse_Pojemo_Romain_Win
+	releaseall
+	end
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_FirstWin::
+	giveitem ITEM_HEART_SCALE, 10
+	setvar VAR_POJEMO_ROMAIN 1
+	releaseall
+	end
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_Win::
+	giveitem ITEM_HEART_SCALE, 3
+	releaseall
+	end
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_No::
+	msgbox VerdanturfTown_WandasHouse_Pojemo_Romain_Text_No, MSGBOX_DEFAULT
+	releaseall
+	end
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_Text_Intro:
+	.string "I'm Wally's Grandma.\p"
+	.string "I am bored, would like to have\n"
+	.string "a Pokemon fight with me?$"
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_Text_No:
+	.string "Oh... Alright then.\n"
+	.string "Good bye dear, enjoy your day.$"
+
+VerdanturfTown_WandasHouse_Pojemo_Romain_Text_Defeat:
+	.string "Oh no. That's too bad.$"
+
 VerdanturfTown_WandasHouse_Text_StrongerSpeech:
 	.string "WALLY: I lost to you, {PLAYER}, but I'm\n"
 	.string "not feeling down anymore.\p"
