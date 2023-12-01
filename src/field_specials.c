@@ -2369,7 +2369,7 @@ void ShowScrollableMultichoice(void)
     case SCROLL_MULTI_BF_MOVE_TUTOR_1:
     case SCROLL_MULTI_BF_MOVE_TUTOR_2:
         task->tMaxItemsOnScreen = MAX_SCROLL_MULTI_ON_SCREEN;
-        task->tNumItems = 11;
+        task->tNumItems = 9;
         task->tLeft = 15;
         task->tTop = 1;
         task->tWidth = 14;
@@ -2520,8 +2520,6 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_BodySlam48BP,
         gText_RockSlide48BP,
         gText_Counter48BP,
-        gText_ThunderWave48BP,
-        gText_SwordsDance48BP,
         gText_Exit
     },
     [SCROLL_MULTI_BF_MOVE_TUTOR_2] =
@@ -2533,9 +2531,7 @@ static const u8 *const sScrollableMultichoiceOptions[][MAX_SCROLL_MULTI_LENGTH] 
         gText_IcyWind24BP,
         gText_Endure48BP,
         gText_PsychUp48BP,
-        gText_IcePunch48BP,
-        gText_ThunderPunch48BP,
-        gText_FirePunch48BP,
+        gText_SwordsDance48BP,
         gText_Exit
     },
     [SCROLL_MULTI_SS_TIDAL_DESTINATION] =
@@ -3114,8 +3110,6 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         BattleFrontier_Lounge7_Text_BodySlamDesc,
         BattleFrontier_Lounge7_Text_RockSlideDesc,
         BattleFrontier_Lounge7_Text_CounterDesc,
-        BattleFrontier_Lounge7_Text_ThunderWaveDesc,
-        BattleFrontier_Lounge7_Text_SwordsDanceDesc,
         gText_Exit,
     };
 
@@ -3128,9 +3122,7 @@ static void ShowBattleFrontierTutorMoveDescription(u8 menu, u16 selection)
         BattleFrontier_Lounge7_Text_IcyWindDesc,
         BattleFrontier_Lounge7_Text_EndureDesc,
         BattleFrontier_Lounge7_Text_PsychUpDesc,
-        BattleFrontier_Lounge7_Text_IcePunchDesc,
-        BattleFrontier_Lounge7_Text_ThunderPunchDesc,
-        BattleFrontier_Lounge7_Text_FirePunchDesc,
+        BattleFrontier_Lounge7_Text_SwordsDanceDesc,
         gText_Exit,
     };
 
