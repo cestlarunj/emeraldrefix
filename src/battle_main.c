@@ -1938,6 +1938,23 @@ void CustomTrainerPartyAssignMoves(struct Pokemon *mon, const struct TrainerMon 
     }
 }
 
+u16 GetEvolvedSpeciesIfPastEvolutionLevel(u16 species, u8 level)
+{
+    int i;
+    for (i = 0; i < EVOS_PER_MON; i++)
+    {
+        switch (gEvolutionTable[species][i].method)
+        {
+        case EVO_LEVEL:
+            if (gEvolutionTable[species][i].param <= level)
+                return GetEvolvedSpeciesIfPastEvolutionLevel(gEvolutionTable[species][i].targetSpecies, level);
+            break;
+        }
+    }
+
+    return species;
+}
+
 u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer *trainer, bool32 firstTrainer, u32 battleTypeFlags)
 {
     u32 personalityValue;
@@ -1995,6 +2012,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 u8 monLvl = GetHighestLevelInPlayerParty() + partyData[i].modLvl;
                 u8 maxLvl = (partyData[i].maxLvl != 0) ? partyData[i].maxLvl : 100;
                 u8 minLvl = (partyData[i].minLvl != 0) ? partyData[i].minLvl : 1;
+                u16 monSpecies = partyData[i].species;
 
                 if (monLvl < partyData[i].minLvl) {
                     monLvl = partyData[i].minLvl;
@@ -2002,7 +2020,10 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                     monLvl = maxLvl;
                 }
 
-                CreateMon(&party[i], partyData[i].species, monLvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+                //EVOLVE A POKEMON IF ABOVE ITS EVOLUTION LEVEL
+                monSpecies = GetEvolvedSpeciesIfPastEvolutionLevel(monSpecies, monLvl);
+
+                CreateMon(&party[i], monSpecies, monLvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             } else { // NORMAL LEVEL SET
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             }

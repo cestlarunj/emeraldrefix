@@ -7295,6 +7295,13 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         const struct TrainerMon *party = gTrainers[trainerId].party;
         lastMonLevel = party[gTrainers[trainerId].partySize - 1].lvl;
 
+        //If the last mon has a scaled level, take the average of its scaled level
+        if (lastMonLevel == 0) {
+            u8 maxLvl = (party[gTrainers[trainerId].partySize - 1].maxLvl != 0) ? party[gTrainers[trainerId].partySize - 1].maxLvl : 100;
+            u8 minLvl = (party[gTrainers[trainerId].partySize - 1].minLvl != 0) ? party[gTrainers[trainerId].partySize - 1].minLvl : 1;
+            lastMonLevel = (minLvl+maxLvl/2);
+        }
+
         for (; gTrainerMoneyTable[i].classId != 0xFF; i++)
         {
             if (gTrainerMoneyTable[i].classId == gTrainers[trainerId].trainerClass)
