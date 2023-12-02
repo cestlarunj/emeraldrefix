@@ -585,7 +585,7 @@ const struct Item gItems[] =
     [ITEM_FULL_HEAL] =
     {
         .name = _("Full Heal"),
-        .price = 1000,
+        .price = 800,
         .description = sFullHealDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -725,7 +725,7 @@ const struct Item gItems[] =
     [ITEM_LAVA_COOKIE] =
     {
         .name = _("Lava Cookie"),
-        .price = 800,
+        .price = 600,
         .description = sLavaCookieDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
