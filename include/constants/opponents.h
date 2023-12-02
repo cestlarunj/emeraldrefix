@@ -859,6 +859,7 @@
 #define TRAINER_HOWARD                      855
 #define TRAINER_POJEMO_VALOU                856
 #define TRAINER_POJEMO_ROMAIN               857
+#define TRAINER_GRANDMASTER_RUNJ            858
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

@@ -7715,13 +7715,13 @@ static const struct TrainerMon sParty_Dale[] = {
 static const struct TrainerMon sParty_Edward[] = {
     {
     .species = SPECIES_KADABRA,
-    .lvl = 32,
+    .lvl = 31,
     .moves = {MOVE_DISABLE, MOVE_PSYSHOCK, MOVE_TELEPORT, MOVE_REFLECT},
     .iv = 50,
     },
     {
     .species = SPECIES_GIRAFARIG,
-    .lvl = 33,
+    .lvl = 32,
     .ability = ABILITY_SAP_SIPPER,
     .heldItem = ITEM_EVIOLITE,
     .iv = 50,
@@ -7736,13 +7736,13 @@ static const struct TrainerMon sParty_Edward[] = {
 static const struct TrainerMon sParty_Alyssa[] = {
     {
     .species = SPECIES_MAGNETON,
-    .lvl = 32,
+    .lvl = 31,
     .heldItem = ITEM_EVIOLITE,
     .iv = 50,
     },
     {
     .species = SPECIES_DODRIO,
-    .lvl = 33,
+    .lvl = 32,
     .ability = ABILITY_EARLY_BIRD,
     .iv = 50,
     },
@@ -16278,6 +16278,20 @@ static const struct TrainerMon sParty_PojemoValou[] = {
     .lvl = SCALED,
     .ability = ABILITY_PRESSURE,
     .heldItem = ITEM_LIFE_ORB,
+    .moves = {MOVE_SWORDS_DANCE, MOVE_TRIPLE_AXEL, MOVE_KNOCK_OFF, MOVE_ICE_SHARD},
+    .iv = 255,
+    .ev = (const u8[]){0, 252, 0, 0, 4, 252},
+    .nature = NATURE_JOLLY,
+    .ball = ITEM_ULTRA_BALL,
+    }
+};
+
+static const struct TrainerMon sParty_GrandMasterRunj[] = {
+    {
+    .species = SPECIES_PSYDUCK,
+    .lvl = 10,
+    .ability = ABILITY_DRIZZLE,
+    .heldItem = ITEM_LEFTOVERS,
     .moves = {MOVE_SWORDS_DANCE, MOVE_TRIPLE_AXEL, MOVE_KNOCK_OFF, MOVE_ICE_SHARD},
     .iv = 255,
     .ev = (const u8[]){0, 252, 0, 0, 4, 252},
