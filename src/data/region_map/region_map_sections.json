@@ -1710,6 +1710,22 @@
       "y": 4,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_STRANGE_VALLEY",
+      "name": "STRANGE VALLEY",
+      "x": 0,
+      "y": 0,
+      "width": 2,
+      "height": 3
+    },
+    {
+      "map_section": "MAPSEC_STRANGE_RUINS",
+      "name": "STRANGE RUINS",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

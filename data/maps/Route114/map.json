@@ -22,6 +22,11 @@
       "map": "MAP_FALLARBOR_TOWN",
       "offset": 0,
       "direction": "right"
+    },
+    {
+      "map": "MAP_STRANGE_VALLEY",
+      "offset": 1,
+      "direction": "left"
     }
   ],
   "object_events": [

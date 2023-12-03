@@ -1067,3 +1067,7 @@ Common_EventScript_LegendaryFlewAway::
 	
 	
 	.include "data/maps/DewfordTown_Mart/scripts.inc"
+
+	.include "data/maps/StrangeValley/scripts.inc"
+
+	.include "data/maps/StrangeValleyRuins/scripts.inc"

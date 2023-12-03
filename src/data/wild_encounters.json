@@ -11164,6 +11164,189 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_STRANGE_VALLEY",
+          "base_label": "gStrangeValley",
+          "water_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_SLOWBRO"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_GOLDUCK"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_RELICANTH"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 75,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_KABUTOPS"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_ARMALDO"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_CRADILY"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_OMASTAR"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_OMASTAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_SEAKING"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_SEAKING"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_SHUCKLE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 68,
+                "species": "SPECIES_RELICANTH"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_STRANGE_VALLEY_RUINS",
+          "base_label": "gStrangeValleyRuins",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 11,
+                "max_level": 15,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 16,
+                "max_level": 20,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 21,
+                "max_level": 25,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 31,
+                "max_level": 40,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 41,
+                "max_level": 45,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 51,
+                "max_level": 55,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 61,
+                "max_level": 70,
+                "species": "SPECIES_UNOWN"
+              },
+              {
+                "min_level": 71,
+                "max_level": 80,
+                "species": "SPECIES_UNOWN"
+              }
+            ]
+          }
         }
       ]
     },
