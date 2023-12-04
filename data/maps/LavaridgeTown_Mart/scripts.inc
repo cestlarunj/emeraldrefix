@@ -65,10 +65,10 @@ LavaridgeTown_Mart_EventScript_OldWoman::
 	end
 
 LavaridgeTown_Mart_Text_XSpeedFirstStrike:
-	.string "Use X SPEED to add to a POKéMON's\n"
-	.string "SPEED in battle.\p"
-	.string "That will help it get in the first\n"
-	.string "strike--a decided advantage!$"
+	.string "I wonder how LICKITUNG's tongue\n"
+	.string "feels like...\p"
+	.string "...\p"
+	.string "Yeah, please forget I said that.$"
 
 LavaridgeTown_Mart_Text_LocalSpecialtyOnMtChimney:
 	.string "On MT. CHIMNEY's peak, there's a local\n"
