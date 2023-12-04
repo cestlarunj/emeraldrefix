@@ -484,7 +484,7 @@ static void ShowTimeWindow(void)
     PutWindowTilemap(sStartClockWindowId);
     DrawStdWindowFrame(sStartClockWindowId, FALSE);
 
-    //TODO REPLACE THIS WITH NIGHT_EVO_HOUR_BEGIN etc
+    //TODORF REFIX REPLACE THIS WITH NIGHT_EVO_HOUR_BEGIN etc
     timeofday = gLocalTime.hours > 8 && gLocalTime.hours < 20 ? gText_Day : gText_Night;
 
     AddTextPrinterParameterized(sStartClockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL); 

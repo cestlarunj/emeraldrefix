@@ -30,7 +30,7 @@ GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "Here you go, I'll pass this on to you.$"
 
 GraniteCave_1F_Text_ExplainFlash:
-	.string "IF you own the HM for FLASH,\n"
+	.string "If you own the HM for FLASH,\n"
 	.string "a POKéMON in your party can use it.\p"
 	.string "It lights up even the inky darkness\n"
 	.string "of caves.\p"
