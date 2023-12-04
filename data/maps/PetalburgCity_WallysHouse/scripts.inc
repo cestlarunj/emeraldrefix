@@ -18,13 +18,16 @@ PetalburgCity_WallysHouse_OnFrame:
 	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_WallysHouse_EventScript_GiveHMSurf
 	.2byte 0
 
+@TODORF REFIX make sure you don't get softlocked for version 0.4
+
 PetalburgCity_WallysHouse_EventScript_GiveHMSurf::
 	lockall
-	msgbox PetalburgCity_WallysHouse_Text_PleaseExcuseUs, MSGBOX_DEFAULT
-	giveitem ITEM_HM_SURF
-	setflag FLAG_RECEIVED_HM_SURF
-	msgbox PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
-	setvar VAR_PETALBURG_CITY_STATE, 5
+	msgbox PetalburgCity_WallysHouse_Text_ThankYouForPlayingEmeraldRefixDemo, MSGBOX_DEFAULT
+	@ msgbox PetalburgCity_WallysHouse_Text_PleaseExcuseUs, MSGBOX_DEFAULT
+	@ giveitem ITEM_HM_SURF
+	@ setflag FLAG_RECEIVED_HM_SURF
+	@ msgbox PetalburgCity_WallysHouse_Text_SurfGoAllSortsOfPlaces, MSGBOX_DEFAULT
+	@ setvar VAR_PETALBURG_CITY_STATE, 5
 	releaseall
 	end
 
@@ -33,6 +36,8 @@ PetalburgCity_WallysHouse_EventScript_WallysDad::
 	faceplayer
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, PetalburgCity_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
 	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceievedHMSurf
+	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_WallysHouse_EventScript_GiveHMSurf
+	@TO BE REMOVED IN 0.4 TODORF REFIX
 	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
 	msgbox PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally, MSGBOX_DEFAULT
 	setflag FLAG_THANKED_FOR_PLAYING_WITH_WALLY
@@ -66,6 +71,14 @@ PetalburgCity_WallysHouse_EventScript_ReceivedHMSurf::
 	msgbox PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling, MSGBOX_DEFAULT
 	release
 	end
+
+PetalburgCity_WallysHouse_Text_ThankYouForPlayingEmeraldRefixDemo:
+	.string "Thank you for playing Emerald Refix\n"
+	.string "beta 0.3, {PLAYER}!\p"
+	.string "Unfortunately, the adventure only goes\n"
+	.string "up to this point.\p"
+	.string "Contact Runj for more informations\n"
+	.string "about the future updates!$"
 
 PetalburgCity_WallysHouse_Text_ThanksForPlayingWithWally:
 	.string "You're…\n"
