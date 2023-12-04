@@ -9717,4 +9717,48 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
     },
+
+    [ITEM_YELLOW_DNA] =
+    {
+        .name = _("Yellow DNA"),
+        .price = 0,
+        .description = sYellowDNA,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_RED_DNA] =
+    {
+        .name = _("Red DNA"),
+        .price = 0,
+        .description = sRedDNA,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_GREEN_DNA] =
+    {
+        .name = _("Green DNA"),
+        .price = 0,
+        .description = sGreenDNA,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
+
+    [ITEM_BLUE_DNA] =
+    {
+        .name = _("Blue DNA"),
+        .price = 0,
+        .description = sBlueDNA,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

@@ -4015,3 +4015,19 @@ static const u8 sBerserkGene[] = _(
     "Sharply boosts\n"
     "Attack, but causes\n"
     "lasting confusion.");
+
+static const u8 sYellowDNA[] = _(
+    "A weird yellow\n"
+    "piece of DNA.");
+    
+static const u8 sRedDNA[] = _(
+    "A weird red\n"
+    "piece of DNA.");
+    
+static const u8 sGreenDNA[] = _(
+    "A weird green\n"
+    "piece of DNA.");
+    
+static const u8 sBlueDNA[] = _(
+    "A weird blue\n"
+    "piece of DNA.");

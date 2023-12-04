@@ -844,6 +844,11 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_LINKING_CORD] = {gItemIcon_LinkingCord, gItemIconPalette_LinkingCord},
     [ITEM_PEAT_BLOCK] = {gItemIcon_PeatBlock, gItemIconPalette_PeatBlock},
     [ITEM_BERSERK_GENE] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    // Emerald Refix items
+    [ITEM_YELLOW_DNA] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    [ITEM_RED_DNA] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    [ITEM_GREEN_DNA] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    [ITEM_BLUE_DNA] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

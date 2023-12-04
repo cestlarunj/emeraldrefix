@@ -914,7 +914,13 @@
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
 
-#define ITEMS_COUNT 799
+// EMERALD REFIX ITEMS
+#define ITEM_YELLOW_DNA 799
+#define ITEM_RED_DNA 800
+#define ITEM_GREEN_DNA 801
+#define ITEM_BLUE_DNA 802
+
+#define ITEMS_COUNT 803
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
