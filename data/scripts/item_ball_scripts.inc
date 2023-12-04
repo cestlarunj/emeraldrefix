@@ -74,6 +74,22 @@ Route111_EventScript_ItemElixir::
 	finditem ITEM_SHUCA_BERRY
 	end
 
+Route111_EventScript_ItemSmoothRock::
+	finditem ITEM_SMOOTH_ROCK
+	end
+
+Route111_EventScript_ItemPPUp::
+	finditem ITEM_PP_UP
+	end
+
+Route111_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
+Route111_EventScript_ItemYellowDNA::
+	finditem ITEM_YELLOW_DNA
+	end
+
 Route112_EventScript_ItemNugget::
 	finditem ITEM_NUGGET
 	end
