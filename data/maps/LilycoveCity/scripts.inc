@@ -593,9 +593,7 @@ LilycoveCity_Text_StrangeCaveInCove:
 
 LilycoveCity_Text_GoingToMoveDeleterForHMs:
 	.string "I'm going to teach my POKéMON some new\n"
-	.string "moves for entering a CONTEST.\p"
-	.string "So, I'm going to see the MOVE DELETER\n"
-	.string "and make it forget HM moves.$"
+	.string "moves for entering a CONTEST.$"
 
 LilycoveCity_Text_ImFromKanto:
 	.string "I came from KANTO.\p"
