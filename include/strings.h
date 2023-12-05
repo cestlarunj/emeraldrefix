@@ -656,6 +656,7 @@ extern const u8 gText_B4F[];
 extern const u8 gText_Rooftop[];
 extern const u8 gText_ElevatorNowOn[];
 
+extern const u8 gText_HeartScale[];
 extern const u8 gText_BlueFlute[];
 extern const u8 gText_YellowFlute[];
 extern const u8 gText_RedFlute[];

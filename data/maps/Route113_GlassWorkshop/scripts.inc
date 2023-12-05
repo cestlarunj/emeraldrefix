@@ -2,13 +2,11 @@ Route113_GlassWorkshop_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route113_GlassWorkshop_OnTransition
 	.byte 0
 
-	.set BLUE_FLUTE_PRICE,   250
-	.set YELLOW_FLUTE_PRICE, 500
-	.set RED_FLUTE_PRICE,    500
-	.set WHITE_FLUTE_PRICE,  1000
-	.set BLACK_FLUTE_PRICE,  1000
-	.set PRETTY_CHAIR_PRICE, 6000
-	.set PRETTY_DESK_PRICE,  8000
+	.set HEART_SCALE_PRICE,  150
+	.set WHITE_FLUTE_PRICE,  500
+	.set BLACK_FLUTE_PRICE,  500
+	.set PRETTY_CHAIR_PRICE, 3000
+	.set PRETTY_DESK_PRICE,  4000
 	.set LOWEST_ASH_PRICE,   BLUE_FLUTE_PRICE
 
 Route113_GlassWorkshop_OnTransition:
@@ -59,50 +57,24 @@ Route113_GlassWorkshop_EventScript_ChooseGlassItem::
 	special ShowScrollableMultichoice
 	waitstate
 	switch VAR_RESULT
-	case 0, Route113_GlassWorkshop_EventScript_BlueFlute
-	case 1, Route113_GlassWorkshop_EventScript_YellowFlute
-	case 2, Route113_GlassWorkshop_EventScript_RedFlute
-	case 3, Route113_GlassWorkshop_EventScript_WhiteFlute
-	case 4, Route113_GlassWorkshop_EventScript_BlackFlute
-	case 5, Route113_GlassWorkshop_EventScript_PrettyChair
-	case 6, Route113_GlassWorkshop_EventScript_PrettyDesk
-	case 7, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
+	case 0, Route113_GlassWorkshop_EventScript_HeartScale
+	case 1, Route113_GlassWorkshop_EventScript_WhiteFlute
+	case 2, Route113_GlassWorkshop_EventScript_BlackFlute
+	case 3, Route113_GlassWorkshop_EventScript_PrettyChair
+	case 4, Route113_GlassWorkshop_EventScript_PrettyDesk
+	case 5, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
 	case MULTI_B_PRESSED, Route113_GlassWorkshop_EventScript_CancelGlassItemSelect
 	end
 
-Route113_GlassWorkshop_EventScript_BlueFlute::
-	setvar VAR_0x8008, ITEM_BLUE_FLUTE
+Route113_GlassWorkshop_EventScript_HeartScale::
+	setvar VAR_0x8008, ITEM_HEART_SCALE
 	bufferitemname STR_VAR_1, VAR_0x8008
-	setvar VAR_0x800A, BLUE_FLUTE_PRICE
-	goto_if_lt VAR_ASH_GATHER_COUNT, BLUE_FLUTE_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
+	setvar VAR_0x800A, HEART_SCALE_PRICE
+	goto_if_lt VAR_ASH_GATHER_COUNT, HEART_SCALE_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
 	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
 	setvar VAR_GLASS_WORKSHOP_STATE, 10
-	subvar VAR_ASH_GATHER_COUNT, BLUE_FLUTE_PRICE
-	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
-	end
-
-Route113_GlassWorkshop_EventScript_YellowFlute::
-	setvar VAR_0x8008, ITEM_YELLOW_FLUTE
-	bufferitemname STR_VAR_1, VAR_0x8008
-	setvar VAR_0x800A, YELLOW_FLUTE_PRICE
-	goto_if_lt VAR_ASH_GATHER_COUNT, YELLOW_FLUTE_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
-	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
-	setvar VAR_GLASS_WORKSHOP_STATE, 11
-	subvar VAR_ASH_GATHER_COUNT, YELLOW_FLUTE_PRICE
-	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
-	end
-
-Route113_GlassWorkshop_EventScript_RedFlute::
-	setvar VAR_0x8008, ITEM_RED_FLUTE
-	bufferitemname STR_VAR_1, VAR_0x8008
-	setvar VAR_0x800A, RED_FLUTE_PRICE
-	goto_if_lt VAR_ASH_GATHER_COUNT, RED_FLUTE_PRICE, Route113_GlassWorkshop_EventScript_NotEnoughAshForItem
-	msgbox Route113_GlassWorkshop_Text_IsThatTheItemForYou, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route113_GlassWorkshop_EventScript_ChooseDifferentItem
-	setvar VAR_GLASS_WORKSHOP_STATE, 12
-	subvar VAR_ASH_GATHER_COUNT, RED_FLUTE_PRICE
+	subvar VAR_ASH_GATHER_COUNT, HEART_SCALE_PRICE
 	goto Route113_GlassWorkshop_EventScript_MakeGlassItem
 	end
 
@@ -221,9 +193,7 @@ Route113_GlassWorkshop_EventScript_NoRoomForDecor::
 
 Route113_GlassWorkshop_EventScript_GiveItemAfterNoRoom::
 	switch VAR_GLASS_WORKSHOP_STATE
-	case 10, Route113_GlassWorkshop_EventScript_GiveBlueFlute
-	case 11, Route113_GlassWorkshop_EventScript_GiveYellowFlute
-	case 12, Route113_GlassWorkshop_EventScript_GiveRedFlute
+	case 10, Route113_GlassWorkshop_EventScript_GiveHeartScale
 	case 13, Route113_GlassWorkshop_EventScript_GiveWhiteFlute
 	case 14, Route113_GlassWorkshop_EventScript_GiveBlackFlute
 	case 15, Route113_GlassWorkshop_EventScript_GivePrettyChair

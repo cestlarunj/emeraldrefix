@@ -833,6 +833,7 @@ const u8 gText_BigGuy[] = _("Big guy");
 const u8 gText_BigGirl[] = _("Big girl");
 const u8 gText_Son[] = _("son");
 const u8 gText_Daughter[] = _("daughter");
+const u8 gText_HeartScale[] = _("HEART SCALE");
 const u8 gText_BlueFlute[] = _("BLUE FLUTE");
 const u8 gText_YellowFlute[] = _("YELLOW FLUTE");
 const u8 gText_RedFlute[] = _("RED FLUTE");
