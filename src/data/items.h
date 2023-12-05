@@ -5075,7 +5075,7 @@ const struct Item gItems[] =
     [ITEM_MACHO_BRACE] =
     {
         .name = _("Macho Brace"),
-        .price = 3000,
+        .price = 10000,
         .holdEffect = HOLD_EFFECT_MACHO_BRACE,
         .description = sMachoBraceDesc,
         .pocket = POCKET_ITEMS,
@@ -5087,7 +5087,7 @@ const struct Item gItems[] =
     [ITEM_POWER_WEIGHT] =
     {
         .name = _("Power Weight"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerWeightDesc,
@@ -5101,7 +5101,7 @@ const struct Item gItems[] =
     [ITEM_POWER_BRACER] =
     {
         .name = _("Power Bracer"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerBracerDesc,
@@ -5115,7 +5115,7 @@ const struct Item gItems[] =
     [ITEM_POWER_BELT] =
     {
         .name = _("Power Belt"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerBeltDesc,
@@ -5129,7 +5129,7 @@ const struct Item gItems[] =
     [ITEM_POWER_LENS] =
     {
         .name = _("Power Lens"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerLensDesc,
@@ -5143,7 +5143,7 @@ const struct Item gItems[] =
     [ITEM_POWER_BAND] =
     {
         .name = _("Power Band"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerBandDesc,
@@ -5157,7 +5157,7 @@ const struct Item gItems[] =
     [ITEM_POWER_ANKLET] =
     {
         .name = _("Power Anklet"),
-        .price = 3000,
+        .price = 8000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = 8,
         .description = sPowerAnkletDesc,
@@ -5755,7 +5755,7 @@ const struct Item gItems[] =
     [ITEM_LUCKY_EGG] =
     {
         .name = _("Lucky Egg"),
-        .price = 10000,
+        .price = 30000,
         .holdEffect = HOLD_EFFECT_LUCKY_EGG,
         .description = sLuckyEggDesc,
         .pocket = POCKET_ITEMS,

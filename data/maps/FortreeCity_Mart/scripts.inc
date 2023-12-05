@@ -15,11 +15,37 @@ FortreeCity_Mart_EventScript_Clerk::
 FortreeCity_Mart_Pokemart:
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_ULTRA_BALL
-	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_MAX_POTION
 	.2byte ITEM_FULL_HEAL
 	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_NONE
+	release
+	end
+
+FortreeCity_Mart_EventScript_Clerk2::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart FortreeCity_Mart_Pokemart2
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+FortreeCity_Mart_Pokemart2:
+	.2byte ITEM_LUCKY_EGG
+	.2byte ITEM_MACHO_BRACE
+	.2byte ITEM_POWER_WEIGHT
+	.2byte ITEM_POWER_BRACER
+	.2byte ITEM_POWER_BELT
+	.2byte ITEM_POWER_LENS
+	.2byte ITEM_POWER_BAND
+	.2byte ITEM_POWER_ANKLET
 	.2byte ITEM_NONE
 	release
 	end
