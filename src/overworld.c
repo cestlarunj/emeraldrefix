@@ -174,7 +174,7 @@ static void TransitionMapMusic(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *, u16, u8);
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *, u8, u16, u8);
 static u16 GetCenterScreenMetatileBehavior(void);
-static bool8 CanLearnFlashInParty(void);
+//static bool8 CanLearnFlashInParty(void);
 
 static void *sUnusedOverworldCallback;
 static u8 sPlayerLinkStates[MAX_LINK_PLAYERS];
@@ -996,6 +996,7 @@ bool32 Overworld_IsBikingAllowed(void)
         return TRUE;
 }
 
+/*
 static bool8 CanLearnFlashInParty(void)
 {
     u8 i;
@@ -1008,6 +1009,7 @@ static bool8 CanLearnFlashInParty(void)
     }
     return FALSE;
 }
+*/
 
 // Flash level of 0 is fully bright
 // Flash level of 1 is the largest flash radius

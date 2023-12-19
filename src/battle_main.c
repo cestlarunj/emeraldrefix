@@ -1927,14 +1927,15 @@ void CustomTrainerPartyAssignMoves(struct Pokemon *mon, const struct TrainerMon 
 
 u16 GetEvolvedSpeciesIfPastEvolutionLevel(u16 species, u8 level)
 {
+    const struct Evolution *evolutions = GetSpeciesEvolutions(species);
     int i;
-    for (i = 0; i < EVOS_PER_MON; i++)
+    for (i = 0; evolutions[i].method != EVOLUTIONS_END; i++)
     {
-        switch (gEvolutionTable[species][i].method)
+        switch (evolutions[i].method)
         {
         case EVO_LEVEL:
-            if (gEvolutionTable[species][i].param <= level)
-                return GetEvolvedSpeciesIfPastEvolutionLevel(gEvolutionTable[species][i].targetSpecies, level);
+            if (evolutions[i].param <= level)
+                return GetEvolvedSpeciesIfPastEvolutionLevel(evolutions[i].targetSpecies, level);
             break;
         }
     }
@@ -2001,7 +2002,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 u16 monSpecies = partyData[i].species;
 
                 if (monLvl < partyData[i].minLvl) {
-                    monLvl = partyData[i].minLvl;
+                    monLvl = minLvl;
                 } else if (monLvl > maxLvl && maxLvl != 0) {
                     monLvl = maxLvl;
                 }

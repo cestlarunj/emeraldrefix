@@ -1,0 +1,20 @@
+tools/agbcc/bin/agbcc <flags> -o build/emerald/src/pokemon.o src/pokemon.c
+tools/ramscrgen/ramscrgen COMMON sym_common.txt ENGLISH -c build/emerald/src,common_syms > build/emerald/sym_common.ld
+cd build/emerald && sed "s#tools/#../../tools/#g" ../../ld_script.ld > ld_script.ld
+cd build/emerald && arm-none-eabi-ld -Map ../../pokeemerald_agbcc.map -T ld_script.ld -o ../../pokeemerald_agbcc.elf <objects> <lib>
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+`ewram_data' referenced in section `.text' of src/vs_seeker.o: defined in discarded section `ewram_data' of src/vs_seeker.o
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      246266 B       256 KB     93.94%
+           IWRAM:       30940 B        32 KB     94.42%
+             ROM:    23978062 B        32 MB     71.46%
+make: *** [Makefile:483: pokeemerald_agbcc.elf] Error 1

@@ -96,8 +96,6 @@
 
 #define EXP_MULTIPLIER 1.7 //EXP MULTIPLIER
 
-extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
-
 extern const u8 *const gBattleScriptsForMoveEffects[];
 
 // table to avoid ugly powing on gba (courtesy of doesnt)
@@ -4125,7 +4123,9 @@ static void Cmd_getexp(void)
                         *exp = 1;
                     gBattleStruct->expShareExpValue = 0;
                 }
+            }
             else
+            {
                 *exp = EXP_MULTIPLIER * calculatedExp;
                 gBattleStruct->expShareExpValue = calculatedExp / 2;
                 if (gBattleStruct->expShareExpValue == 0)
