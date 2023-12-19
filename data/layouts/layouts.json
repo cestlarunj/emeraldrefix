@@ -2914,7 +2914,7 @@
     {
       "id": "LAYOUT_JAGGED_PASS",
       "name": "JaggedPass_Layout",
-      "width": 30,
+      "width": 46,
       "height": 46,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lavaridge",
@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/StrangeValleyRuins/border.bin",
       "blockdata_filepath": "data/layouts/StrangeValleyRuins/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIERY_PATH_2",
+      "name": "FieryPath_2_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/FieryPath_2/border.bin",
+      "blockdata_filepath": "data/layouts/FieryPath_2/map.bin"
     }
   ]
 }

@@ -7,7 +7,7 @@ Route113_GlassWorkshop_MapScripts::
 	.set BLACK_FLUTE_PRICE,  500
 	.set PRETTY_CHAIR_PRICE, 3000
 	.set PRETTY_DESK_PRICE,  4000
-	.set LOWEST_ASH_PRICE,   BLUE_FLUTE_PRICE
+	.set LOWEST_ASH_PRICE,   HEART_SCALE_PRICE
 
 Route113_GlassWorkshop_OnTransition:
 	setflag FLAG_LANDMARK_GLASS_WORKSHOP
@@ -163,11 +163,17 @@ Route113_GlassWorkshop_EventScript_MakeGlassItem::
 	delay 30
 	fadescreen FADE_FROM_BLACK
 	msgbox Route113_GlassWorkshop_Text_IveFinishedGlassItem, MSGBOX_DEFAULT
-	call_if_eq VAR_0x8009, 0, Route113_GlassWorkshop_EventScript_GiveGlassFlute
-	call_if_eq VAR_0x8009, 1, Route113_GlassWorkshop_EventScript_GiveGlassDecor
+	call_if_eq VAR_0x8009, 0, Route113_GlassWorkshop_EventScript_GiveScale
+	call_if_eq VAR_0x8009, 1, Route113_GlassWorkshop_EventScript_GiveGlassFlute
+	call_if_eq VAR_0x8009, 2, Route113_GlassWorkshop_EventScript_GiveGlassDecor
 	setvar VAR_GLASS_WORKSHOP_STATE, 2
 	release
 	end
+
+Route113_GlassWorkshop_EventScript_GiveScale::
+	giveitem VAR_0x8008
+	goto_if_eq VAR_RESULT, FALSE, Route113_GlassWorkshop_EventScript_NoRoomForHeartScale
+	return
 
 Route113_GlassWorkshop_EventScript_GiveGlassFlute::
 	giveitem VAR_0x8008
@@ -178,6 +184,12 @@ Route113_GlassWorkshop_EventScript_GiveGlassDecor::
 	givedecoration VAR_0x8008
 	goto_if_eq VAR_RESULT, FALSE, Route113_GlassWorkshop_EventScript_NoRoomForDecor
 	return
+
+Route113_GlassWorkshop_EventScript_NoRoomForHeartScale::
+	call Common_EventScript_BagIsFull
+	msgbox Route113_GlassWorkshop_Text_NoRoomInBag, MSGBOX_DEFAULT
+	release
+	end
 
 Route113_GlassWorkshop_EventScript_NoRoomForFlute::
 	call Common_EventScript_BagIsFull
@@ -200,50 +212,36 @@ Route113_GlassWorkshop_EventScript_GiveItemAfterNoRoom::
 	case 16, Route113_GlassWorkshop_EventScript_GivePrettyDesk
 	end
 
-Route113_GlassWorkshop_EventScript_GiveBlueFlute::
+Route113_GlassWorkshop_EventScript_GiveHeartScale::
 	setvar VAR_0x8009, 0
-	setvar VAR_0x8008, ITEM_BLUE_FLUTE
-	bufferitemname STR_VAR_1, VAR_0x8008
-	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
-	end
-
-Route113_GlassWorkshop_EventScript_GiveYellowFlute::
-	setvar VAR_0x8009, 0
-	setvar VAR_0x8008, ITEM_YELLOW_FLUTE
-	bufferitemname STR_VAR_1, VAR_0x8008
-	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
-	end
-
-Route113_GlassWorkshop_EventScript_GiveRedFlute::
-	setvar VAR_0x8009, 0
-	setvar VAR_0x8008, ITEM_RED_FLUTE
+	setvar VAR_0x8008, ITEM_HEART_SCALE
 	bufferitemname STR_VAR_1, VAR_0x8008
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
 	end
 
 Route113_GlassWorkshop_EventScript_GiveWhiteFlute::
-	setvar VAR_0x8009, 0
+	setvar VAR_0x8009, 1
 	setvar VAR_0x8008, ITEM_WHITE_FLUTE
 	bufferitemname STR_VAR_1, VAR_0x8008
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
 	end
 
 Route113_GlassWorkshop_EventScript_GiveBlackFlute::
-	setvar VAR_0x8009, 0
+	setvar VAR_0x8009, 1
 	setvar VAR_0x8008, ITEM_BLACK_FLUTE
 	bufferitemname STR_VAR_1, VAR_0x8008
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
 	end
 
 Route113_GlassWorkshop_EventScript_GivePrettyChair::
-	setvar VAR_0x8009, 1
+	setvar VAR_0x8009, 2
 	setvar VAR_0x8008, DECOR_PRETTY_CHAIR
 	bufferdecorationname STR_VAR_1, DECOR_PRETTY_CHAIR
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
 	end
 
 Route113_GlassWorkshop_EventScript_GivePrettyDesk::
-	setvar VAR_0x8009, 1
+	setvar VAR_0x8009, 2
 	setvar VAR_0x8008, DECOR_PRETTY_DESK
 	bufferdecorationname STR_VAR_1, DECOR_PRETTY_DESK
 	goto Route113_GlassWorkshop_EventScript_TryGiveItemAgain
@@ -251,8 +249,9 @@ Route113_GlassWorkshop_EventScript_GivePrettyDesk::
 
 Route113_GlassWorkshop_EventScript_TryGiveItemAgain::
 	msgbox Route113_GlassWorkshop_Text_IveFinishedGlassItem, MSGBOX_DEFAULT
-	call_if_eq VAR_0x8009, 0, Route113_GlassWorkshop_EventScript_GiveGlassFlute
-	call_if_eq VAR_0x8009, 1, Route113_GlassWorkshop_EventScript_GiveGlassDecor
+	call_if_eq VAR_0x8009, 0, Route113_GlassWorkshop_EventScript_GiveHeartScale
+	call_if_eq VAR_0x8009, 1, Route113_GlassWorkshop_EventScript_GiveGlassFlute
+	call_if_eq VAR_0x8009, 2, Route113_GlassWorkshop_EventScript_GiveGlassDecor
 	setvar VAR_GLASS_WORKSHOP_STATE, 2
 	release
 	end
