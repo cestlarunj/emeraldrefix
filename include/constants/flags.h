@@ -1223,10 +1223,11 @@
 #define FLAG_ITEM_ROUTE_111_HEART_SCALE                             0x495
 #define FLAG_ITEM_ROUTE_111_YELLOW_DNA                              0x496
 
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
-#define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
+#define FLAG_ITEM_FIERY_PATH_2_HEAT_ROCK                            0x497
+#define FLAG_ITEM_FIERY_PATH_2_HEART_SCALE                          0x498
+#define FLAG_ITEM_FIERY_PATH_2_TIMER_BALL                           0x499
+#define FLAG_ITEM_FIERY_PATH_2_RED_DNA                              0x49A
+
 #define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
@@ -1303,15 +1304,16 @@
 #define FLAG_UNUSED_0x4E4                                           0x4E4 // Unused Flag
 #define FLAG_UNUSED_0x4E5                                           0x4E5 // Unused Flag
 #define FLAG_UNUSED_0x4E6                                           0x4E6 // Unused Flag
-#define FLAG_UNUSED_0x4E7                                           0x4E7 // Unused Flag
-#define FLAG_UNUSED_0x4E8                                           0x4E8 // Unused Flag
-#define FLAG_UNUSED_0x4E9                                           0x4E9 // Unused Flag
-#define FLAG_UNUSED_0x4EA                                           0x4EA // Unused Flag
-#define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
-#define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
-#define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
-#define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
+
+#define FLAG_HIDE_ARTICUNO                                          0x4E7
+#define FLAG_CAUGHT_ARTICUNO                                        0x4E8
+#define FLAG_DEFEATED_ARTICUNO                                      0x4E9
+#define FLAG_HIDE_ZAPDOS                                            0x4EA
+#define FLAG_CAUGHT_ZAPDOS                                          0x4EB
+#define FLAG_DEFEATED_ZAPDOS                                        0x4EC
+#define FLAG_HIDE_MOLTRES                                           0x4ED
+#define FLAG_CAUGHT_MOLTRES                                         0x4EE
+#define FLAG_DEFEATED_MOLTRES                                       0x4EF
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1

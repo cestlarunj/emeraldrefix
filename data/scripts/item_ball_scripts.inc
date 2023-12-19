@@ -394,6 +394,22 @@ FieryPath_EventScript_ItemTMToxic::
 	finditem ITEM_TM_TOXIC
 	end
 
+FieryPath_2_EventScript_ItemHeartScale::
+	finditem ITEM_HEART_SCALE
+	end
+
+FieryPath_2_EventScript_ItemRedDNA::
+	finditem ITEM_RED_DNA
+	end
+
+FieryPath_2_EventScript_ItemTimerBall::
+	finditem ITEM_TIMER_BALL
+	end
+
+FieryPath_2_EventScript_ItemHeatRock::
+	finditem ITEM_HEAT_ROCK
+	end
+
 MeteorFalls_1F_1R_EventScript_ItemTMIronTail::
 	finditem ITEM_TM_IRON_TAIL
 	end

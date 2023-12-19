@@ -1071,3 +1071,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/StrangeValley/scripts.inc"
 
 	.include "data/maps/StrangeValleyRuins/scripts.inc"
+
+	.include "data/maps/FieryPath_2/scripts.inc"

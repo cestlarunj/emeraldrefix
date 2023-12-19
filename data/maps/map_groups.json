@@ -434,7 +434,8 @@
     "AlteringCave",
     "MeteorFalls_StevensCave",
     "StrangeValley",
-    "StrangeValleyRuins"
+    "StrangeValleyRuins",
+    "FieryPath_2"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",
