@@ -483,8 +483,7 @@ static void ShowTimeWindow(void)
     PutWindowTilemap(sStartClockWindowId);
     DrawStdWindowFrame(sStartClockWindowId, FALSE);
 
-    //TODORF REFIX REPLACE THIS WITH NIGHT_EVO_HOUR_BEGIN etc
-    timeofday = gLocalTime.hours > 8 && gLocalTime.hours < 20 ? gText_Day : gText_Night;
+    timeofday = gLocalTime.hours >= DAY_HOUR_BEGIN && gLocalTime.hours < NIGHT_HOUR_BEGIN ? gText_Day : gText_Night;
 
     AddTextPrinterParameterized(sStartClockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL); 
 
@@ -577,7 +576,7 @@ static bool32 InitStartMenuStep(void)
         sInitStartMenuData[0]++;
         break;
     case 4:
-        ShowTimeWindow();
+        //ShowTimeWindow();
         sInitStartMenuData[0]++;
         break;
     case 5:
@@ -712,7 +711,7 @@ static bool8 HandleStartMenuInput(void)
     }
 
     RemoveExtraStartMenuWindows();
-    ShowTimeWindow();
+    //ShowTimeWindow();
     return FALSE;
 }
 
@@ -747,7 +746,7 @@ static bool8 StartMenuPokemonCallback(void)
     if (!GetSafariZoneFlag() && !InBattlePyramid() && gSaveBlock2Ptr->playTimeSeconds == 0) 
     {
         RemoveExtraStartMenuWindows();
-        ShowTimeWindow();
+        //ShowTimeWindow();
     }
 
     return FALSE;
