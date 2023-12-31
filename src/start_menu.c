@@ -82,7 +82,9 @@ bool8 (*gMenuCallback)(void);
 
 // EWRAM
 EWRAM_DATA static u8 sSafariBallsWindowId = 0;
+/* MENU CLOCK
 EWRAM_DATA static u8 sStartClockWindowId = 0;
+*/
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
@@ -285,7 +287,9 @@ static void ShowSaveInfoWindow(void);
 static void RemoveSaveInfoWindow(void);
 static void HideStartMenuWindow(void);
 static void HideStartMenuDebug(void);
+/* MENU CLOCK
 static void ShowTimeWindow(void);
+*/
 
 void SetDexPokemonPokenavFlags(void) // unused
 {
@@ -472,6 +476,7 @@ static void ShowPyramidFloorWindow(void)
 
 #define CLOCK_WINDOW_WIDTH 70
 
+/* MENU CLOCK
 static void ShowTimeWindow(void)
 {
     const u8 *timeofday;
@@ -496,26 +501,28 @@ static void ShowTimeWindow(void)
 
     CopyWindowToVram(sStartClockWindowId, COPYWIN_GFX);
 }
+*/
 
 static void RemoveExtraStartMenuWindows(void)
 {
     if (GetSafariZoneFlag())
     {
         ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
-        //CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
+        CopyWindowToVram(sSafariBallsWindowId, COPYWIN_GFX);
         RemoveWindow(sSafariBallsWindowId);
     }
-    else if (InBattlePyramid())
+    if (InBattlePyramid())
     {
         ClearStdWindowAndFrameToTransparent(sBattlePyramidFloorWindowId, FALSE);
         RemoveWindow(sBattlePyramidFloorWindowId);
     }
+    /* MENU CLOCK
     else
     {
         ClearStdWindowAndFrameToTransparent(sStartClockWindowId, FALSE);
-        // CopyWindowToVram(sStartClockWindowId, COPYWIN_GFX);
         RemoveWindow(sStartClockWindowId);
     }
+    */
 }
 
 static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
@@ -576,14 +583,19 @@ static bool32 InitStartMenuStep(void)
         sInitStartMenuData[0]++;
         break;
     case 4:
-        //ShowTimeWindow();
+    /* MENU CLOCK
+        ShowTimeWindow();
         sInitStartMenuData[0]++;
         break;
     case 5:
+    */
         if (PrintStartMenuActions(&sInitStartMenuData[1], 2))
             sInitStartMenuData[0]++;
         break;
+    /* MENU CLOCK
     case 6:
+    */
+   case 5:
         sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
@@ -710,8 +722,10 @@ static bool8 HandleStartMenuInput(void)
         return TRUE;
     }
 
+    /* MENU CLOCK
     RemoveExtraStartMenuWindows();
-    //ShowTimeWindow();
+    ShowTimeWindow();
+    */
     return FALSE;
 }
 
@@ -743,11 +757,15 @@ static bool8 StartMenuPokemonCallback(void)
         return TRUE;
     }
 
+    /* MENU CLOCK
     if (!GetSafariZoneFlag() && !InBattlePyramid() && gSaveBlock2Ptr->playTimeSeconds == 0) 
     {
         RemoveExtraStartMenuWindows();
-        //ShowTimeWindow();
+        
+        ShowTimeWindow();
+        
     }
+    */
 
     return FALSE;
 }
