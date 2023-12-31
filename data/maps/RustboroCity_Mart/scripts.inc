@@ -84,7 +84,7 @@ RustboroCity_Mart_Pokemart_Expanded2:
 	.2byte ITEM_BLACK_GLASSES
 	.2byte ITEM_CHARCOAL
 	.2byte ITEM_DRAGON_FANG
-	.2byte ITEM_PIXIE_PLATE
+	.2byte ITEM_FAIRY_FEATHER
 	.2byte ITEM_HARD_STONE
 	.2byte ITEM_MAGNET
 	.2byte ITEM_METAL_COAT
