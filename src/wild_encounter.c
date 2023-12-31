@@ -255,7 +255,7 @@ static u8 ChooseWildMonIndex_WaterRock(void)
 static u8 ChooseWildMonIndex_Fishing(u8 rod)
 {
     u8 wildMonIndex = 0;
-    bool8 swap = FALSE;
+    //bool8 swap = FALSE;
     u8 rand = Random() % ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_TOTAL;
     
     /* MODIFIED */
@@ -265,7 +265,7 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
     */
 
     if (LURE_STEP_COUNT != 0 && (Random() % 10 < 2))
-        swap = TRUE;
+        //swap = TRUE;
 
     if (rand < ENCOUNTER_CHANCE_FISHING_MONS_OLD_ROD_SLOT_0)
         wildMonIndex = 0;
