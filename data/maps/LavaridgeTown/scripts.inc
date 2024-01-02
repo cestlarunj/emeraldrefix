@@ -232,52 +232,6 @@ LavaridgeTown_EventScript_ExpertF::
 	msgbox LavaridgeTown_Text_OhYouLikeHotSprings, MSGBOX_NPC
 	end
 
-LavaridgeTown_EventScript_FlamethrowerGuy::
-	lock
-	faceplayer
-	msgbox LavaridgeTown_Text_ILoveBerries, MSGBOX_DEFAULT
-	goto_if_unset FLAG_TM35_IN_LAVARIDGE, LavaridgeTown_EventScript_FlamethrowerGuy_ProposeTrade
-	release
-	end
-
-LavaridgeTown_EventScript_FlamethrowerGuy_ProposeTrade::
-	checkitem ITEM_LUM_BERRY 100
-	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_FlamethrowerGuy_AskTrade
-	msgbox LavaridgeTown_Text_BringMe100Berries, MSGBOX_DEFAULT
-	release
-	end
-
-LavaridgeTown_EventScript_FlamethrowerGuy_AskTrade::
-	msgbox LavaridgeTown_Text_WillYouTrade, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_FlamethrowerGuy_DeclineTrade
-	msgbox LavaridgeTown_Text_ThankYou, MSGBOX_DEFAULT
-	removeitem ITEM_LUM_BERRY 100
-	giveitem ITEM_TM35
-	setflag FLAG_TM35_IN_LAVARIDGE
-	msgbox LavaridgeTown_Text_ILoveBerries, MSGBOX_DEFAULT
-	release
-	end
-
-LavaridgeTown_EventScript_FlamethrowerGuy_DeclineTrade::
-	msgbox LavaridgeTown_Text_BringMe100Berries, MSGBOX_DEFAULT
-	release
-	end
-
-LavaridgeTown_Text_ILoveBerries:
-	.string "Oh, how I love LUM BERRIES!$"
-
-LavaridgeTown_Text_WillYouTrade:
-	.string "I see you have 100 of them!\n"
-	.string "Will you trade them with me?$"
-
-LavaridgeTown_Text_ThankYou:
-	.string "Thank you so much!\n"
-	.string "Have this TM.$"
-
-LavaridgeTown_Text_BringMe100Berries:
-	.string "If you bring me 100 LUM BERRIES,\n"
-	.string "I'll give you something cool.$"
-
 LavaridgeTown_EventScript_EggWoman::
 	lock
 	faceplayer
@@ -321,6 +275,59 @@ LavaridgeTown_EventScript_GymSign::
 LavaridgeTown_EventScript_HerbShopSign::
 	msgbox LavaridgeTown_Text_HerbShopSign, MSGBOX_SIGN
 	end
+
+LavaridgeTown_EventScript_AbilityCapsuleSeller::
+	lock
+	faceplayer
+	goto_if_set FLAG_ABILITY_CAPSULE_IN_LAVARIDGE, LavaridgeTown_EventScript_AbilityCapsuleSeller_ThankYou
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerDoYouWantAbilityCapsule, MSGBOX_DEFAULT
+	checkitem ITEM_HEART_SCALE 5
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_EventScript_AbilityCapsuleSeller_ProposeTrade
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerNotEnoughScales, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_EventScript_AbilityCapsuleSeller_ProposeTrade::
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerProposeTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LavaridgeTown_EventScript_AbilityCapsuleSeller_DeclineTrade
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerThankYou, MSGBOX_DEFAULT
+	removeitem ITEM_HEART_SCALE 5
+	giveitem ITEM_ABILITY_CAPSULE
+	setflag FLAG_ABILITY_CAPSULE_IN_LAVARIDGE
+	release
+	end
+
+LavaridgeTown_EventScript_AbilityCapsuleSeller_DeclineTrade::
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerDeclineTrade, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_EventScript_AbilityCapsuleSeller_ThankYou::
+	msgbox LavaridgeTown_Text_AbilityCapsuleSellerThankYou, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_Text_AbilityCapsuleSellerDoYouWantAbilityCapsule:
+	.string "I have this spare ABILITY CAPSULE,\n"
+	.string "but I'm not gonna use it.\p"
+	.string "I'm willing to trade it \n"
+	.string "for 5 HEART SCALES !$"
+
+LavaridgeTown_Text_AbilityCapsuleSellerProposeTrade:
+	.string "I'm willing to trade it \n"
+	.string "for 5 HEART SCALES !$"	
+
+LavaridgeTown_Text_AbilityCapsuleSellerDeclineTrade:
+	.string "Oh well.\n"
+	.string "Come back if you change your mind.$"
+
+LavaridgeTown_Text_AbilityCapsuleSellerNotEnoughScales:
+	.string "Oh, but you don't have enough\n"
+	.string "HEART SCALES. Too bad.$"
+
+LavaridgeTown_Text_AbilityCapsuleSellerThankYou:
+	.string "Thank you ! These HEART SCALES are\n"
+	.string "going straight in my collection!$"
 
 LavaridgeTown_Text_MayNiceBadgesTakeThis:
 	.string "MAY: {PLAYER}{KUN}! Long time no see!\p"
