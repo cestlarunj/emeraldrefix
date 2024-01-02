@@ -462,6 +462,52 @@ MauvilleCity_EventScript_RegisterWallyCall::
 	releaseall
 	end
 
+MauvilleCity_EventScript_FlamethrowerGuy::
+	lock
+	faceplayer
+	msgbox MauvilleCity_Text_ILoveBerries, MSGBOX_DEFAULT
+	goto_if_unset FLAG_TM35_IN_MAUVILLE, MauvilleCity_EventScript_FlamethrowerGuy_ProposeTrade
+	release
+	end
+
+MauvilleCity_EventScript_FlamethrowerGuy_ProposeTrade::
+	checkitem ITEM_SITRUS_BERRY 100
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_EventScript_FlamethrowerGuy_AskTrade
+	msgbox MauvilleCity_Text_BringMe100Berries, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_EventScript_FlamethrowerGuy_AskTrade::
+	msgbox MauvilleCity_Text_WillYouTrade, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_EventScript_FlamethrowerGuy_DeclineTrade
+	msgbox MauvilleCity_Text_ThankYou, MSGBOX_DEFAULT
+	removeitem ITEM_SITRUS_BERRY 100
+	giveitem ITEM_TM35
+	setflag FLAG_TM35_IN_MAUVILLE
+	msgbox MauvilleCity_Text_ILoveBerries, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_EventScript_FlamethrowerGuy_DeclineTrade::
+	msgbox MauvilleCity_Text_BringMe100Berries, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_Text_ILoveBerries:
+	.string "Oh, how I love SITRUS BERRIES!$"
+
+MauvilleCity_Text_WillYouTrade:
+	.string "I see you have 100 of them!\n"
+	.string "Will you trade them for a TM?$"
+
+MauvilleCity_Text_ThankYou:
+	.string "Thank you so much!\n"
+	.string "Have this TM.$"
+
+MauvilleCity_Text_BringMe100Berries:
+	.string "If you bring me 100 SITRUS,\n"
+	.string "I'll give you a cool fire-type TM.$"
+
 MauvilleCity_Text_UncleHesTooPeppy:
 	.string "UNCLE: It's because of POKéMON that\n"
 	.string "this boy's got more pep, I suppose…\l"
