@@ -61,4 +61,13 @@ EventScript_ERFpatch_0_2_to_0_3::
 	setberrytree BERRY_TREE_ROUTE_123_PECHA,    ITEM_TO_BERRY(ITEM_LEPPA_BERRY),  BERRY_STAGE_BERRIES
 	setberrytree BERRY_TREE_ROUTE_123_SITRUS,   ITEM_TO_BERRY(ITEM_MARANGA_BERRY), BERRY_STAGE_BERRIES
 	setberrytree BERRY_TREE_ROUTE_123_RAWST,    ITEM_TO_BERRY(ITEM_LEPPA_BERRY),  BERRY_STAGE_BERRIES
+
+	checkitem ITEM_PIXIE_PLATE
+	goto_if_eq VAR_RESULT, TRUE, EventScript_ERFpatch_ConvertPixiePlate
+
     return
+
+EventScript_ERFpatch_ConvertPixiePlate::
+	removeitem ITEM_PIXIE_PLATE
+	additem ITEM_FAIRY_FEATHER
+	return
