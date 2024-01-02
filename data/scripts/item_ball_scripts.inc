@@ -115,7 +115,7 @@ Route114_EventScript_ItemProtein::
 	end
 
 Route114_EventScript_ItemEnergyPowder::
-	finditem ITEM_ENERGY_POWDER
+	finditem ITEM_MAX_POTION
 	end
 
 Route115_EventScript_ItemSuperPotion::
