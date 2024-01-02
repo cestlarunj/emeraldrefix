@@ -1505,8 +1505,8 @@
 
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
-#define FLAG_TM35_IN_LAVARIDGE                      (SYSTEM_FLAGS + 0x85) // CUSTOM EMERALDREFIX / set = received TM35 Flamethrower from the guy in Lavaridge
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
+#define FLAG_TM35_IN_MAUVILLE                       (SYSTEM_FLAGS + 0x85) // CUSTOM EMERALDREFIX / set = received TM35 Flamethrower from the guy in Mauville
+#define FLAG_ABILITY_CAPSULE_IN_LAVARIDGE           (SYSTEM_FLAGS + 0x86) // CUSTOM EMERALDREFIX / set = received the unique ability capsule in Lavaridge
 #define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
 #define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
 #define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
