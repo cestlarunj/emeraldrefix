@@ -94,7 +94,7 @@
 #define MEMBERS_7(a, b, c, d, e, f, g) a; b; c; d; e; f; g;
 #define MEMBERS_8(a, b, c, d, e, f, g, h) a; b; c; d; e; f; g; h;
 
-#define EXP_MULTIPLIER 1.7 //EXP MULTIPLIER
+#define EXP_MULTIPLIER 1.65 //EXP MULTIPLIER
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 
