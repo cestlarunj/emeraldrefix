@@ -4869,19 +4869,6 @@ static const struct TrainerMon sParty_Wyatt[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jaylen[] = {
-    {
-    .species = SPECIES_VIBRAVA,
-    .lvl = 41,
-    .iv = 75,
-    },
-    {
-    .species = SPECIES_HYPNO,
-    .lvl = 40,
-    .iv = 75,
-    }, 
-};
-
 static const struct TrainerMon sParty_Madeline1[] = {
     {
     .species = SPECIES_GARDEVOIR,
@@ -5496,6 +5483,110 @@ static const struct TrainerMon sParty_Elliot5[] = {
     .lvl = 80,
     .iv = 180,
     }
+};
+
+
+
+static const struct TrainerMon sParty_Carol[] = {
+    {
+    .species = SPECIES_TAILLOW,
+    .lvl = SCALED,
+    .modLvl = -1,
+    .minLvl = 16,
+    .maxLvl = 22,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_LOMBRE,
+    .lvl = SCALED,
+    .modLvl = 0,
+    .minLvl = 18,
+    .maxLvl = 23,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_TRAPINCH,
+    .lvl = SCALED,
+    .modLvl = 0,
+    .minLvl = 17,
+    .maxLvl = 24,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_RHYHORN,
+    .lvl = SCALED,
+    .modLvl = +1,
+    .minLvl = 18,
+    .maxLvl = 24,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_GOLBAT,
+    .lvl = SCALED,
+    .modLvl = +1,
+    .minLvl = 22,
+    .maxLvl = 24,
+    .iv = 25,
+    }
+};
+
+static const struct TrainerMon sParty_Eric[] = {
+    {
+    .species = SPECIES_GEODUDE,
+    .lvl = 20,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_BALTOY,
+    .lvl = 20,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_KADABRA,
+    .lvl = 21,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_MACHOP,
+    .lvl = 21,
+    .iv = 25,
+    }
+};
+
+
+static const struct TrainerMon sParty_Jaylen[] = {
+    {
+    .species = SPECIES_MANKEY,
+    .lvl = SCALED,
+    .modLvl = 0,
+    .minLvl = 20,
+    .maxLvl = 23,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_ROSELIA,
+    .lvl = SCALED,
+    .modLvl = +1,
+    .minLvl = 20,
+    .maxLvl = 22,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_MURKROW,
+    .lvl = SCALED,
+    .modLvl = -1,
+    .minLvl = 21,
+    .maxLvl = 23,
+    .iv = 25,
+    },
+    {
+    .species = SPECIES_TENTACOOL,
+    .lvl = SCALED,
+    .modLvl = 0,
+    .minLvl = 20,
+    .maxLvl = 23,
+    .iv = 25,
+    },
 };
 
 static const struct TrainerMon sParty_Howard[] = {
@@ -10828,29 +10919,6 @@ static const struct TrainerMon sParty_Larry[] = {
     }
 };
 
-static const struct TrainerMon sParty_Carol[] = {
-    {
-    .species = SPECIES_SWELLOW,
-    .lvl = 37,
-    .iv = 75,
-    },
-    {
-    .species = SPECIES_LOMBRE,
-    .lvl = 38,
-    .iv = 75,
-    },
-    {
-    .species = SPECIES_VIBRAVA,
-    .lvl = 38,
-    .iv = 75,
-    },
-    {
-    .species = SPECIES_RHYHORN,
-    .lvl = 37,
-    .iv = 75,
-    }
-};
-
 static const struct TrainerMon sParty_Brice[] = {
     {
     .species = SPECIES_CAMERUPT,
@@ -11236,19 +11304,6 @@ static const struct TrainerMon sParty_Clark[] = {
     .ability = ABILITY_ARENA_TRAP,
     .iv = 25,
     },
-};
-
-static const struct TrainerMon sParty_Eric[] = {
-    {
-    .species = SPECIES_GEODUDE,
-    .lvl = 20,
-    .iv = 0,
-    },
-    {
-    .species = SPECIES_BALTOY,
-    .lvl = 20,
-    .iv = 0,
-    }
 };
 
 static const struct TrainerMon sParty_Mike1[] = {

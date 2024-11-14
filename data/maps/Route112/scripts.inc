@@ -94,11 +94,6 @@ Route112_EventScript_Larry::
 	msgbox Route112_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route112_EventScript_Carol::
-	trainerbattle_single TRAINER_CAROL, Route112_Text_CarolIntro, Route112_Text_CarolDefeat
-	msgbox Route112_Text_CarolPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route112_EventScript_Bryant::
 	trainerbattle_single TRAINER_BRYANT, Route112_Text_BryantIntro, Route112_Text_BryantDefeat
 	msgbox Route112_Text_BryantPostBattle, MSGBOX_AUTOCLOSE

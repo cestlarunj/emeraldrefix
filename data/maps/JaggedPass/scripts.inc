@@ -94,11 +94,6 @@ JaggedPass_EventScript_GuardDefeated::
 	releaseall
 	end
 
-JaggedPass_EventScript_Eric::
-	trainerbattle_single TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat
-	msgbox JaggedPass_Text_EricPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 JaggedPass_EventScript_Diana::
 	trainerbattle_single TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat, JaggedPass_EventScript_RegisterDiana
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -149,20 +144,13 @@ JaggedPass_EventScript_Autumn::
 	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-JaggedPass_Text_EricIntro:
-	.string "MT. CHIMNEY's JAGGED PASS…\p"
-	.string "Now this is what I've always wanted\n"
-	.string "in a mountain.\p"
-	.string "This jagged bumpiness…\n"
-	.string "It rocks my soul!$"
+JaggedPass_EventScript_TempSign::
+	msgbox JaggedPass_Text_TempSign, MSGBOX_SIGN
+	end
 
-JaggedPass_Text_EricDefeat:
-	.string "Losing left me bitter!$"
-
-JaggedPass_Text_EricPostBattle:
-	.string "Yes, I did lose at POKéMON…\p"
-	.string "But, when it comes to the love of\n"
-	.string "the mountains, I have you beat!$"
+JaggedPass_Text_TempSign:
+	.string "WORK IN PROGRESS\n"
+	.string "INCOMING IN v0.4$"
 
 JaggedPass_Text_DianaIntro:
 	.string "This place isn't your casual hike.\n"

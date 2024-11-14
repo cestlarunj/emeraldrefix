@@ -1,3 +1,7 @@
 GraniteCave_B2F_MapScripts::
 	.byte 0
 
+GraniteCave_B2F_EventScript_Jaylen::
+	trainerbattle_single TRAINER_JAYLEN, GraniteCave_B2F_Text_JaylenIntro, GraniteCave_B2F_Text_JaylenDefeat
+	msgbox GraniteCave_B2F_Text_JaylenPostBattle, MSGBOX_AUTOCLOSE
+	end

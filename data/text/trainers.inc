@@ -598,6 +598,19 @@ Route106_Text_KylaPostBattle:
 	.string "Drifting along with the waves…\n"
 	.string "I love it! Why don't you give it a try?$"
 
+Route106_Text_CarolIntro:
+	.string "When you're out on a picnic, why,\n"
+	.string "you simply have to sing!\l"
+	.string "Come on, sing with me!$"
+
+Route106_Text_CarolDefeat:
+	.string "Oh, you're so strong!$"
+
+Route106_Text_CarolPostBattle:
+	.string "It doesn't matter if you're good or bad\n"
+	.string "at singing or POKéMON.\p"
+	.string "If you have the most fun, you win!$"
+
 Route107_Text_DarrinIntro:
 	.string "Yawn…\p"
 	.string "I must have drifted off to sleep while\n"
@@ -1571,19 +1584,6 @@ Route112_Text_LarryPostBattle:
 	.string "I'm not crying because I miss my mommy!\n"
 	.string "Snivel…$"
 
-Route112_Text_CarolIntro:
-	.string "When you're out on a picnic, why,\n"
-	.string "you simply have to sing!\l"
-	.string "Come on, sing with me!$"
-
-Route112_Text_CarolDefeat:
-	.string "Oh, you're so strong!$"
-
-Route112_Text_CarolPostBattle:
-	.string "It doesn't matter if you're good or bad\n"
-	.string "at singing or POKéMON.\p"
-	.string "If you have the most fun, you win!$"
-
 Route112_Text_BryantIntro:
 	.string "I caught hot POKéMON in FIERY PATH!\n"
 	.string "Take a look!$"
@@ -1609,19 +1609,6 @@ Route112_Text_ShaylaPostBattle:
 	.string "I was thinking that maybe we can have\l"
 	.string "a rematch right now…\l"
 	.string "But it's all right if you're busy.$"
-
-Route113_Text_JaylenIntro:
-	.string "Can you guess why it's so cool\n"
-	.string "around here?$"
-
-Route113_Text_JaylenDefeat:
-	.string "Peeuuw!\n"
-	.string "That stinks!$"
-
-Route113_Text_JaylenPostBattle:
-	.string "The volcanic ash blocks the sun,\n"
-	.string "so it doesn't get very warm.\p"
-	.string "That's good for me--I can't stand heat!$"
 
 Route113_Text_DillonIntro:
 	.string "The volcano's eruption is proof that\n"
@@ -4791,6 +4778,33 @@ GraniteCave_1F_Text_HowardDefeat:
 GraniteCave_1F_Text_HowardPostBattle:
 	.string "I got extinguished!$"
 
+GraniteCave_B1F_Text_EricIntro:
+	.string "DEWFORD TOWN's GRANITE CAVE…\p"
+	.string "Now this is what I've always wanted\n"
+	.string "in a cave.\p"
+	.string "This jagged bumpiness…\n"
+	.string "It rocks my soul!$"
+
+GraniteCave_B1F_Text_EricDefeat:
+	.string "Losing left me bitter!$"
+
+GraniteCave_B1F_Text_EricPostBattle:
+	.string "Yes, I did lose at POKéMON…\p"
+	.string "But, when it comes to the love of\n"
+	.string "the caves, I have you beat!$"
+
+GraniteCave_B2F_Text_JaylenIntro:
+	.string "I love breaking rocks with\n"
+	.string "my POKéMON around here!$"
+
+GraniteCave_B2F_Text_JaylenDefeat:
+	.string "Peeuuw!\n"
+	.string "You broke me!$"
+
+GraniteCave_B2F_Text_JaylenPostBattle:
+	.string "The sun does pass through here,\n"
+	.string "so it doesn't get very warm.\p"
+	.string "That's good for me--I can't stand heat!$"
 
 VSSeeker_Text_BatteryNotChargedNeedXSteps::
 	.string "The battery isn't charged enough.\p"

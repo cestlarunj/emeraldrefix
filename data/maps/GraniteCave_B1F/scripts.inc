@@ -9,3 +9,7 @@ GraniteCave_B1F_SetHoleWarp:
 	setholewarp MAP_GRANITE_CAVE_B2F
 	end
 
+GraniteCave_B1F_EventScript_Eric::
+	trainerbattle_single TRAINER_ERIC, GraniteCave_B1F_Text_EricIntro, GraniteCave_B1F_Text_EricDefeat
+	msgbox GraniteCave_B1F_Text_EricPostBattle, MSGBOX_AUTOCLOSE
+	end
