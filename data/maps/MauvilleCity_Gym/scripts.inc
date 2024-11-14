@@ -357,7 +357,7 @@ MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "With the DYNAMO BADGE, the LEVEL CAP\n"
-	.string "increases up to Level 47.\p"
+	.string "increases up to Level 48.\p"
 	.string "And, it will make your POKéMON able to\n"
 	.string "use ROCK SMASH out of battle, too.\p"
 	.string "Hmm…\n"

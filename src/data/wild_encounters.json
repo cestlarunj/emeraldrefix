@@ -10381,57 +10381,57 @@
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_MAREEP"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_AIPOM"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_PINECO"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SHUCKLE"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_TEDDIURSA"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_HOUNDOUR"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_STANTLER"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SMEARGLE"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SMEARGLE"
               },
               {
                 "min_level": 80,
                 "max_level": 80,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_SMEARGLE"
               }
             ]
           }
